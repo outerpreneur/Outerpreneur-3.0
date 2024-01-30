@@ -1,0 +1,384 @@
+{% assign mobile_menu = linklists[section.settings.mobile_menu] %}
+<div class="bg-white ">
+  <div id="mobile-menu" class="relative z-40 hidden lg:hidden" role="dialog" aria-modal="true">
+    <div class="fixed inset-0  flex">
+      <div class="relative flex w-full max-w-xs flex-col overflow-y-auto bg-white pb-12 shadow-xl">
+        <div class="flex px-4 pb-2 pt-5">
+          <button
+            type="button"
+            id="mobile-menu-close"
+            class="relative -m-2 inline-flex items-center justify-center rounded-md p-2 text-gray-400 cursor-pointer"
+          >
+            <span class="absolute -inset-0.5"></span>
+            <span class="sr-only">Close menu</span>
+            <svg
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              aria-hidden="true"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+
+        <!-- Links -->
+        <div class="mt-2">
+          <!-- 'Women' tab panel, show/hide based on tab state. -->
+          <div
+            id="tabs-1-panel-1"
+            class="space-y-10 px-4 pb-8 pt-10"
+            aria-labelledby="tabs-1-tab-1"
+            role="tabpanel"
+            tabindex="0"
+          >
+            <div>
+              <p class="font-medium text-gray-900">{{ mobile_menu.title }}</p>
+              <ul role="list" aria-labelledby="women-brands-heading-mobile" class="mt-6 flex flex-col space-y-6">
+                {% for link in mobile_menu.links %}
+                  <li class="flow-root">
+                    <a href="{{ link.url }}" class="-m-2 block p-2 text-gray-500">{{ link.title }}</a>
+                  </li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="space-y-6 border-t border-gray-200 px-4 py-6">
+          {% for link in linklist[section.settings.secondary_menu].links %}
+            <div class="flow-root">
+              <a href="{{ link.url }}" class="-m-2 block p-2 font-medium text-gray-900">{{ link.title }}</a>
+            </div>
+          {% endfor %}
+        </div>
+
+        {% if section.settings.show_account_settings %}
+          <div class="space-y-6 border-t border-gray-200 px-4 py-6">
+            <div class="flow-root">
+              <a href="#" class="-m-2 block p-2 font-medium text-gray-900">Sign in</a>
+            </div>
+            <div class="flow-root">
+              <a href="#" class="-m-2 block p-2 font-medium text-gray-900">Create account</a>
+            </div>
+          </div>
+        {% endif %}
+
+        {% if section.settings.show_currency %}
+          <div class="border-t border-gray-200 px-4 py-6">
+            <a href="#" class="-m-2 flex items-center p-2">
+              <img src="https://tailwindui.com/img/flags/flag-canada.svg" alt="" class="block h-auto w-5 flex-shrink-0">
+              <span class="ml-3 block text-base font-medium text-gray-900">CAD</span>
+              <span class="sr-only">, change currency</span>
+            </a>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+  <header id="header" class=" bg-white z-40 fixed w-full">
+    <nav aria-label="Top" class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="border-b border-gray-200">
+        <div class="flex h-16 items-center">
+          <!-- Mobile menu toggle, controls the 'mobileMenuOpen' state. -->
+          <button
+            id="mobile-menu-open"
+            type="button"
+            class="relative rounded-md bg-white p-2 text-gray-400 lg:hidden cursor-pointer"
+          >
+            <span class="absolute -inset-0.5"></span>
+            <span class="sr-only">Open menu</span>
+            <svg
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              aria-hidden="true"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+          </button>
+
+          <!-- Logo -->
+          <div class="ml-4 flex lg:ml-0">
+            <a href="/">
+              <span class="sr-only">Your Company</span>
+              {% if section.settings.header_logo != blank %}
+                <img
+                  class="h-{{ section.settings.logo_size }} w-auto"
+                  src="{{ section.settings.header_logo | image_url }}"
+                  height=""
+                  width=""
+                  loading="eager"
+                  alt=""
+                >
+              {% else %}
+                <p>{{ shop.name }}</p>
+              {% endif %}
+            </a>
+          </div>
+
+          <!-- Desktop menu -->
+          <div class="hidden lg:ml-8 lg:block lg:self-stretch">
+            <div class="flex h-full space-x-8">
+              {% for link in linklists[section.settings.header_menu].links %}
+                <a
+                  href="{{ link.url }}"
+                  class="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800"
+                >
+                  {{- link.title -}}
+                </a>
+              {% endfor %}
+            </div>
+          </div>
+
+          <div class="ml-auto flex items-center">
+            {% if section.settings.show_account_settings == true %}
+              <div class="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
+                <a href="/account/login" class="text-sm font-medium text-gray-700 hover:text-gray-800">Sign in</a>
+                <span class="h-6 w-px bg-gray-200" aria-hidden="true"></span>
+                <a href="/account/register" class="text-sm font-medium text-gray-700 hover:text-gray-800"
+                  >Create account</a
+                >
+              </div>
+            {% endif %}
+
+            {% if section.settings.show_currency == true %}
+              <div class="hidden lg:ml-8 lg:flex">
+                <a href="" class="flex items-center text-gray-700 hover:text-gray-800">
+                  <img
+                    src="https://tailwindui.com/img/flags/flag-canada.svg"
+                    alt=""
+                    class="block h-auto w-5 flex-shrink-0"
+                  >
+                  <span class="ml-3 block text-sm font-medium">CAD</span>
+                  <span class="sr-only">, change currency</span>
+                </a>
+              </div>
+            {% endif %}
+
+            <!-- Search -->
+            {% if section.settings.show_search == true %}
+              <div class="flex lg:ml-6">
+                <a href="/search" class="p-2 text-gray-400 hover:text-gray-500">
+                  <span class="sr-only">Search</span>
+                  <svg
+                    class="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                  </svg>
+                </a>
+              </div>
+            {% endif %}
+
+            {% if section.settings.show_cart == true %}
+              <!-- Cart -->
+              <div class="ml-4 flow-root lg:ml-6">
+                <a href="/cart" class="group -m-2 flex items-center p-2">
+                  <svg
+                    class="h-6 w-6 flex-shrink-0 text-gray-400 group-hover:text-gray-500"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+                  </svg>
+                  <span class="ml-2 text-sm font-medium text-gray-700 group-hover:text-gray-800">
+                    {{- cart.item_count -}}
+                  </span>
+                  <span class="sr-only">items in cart, view bag</span>
+                </a>
+              </div>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+</div>
+
+{% schema %}
+{
+  "name": "Header",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "header_logo",
+      "label": "Logo Image",
+      "info": "The logo image that appears in the header."
+    },
+    {
+      "type": "select",
+      "id": "logo_size",
+      "label": "Logo Size",
+      "options": [
+        {
+          "value": "8",
+          "label": "8"
+        },
+        {
+          "value": "10",
+          "label": "10"
+        },
+        {
+          "value": "12",
+          "label": "12"
+        },
+        {
+          "value": "14",
+          "label": "14"
+        },
+        {
+          "value": "16",
+          "label": "16"
+        },
+        {
+          "value": "18",
+          "label": "18"
+        },
+        {
+          "value": "20",
+          "label": "20"
+        },
+        {
+          "value": "22",
+          "label": "22"
+        },
+        {
+          "value": "24",
+          "label": "24"
+        },
+        {
+          "value": "26",
+          "label": "26"
+        },
+        {
+          "value": "28",
+          "label": "28"
+        },
+        {
+          "value": "30",
+          "label": "30"
+        },
+        {
+          "value": "32",
+          "label": "32"
+        },
+        {
+          "value": "34",
+          "label": "34"
+        },
+        {
+          "value": "36",
+          "label": "36"
+        },
+        {
+          "value": "38",
+          "label": "38"
+        },
+        {
+          "value": "40",
+          "label": "40"
+        },
+        {
+          "value": "42",
+          "label": "42"
+        },
+        {
+          "value": "44",
+          "label": "44"
+        },
+        {
+          "value": "46",
+          "label": "46"
+        },
+        {
+          "value": "48",
+          "label": "48"
+        },
+        {
+          "value": "50",
+          "label": "50"
+        },
+        {
+          "value": "52",
+          "label": "52"
+        },
+        {
+          "value": "54",
+          "label": "54"
+        },
+        {
+          "value": "56",
+          "label": "56"
+        },
+        {
+          "value": "58",
+          "label": "58"
+        }
+      ],
+      "default": "24",
+      "info": "The size of the logo image that appears in the header."
+    },
+    {
+      "type": "link_list",
+      "id": "header_menu",
+      "label": "Main Menu",
+      "info": "The main menu that appears in the header.",
+      "default": "main-menu"
+    },
+    {
+      "type": "link_list",
+      "id": "mobile_menu",
+      "label": "Mobile Menu",
+      "info": "The mobile menu that appears in the header."
+    },
+    {
+      "type": "link_list",
+      "id": "secondary_menu",
+      "label": "Secondary Menu",
+      "info": "The secondary menu that appears in the header."
+    },
+    { "type": "header", "content": "Header Options" },
+    {
+      "type": "checkbox",
+      "id": "show_account_settings",
+      "label": "Show Sign In",
+      "default": true,
+      "info": "Show the sign in link in the header."
+    },
+    {
+      "type": "checkbox",
+      "id": "show_currency",
+      "label": "Show Currency",
+      "default": true,
+      "info": "Show the currency selector in the header."
+    },
+    {
+      "type": "checkbox",
+      "id": "show_search",
+      "label": "Show Search",
+      "default": true,
+      "info": "Show the search icon in the header."
+    },
+    {
+      "type": "checkbox",
+      "id": "show_cart",
+      "label": "Show Cart",
+      "default": true,
+      "info": "Show the cart icon in the header."
+    }
+  ]
+}
+{% endschema %}

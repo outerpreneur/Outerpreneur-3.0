@@ -1,0 +1,87 @@
+<div id="services" class="bg-white py-24 sm:py-32">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+      <div>
+        <h2 class="text-base font-semibold leading-7 text-indigo-600">{{ section.settings.subtitle }}</h2>
+        <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">{{ section.settings.title }}</p>
+        <p class="mt-6 text-base leading-7 text-gray-600">
+          {{ section.settings.description }}
+        </p>
+      </div>
+      <dl class="col-span-2 grid grid-cols-1 gap-x-8 gap-y-10 text-base leading-7 text-gray-600 sm:grid-cols-2 lg:gap-y-16">
+        {% for block in section.blocks %}
+          <div class="relative pl-9">
+            <dt class="font-semibold text-gray-900">
+              <svg
+                class="absolute left-0 top-1 h-5 w-5 text-indigo-500"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+              </svg>
+              {{ block.settings.feature_title }}
+            </dt>
+            <dd class="mt-2">
+              {{ block.settings.feature_description }}
+            </dd>
+          </div>
+        {% endfor %}
+      </dl>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Feature Section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "All-in-one platform"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "Everything you need"
+    },
+    {
+      "type": "text",
+      "id": "description",
+      "label": "Description",
+      "default": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione."
+    }
+  ],
+  "max_blocks": 8,
+  "blocks": [
+    {
+      "type": "feauture",
+      "name": "Feature",
+      "settings": [
+        {
+          "type": "text",
+          "id": "feature_title",
+          "label": "Title",
+          "default": "Invite team members"
+        },
+        {
+          "type": "textarea",
+          "id": "feature_description",
+          "label": "Description",
+          "default": "Rerum repellat labore necessitatibus reprehenderit molestiae praesentium"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Feature Section",
+      "category": "Content",
+      "settings": {}
+    }
+  ]
+}
+{% endschema %}

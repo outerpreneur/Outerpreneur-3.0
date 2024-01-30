@@ -1,0 +1,109 @@
+<div id="faq" class="bg-white">
+  <div class="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8 lg:py-40">
+    <div class="mx-auto max-w-4xl divide-y divide-gray-900/10">
+      <h2 class="text-2xl font-bold leading-10 tracking-tight text-gray-900">
+        {{ section.settings.title }}
+      </h2>
+      <dl class="mt-10 space-y-6 divide-y divide-gray-900/10 ">
+        {% for block in section.blocks %}
+          <div class="pt-6 faq-item">
+            <dt class="faq-button py-1">
+              <!-- Expand/collapse question button -->
+              <button
+                type="button"
+                class="flex w-full items-start justify-between text-left text-gray-900"
+                aria-controls="faq-0"
+                aria-expanded="false"
+              >
+                <span class="text-base font-semibold leading-7 cursor-pointer">
+                  {{ block.settings.question }}
+                </span>
+                <span class="ml-6 flex h-7 items-center">
+                  <!--
+                    Icon when question is collapsed.
+
+                    Item expanded: "hidden", Item collapsed: ""
+                  -->
+                  <svg
+                    class="h-6 w-6 plus-button"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" />
+                  </svg>
+                  <!--
+                    Icon when question is expanded.
+
+                    Item expanded: "", Item collapsed: "hidden"
+                  -->
+                  <svg
+                    class="hidden h-6 w-6 minus-button"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6" />
+                  </svg>
+                </span>
+              </button>
+            </dt>
+            <dd class="mt-2 pr-12  faq-answer hidden">
+              <p class="text-base leading-7 text-gray-600">
+                {{ block.settings.answer }}
+              </p>
+            </dd>
+          </div>
+        {% endfor %}
+
+        <!-- More questions... -->
+      </dl>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "FAQ",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Frequently asked questions"
+    }
+  ],
+  "max_blocks": 10,
+  "blocks": [
+    {
+      "type": "text",
+      "name": "Question",
+      "settings": [
+        {
+          "type": "text",
+          "id": "question",
+          "label": "Question",
+          "default": "What's the best thing about Switzerland?"
+        },
+        {
+          "type": "textarea",
+          "id": "answer",
+          "label": "Answer",
+          "default": "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "FAQ",
+      "category": "Content",
+      "settings": {}
+    }
+  ]
+}
+{% endschema %}

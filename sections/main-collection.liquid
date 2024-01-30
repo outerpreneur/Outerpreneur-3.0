@@ -1,0 +1,243 @@
+<div class="">
+  <div class="relative bg-gray-900">
+    <!-- Decorative image and overlay -->
+    <div aria-hidden="true" class="absolute inset-0 overflow-hidden">
+      {% if collection.image != blank %}
+        <img
+          src="{{ collection.image | image_url }}"
+          loading="eager"
+          width=""
+          height=""
+          alt=""
+          class="h-full w-full object-cover object-center"
+        >
+      {% else %}
+        <img
+          src="https://cdn.shopify.com/s/files/1/0549/1313/8748/files/pullover-hoodie-mockup-of-a-serious-woman-standing-at-the-beach-26829.jpg?v=1656047179"
+          loading="eager"
+          width=""
+          height=""
+          alt=""
+          class="h-full w-full object-cover object-center"
+        >
+      {% endif %}
+    </div>
+    <div aria-hidden="true" class="absolute inset-0 bg-gray-900 opacity-50"></div>
+
+    <div class="relative mx-auto flex max-w-3xl flex-col items-center px-6 py-32 text-center sm:py-64 lg:px-0">
+      <h1 class="text-4xl font-bold tracking-tight text-white lg:text-6xl">
+        {{ collection.title }}
+        {% if collection.products_count > 0 %}
+          <span class="text-gray-500 text-sm">({{ collection.products_count }})</span>
+        {% endif %}
+      </h1>
+      <p class="mt-4 text-xl text-white">
+        {% if collection.description != blank %}
+          {{ collection.description }}
+        {% else %}
+          The latest news, articles, and resources, sent to your inbox weekly.
+        {% endif %}
+      </p>
+    </div>
+  </div>
+</div>
+
+{% paginate collection.products by 6 %}
+  <div class="bg-white">
+    <div class="mx-auto max-w-7xl overflow-hidden px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
+      {% if collection.products_count == 0 %}
+        <p>There are no products in this collection.</p>
+      {% endif %}
+
+      <select id="sort-by">
+        {% assign sort_by = collection.sort_by | default: collection.default_sort_by %}
+
+        {% for option in collection.sort_options %}
+          <option
+            value="{{ option.value }}"
+            {% if option.value == sort_by %}
+              selected="selected"
+            {% endif %}
+          >
+            {{ option.name }}
+          </option>
+        {% endfor %}
+      </select>
+
+      <div class="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-3 lg:grid-cols-{{ section.settings.number_of_columns }} lg:gap-x-8">
+        {% for product in collection.products %}
+          <a href="{{ product.url }}" class="group text-sm">
+            <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-100 group-hover:opacity-75">
+              <img
+                src="{{ product.featured_image | image_url }}"
+                width="500"
+                height="500"
+                loading="lazy"
+                alt="White fabric pouch with white zipper, black zipper pull, and black elastic loop."
+                class="h-full w-full object-cover object-center"
+              >
+            </div>
+            <h3 class="mt-4 font-medium text-gray-900">{{ product.title }}</h3>
+            <p class="italic text-gray-500">
+              {% if product.variants.size > 1 %}
+                {{ product.variants.size }} variants
+              {% else %}
+                {{ product.variants.first.title }}
+              {% endif %}
+            </p>
+            <p class="mt-2 font-medium text-gray-900">
+              {% if product.variants.size > 1 %}
+                From
+              {% endif %}
+              {{ product.price_min | money_with_currency }}
+            </p>
+          </a>
+        {% endfor %}
+
+        <!-- More products... -->
+      </div>
+
+      {% if paginate.pages > 1 %}
+        <nav class="flex items-center justify-between border-t border-gray-200 px-4 sm:px-0">
+          <div class="-mt-px flex w-0 flex-1">
+            {% if paginate.previous %}
+              <a
+                href="{{ paginate.previous.url }}"
+                class="inline-flex items-center border-t-2 border-transparent pr-1 pt-4 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
+              >
+                <svg class="mr-3 h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M18 10a.75.75 0 01-.75.75H4.66l2.1 1.95a.75.75 0 11-1.02 1.1l-3.5-3.25a.75.75 0 010-1.1l3.5-3.25a.75.75 0 111.02 1.1l-2.1 1.95h12.59A.75.75 0 0118 10z" clip-rule="evenodd" />
+                </svg>
+                Previous
+              </a>
+            {% endif %}
+          </div>
+          <div class="hidden md:-mt-px md:flex">
+            {% for page in paginate.pages %}
+              <a
+                href="{{ page.url }}"
+                class="inline-flex items-center border-t-2 border-transparent px-4 pt-4 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
+              >
+                {{- page.title -}}
+              </a>
+            {% endfor %}
+          </div>
+          <div class="hidden md:-mt-px md:flex">
+            {% for page in paginate.pages %}
+              <a
+                href="{{ page.url }}"
+                class="inline-flex items-center border-t-2 border-transparent px-4 pt-4 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
+              >
+                {{- page.title -}}
+              </a>
+            {% endfor %}
+            <span class="inline-flex items-center px-4 pt-4 text-sm font-medium text-gray-700">
+              Page {{ paginate.current_page }} of {{ paginate.pages | size }}
+            </span>
+          </div>
+          <div class="-mt-px flex w-0 flex-1 justify-end">
+            {% if paginate.next %}
+              <a
+                href="{{ paginate.next.url }}"
+                class="inline-flex items-center border-t-2 border-transparent pl-1 pt-4 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
+              >
+                Next
+                <svg class="ml-3 h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M2 10a.75.75 0 01.75-.75h12.59l-2.1-1.95a.75.75 0 111.02-1.1l3.5 3.25a.75.75 0 010 1.1l-3.5 3.25a.75.75 0 11-1.02-1.1l2.1-1.95H2.75A.75.75 0 012 10z" clip-rule="evenodd" />
+                </svg>
+              </a>
+            {% endif %}
+          </div>
+        </nav>
+      {% endif %}
+    </div>
+  </div>
+{% endpaginate %}
+
+{% javascript %}
+  Shopify.queryParams = {};
+
+  // Preserve existing query parameters
+  if (location.search.length) {
+    var params = location.search.substr(1).split('&');
+
+    for (var i = 0; i < params.length; i++) {
+      var keyValue = params[i].split('=');
+
+      if (keyValue.length) {
+        Shopify.queryParams[decodeURIComponent(keyValue[0])] = decodeURIComponent(keyValue[1]);
+      }
+    }
+  }
+
+  // Update sort_by query parameter on select change
+  document.querySelector('#sort-by').addEventListener('change', function (e) {
+    var value = e.target.value;
+
+    Shopify.queryParams.sort_by = value;
+    location.search = new URLSearchParams(Shopify.queryParams).toString();
+  });
+{% endjavascript %}
+
+{% schema %}
+{
+  "name": "Collection",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Collection page"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Collection page"
+    },
+    {
+      "type": "text",
+      "id": "description",
+      "label": "Description",
+      "default": "The latest news, articles, and resources, sent to your inbox weekly."
+    },
+    {
+      "type": "select",
+      "id": "number_of_columns",
+      "label": "Number of columns",
+      "default": "3",
+      "options": [
+        {
+          "value": "1",
+          "label": "1"
+        },
+        {
+          "value": "2",
+          "label": "2"
+        },
+        {
+          "value": "3",
+          "label": "3"
+        },
+        {
+          "value": "4",
+          "label": "4"
+        },
+        {
+          "value": "5",
+          "label": "5"
+        },
+        {
+          "value": "6",
+          "label": "6"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Collection",
+      "category": "Collection page"
+    }
+  ]
+}
+{% endschema %}
+```

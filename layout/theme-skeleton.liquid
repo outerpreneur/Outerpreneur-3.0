@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ shop.name }}</title>
+    {{ content_for_header }}
+
+    {{ 'output.css' | asset_url | stylesheet_tag }}
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+
+    <script src="{{ 'app.js' | asset_url }}" defer></script>
+  </head>
+  <body class="bg-backgroundColor">
+    {{ content_for_layout }}
+  </body>
+</html>
+
+{% style %}
+  .bg-backgroundColor {
+    background-color: {{ settings.bg }};
+  }
+{% endstyle %}

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ shop.name }}</title>
+    {{ content_for_header }}
+    {% render 'favicon' %}
+    {{ 'output.css' | asset_url | stylesheet_tag }}
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+
+    <script src="{{ 'app.js' | asset_url }}" defer></script>
+  </head>
+  <body class="bg-backgroundColor">
+    {% sections 'header-group' %}
+    {{ content_for_layout }}
+    {% sections 'footer-group' %}
+  </body>
+</html>
+
+{% style %}
+    .bg-backgroundColor {
+      background-color: {{ settings.bg }};
+    }
+
+
+  {% assign primary_btn_1 = settings.primary_btn_first_color %}
+  {% assign primary_btn_2 = settings.primary_btn_second_color %}
+  {% assign secondary_btn_1 = settings.secondary_btn_first_color %}
+  {% assign secondary_btn_2 = settings.secondary_btn_second_color %}
+
+
+  .gradient-button-1 {
+      background: linear-gradient(
+        to right,
+        {{ primary_btn_1 }},
+        {{ primary_btn_2 }}
+      );
+    // }
+
+    .gradient-button-2 {
+      background: linear-gradient(
+        to right,
+        {{ secondary_btn_1 }},
+        {{ secondary_btn_2 }}
+      );
+    // }
+{% endstyle %}

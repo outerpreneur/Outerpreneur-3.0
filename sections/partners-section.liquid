@@ -1,0 +1,148 @@
+<div
+  id="partners"
+  class=" py-24 sm:py-32"
+  style="background-image: url('{{ section.settings.background_image |  image_url }}'); background-size: cover; background-position: top"
+>
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="grid grid-cols-1 items-center gap-x-8 gap-y-16 lg:grid-cols-2">
+      <div class="mx-auto w-full max-w-xl lg:mx-0">
+        <h2 class="text-3xl font-bold tracking-tight text-white">
+          {{ section.settings.title }}
+        </h2>
+        <p class="mt-6 text-lg leading-8 text-white">
+          {{ section.settings.description }}
+        </p>
+        <div class="mt-8 flex items-center gap-x-6">
+          <a
+            href="{{ section.settings.button_url }}"
+            class="rounded-md {{ section.settings.gradient_scheme }} px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+          >
+            {{ section.settings.button_text }}
+          </a>
+          <a
+            href="{{ section.settings.link_url }}"
+            class="text-sm font-semibold text-white"
+          >
+            {{ section.settings.link_text }}
+            <span aria-hidden="true">&rarr;</span>
+          </a>
+        </div>
+      </div>
+      <div class="mx-auto grid w-full max-w-xl grid-cols-{{ section.settings.image_columns }} items-center gap-y-12 sm:gap-y-14 lg:mx-0 lg:max-w-none lg:pl-8">
+        {% for block in section.blocks %}
+          <img
+            class="max-h-12 w-36 object-contain object-left"
+            src="{{ block.settings.image | image_url }}"
+            loading="lazy"
+            alt="Tuple"
+            width=""
+            height=""
+          >
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Partners",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Background image"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Trusted by the most innovative teams"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, egestas tempus tellus etiam sed. Quam a scelerisque amet ullamcorper eu enim et fermentum, augue."
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button text",
+      "default": "Create account"
+    },
+    {
+      "type": "select",
+      "id": "gradient_scheme",
+      "label": "Button gradient scheme",
+      "options": [
+        {
+          "value": "bg-gradient-to-r from-cyan-500 to-blue-500",
+          "label": "Cyan to blue"
+        },
+        {
+          "value": "bg-gradient-to-br from-pink-500 to-orange-400 ",
+          "label": "Pink to orange"
+        },
+        {
+          "value": "bg-gradient-to-tr from-[#9089fc] to-[#ff80b5] ",
+          "label": "Purple to pink"
+        }
+      ]
+    },
+    {
+      "type": "url",
+      "id": "button_url",
+      "label": "Button URL"
+    },
+    {
+      "type": "text",
+      "id": "link_text",
+      "label": "Link text",
+      "default": "Contact us"
+    },
+    {
+      "type": "url",
+      "id": "link_url",
+      "label": "Link URL"
+    },
+    {
+      "type": "select",
+      "id": "image_columns",
+      "label": "Image columns",
+      "default": "2",
+      "options": [
+        {
+          "value": "2",
+          "label": "2"
+        },
+        {
+          "value": "3",
+          "label": "3"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 9,
+  "blocks": [
+    {
+      "type": "image_picker",
+      "name": "Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Partners",
+      "category": "Partners",
+      "settings": {}
+    }
+  ]
+}
+{% endschema %}

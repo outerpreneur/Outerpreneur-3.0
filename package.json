@@ -1,0 +1,19 @@
+{
+  "scripts": {
+    "tw": "npx tailwindcss -i assets/input.css -o assets/output.css --watch"
+  },
+  "devDependencies": {
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@tailwindcss/forms": "^0.5.7",
+    "@tailwindcss/typography": "^0.5.10",
+    "prettier": "^3.2.2",
+    "prettier-plugin-tailwindcss": "^0.5.11",
+    "tailwindcss": "^3.4.1"
+  },
+  "plugins": [
+    "prettier-plugin-tailwindcss"
+  ],
+  "dependencies": {
+    "tailgrids": "^2.1.0"
+  }
+}

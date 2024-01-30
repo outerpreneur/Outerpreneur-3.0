@@ -1,0 +1,98 @@
+<div
+  class="bg-white"
+  style="background-image: url('{{ section.settings.background_image | image_url }}'); background-size: cover; background-position: center"
+>
+  <div class="">
+    <div class="mx-auto px-6 max-w-7xl py-24 sm:py-32 lg:flex lg:items-center lg:justify-between lg:px-8">
+      <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+        {{ section.settings.title }}
+        <br>
+        {{ section.settings.subtitle }}
+      </h2>
+      <div class="mt-10 flex items-center gap-x-6 lg:mt-0 lg:flex-shrink-0">
+        <a
+          href="{{ section.settings.button_url }}"
+          class="rounded-md {{ section.settings.gradient_scheme }} px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-gradient-to-bl-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+        >
+          {{ section.settings.button_text }}
+        </a>
+        <a href="{{ section.settings.button_url_2 }}" class="text-sm font-semibold leading-6 text-white">
+          {{- section.settings.button_text }}
+          <span aria-hidden="true">→</span></a
+        >
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "CTA section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Background image"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Ready to dive in?"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button text",
+      "default": "Get started"
+    },
+    {
+      "type": "select",
+      "id": "gradient_scheme",
+      "label": "Button gradient scheme",
+      "options": [
+        {
+          "value": "bg-gradient-to-r from-cyan-500 to-blue-500",
+          "label": "Cyan to blue"
+        },
+        {
+          "value": "bg-gradient-to-br from-pink-500 to-orange-400 ",
+          "label": "Pink to orange"
+        },
+        {
+          "value": "bg-gradient-to-tr from-[#9089fc] to-[#ff80b5] ",
+          "label": "Purple to pink"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "button_url",
+      "label": "Button URL"
+    },
+    {
+      "type": "text",
+      "id": "button_text_2",
+      "label": "Button text",
+      "default": "Learn more"
+    },
+    {
+      "type": "url",
+      "id": "button_url_2",
+      "label": "Button URL"
+    }
+  ],
+  "presets": [
+    {
+      "name": "CTA section",
+      "category": "Sections",
+      "settings": {}
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,110 @@
+[
+  {
+    "name": "Colors",
+    "settings": [
+      {
+        "type": "color",
+        "id": "bg",
+        "label": "Background color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "text_color",
+        "label": "Text color",
+        "default": "#000000"
+      },
+      {
+        "type": "color",
+        "id": "link_color",
+        "label": "Link color",
+        "default": "#0000ff"
+      },
+      {
+        "type": "color",
+        "id": "link_hover_color",
+        "label": "Link hover color",
+        "default": "#ff0000"
+      },
+      {
+        "type": "color",
+        "id": "link_active_color",
+        "label": "Link active color",
+        "default": "#00ff00"
+      },
+      {
+        "type": "color",
+        "id": "link_visited_color",
+        "label": "Link visited color",
+        "default": "#ff00ff"
+      },
+      {
+        "type": "color",
+        "id": "header_bg_color",
+        "label": "Header background color",
+        "default": "#fff"
+      },
+      {
+        "type": "color",
+        "id": "header_text_color",
+        "label": "Header text color",
+        "default": "#00ffff"
+      },
+      {
+        "type": "header",
+        "content": "Buttons"
+      },
+      {
+        "type": "color",
+        "id": "primary_btn_first_color",
+        "label": "Primary button first color",
+        "default": "#09b5d6"
+      },
+      {
+        "type": "color",
+        "id": "primary_btn_second_color",
+        "label": "Primary button_second_color",
+        "default": "#09b5d6"
+      },
+      {
+        "type": "color",
+        "id": "secondary_btn_first_color",
+        "label": "Secondary button first color",
+        "default": "#9361f6"
+      },
+      {
+        "type": "color",
+        "id": "secondary_btn_second_color",
+        "label": "Secondary button_second_color",
+        "default": "#e1489a"
+      }
+    ]
+  },
+  {
+    "name": "Settings",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "show_search",
+        "label": "Show search",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "search_placeholder",
+        "label": "Search placeholder",
+        "default": "Search..."
+      }
+    ]
+  },
+  {
+    "name": "favicon",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "favicon",
+        "label": "Favicon"
+      }
+    ]
+  }
+]

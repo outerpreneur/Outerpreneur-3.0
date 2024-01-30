@@ -163,8 +163,9 @@
             <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
 
             <button
+              id="add-to-cart"
               type="submit"
-              class="mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+              class="mt-10 flex w-full items-center justify-center rounded-md border border-transparent {{ section.settings.gradient_scheme }} px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
             >
               Add to cart
             </button>
@@ -285,3 +286,51 @@
     </div>
   </div>
 </div>
+
+{% schema %}
+{
+  "name": "Product",
+  "settings": [
+    {
+      "type": "select",
+      "id": "gradient_scheme",
+      "label": "Button gradient scheme",
+      "options": [
+        {
+          "value": "bg-gradient-to-r from-cyan-500 to-blue-500",
+          "label": "Cyan to blue"
+        },
+        {
+          "value": "bg-gradient-to-br from-pink-500 to-orange-400 ",
+          "label": "Pink to orange"
+        },
+        {
+          "value": "bg-gradient-to-tr from-[#9089fc] to-[#ff80b5] ",
+          "label": "Purple to pink"
+        }
+      ],
+      "default": "bg-gradient-to-r from-cyan-500 to-blue-500"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_vendor",
+      "label": "Show vendor",
+      "default": true
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product",
+      "name": "Product",
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "show_vendor",
+          "label": "Show vendor",
+          "default": true
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

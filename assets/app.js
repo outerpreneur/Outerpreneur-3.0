@@ -176,3 +176,26 @@ document.querySelectorAll(".remove-item").forEach((remove) => {
       });
   });
 });
+
+// add to cart
+
+const addToCartForms = document.querySelectorAll("form[action='/cart/add']");
+
+addToCartForms.forEach((form) => {
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+    const id = form.querySelector("[name='id']").value;
+
+    axios
+      .post("/cart/add.js", {
+        id,
+        quantity: 1,
+      })
+      .then(() => {
+        axios.get("/cart.json").then((response) => {
+          const cartCount = response.data.item_count;
+          document.querySelector("#cart-count").textContent = cartCount;
+        });
+      });
+  });
+});

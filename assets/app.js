@@ -21,7 +21,6 @@ document.addEventListener("DOMContentLoaded", function () {
       const answer = this.parentNode.querySelector(".faq-answer");
       const plusButton = this.querySelector(".plus-button");
       const minusButton = this.querySelector(".minus-button");
-      console.log(plusButton);
 
       if (answer.classList.contains("hidden")) {
         answer.classList.remove("hidden");
@@ -61,27 +60,31 @@ document
   });
 
 function updateItemQuantity(key, quantity) {
-  console.log(key, quantity);
+  // console.log(key, quantity);
   axios
     .post("/cart/change.js", {
       id: key,
       quantity,
     })
     .then((response) => {
+      console.log(response.data);
       const format = document
         .querySelector("[data-money-format]")
         .getAttribute("data-money-format");
-      console.log(format);
       const totalDiscount = formatMoney(response.data.total_discount, format);
       const totalPrice = formatMoney(response.data.total_price, format);
       const item = response.data.items.find((item) => item.key === key);
       const itemPrice = formatMoney(item.final_line_price, format);
+      const cartCount = response.data.item_count;
 
       document.querySelector("#total-price").textContent = totalPrice;
+      document.querySelector("#subtotal").textContent = totalPrice;
       document.querySelector("#total-discount").textContent = totalDiscount;
-      document.querySelector("#subtotal").textContent = itemPrice;
+      document.querySelector(`[data-key="${key}"] #subtotal-item`).textContent =
+        itemPrice;
+      document.querySelector("#cart-count").textContent = cartCount;
 
-      console.log(totalDiscount, totalPrice, item);
+      // console.log(totalDiscount, totalPrice, item);
     });
 }
 
@@ -136,7 +139,6 @@ function formatMoney(cents, format) {
 document.querySelectorAll(".remove-item").forEach((remove) => {
   remove.addEventListener("click", function (event) {
     event.preventDefault();
-    // alert("Are you sure you want to remove this item?");
     const item = remove.closest(".cart-item");
     const key = item.getAttribute("data-key");
     axios
@@ -145,21 +147,32 @@ document.querySelectorAll(".remove-item").forEach((remove) => {
         quantity: 0,
       })
       .then((response) => {
-        item.remove();
-      });
-    //     const format = document
-    //       .querySelector("[data-money-format]")
-    //       .getAttribute("data-money-format");
-    //     console.log(format);
-    //     const totalDiscount = formatMoney(response.data.total_discount, format);
-    //     const totalPrice = formatMoney(response.data.total_price, format);
-    //     const item = response.data.items.find((item) => item.key === key);
-    //     const itemPrice = formatMoney(item.final_line_price, format);
+        if (response.data.item_count === 0) {
+          document.querySelector(".cart-item").innerHTML =
+            "<p class='text-center'>Your cart is empty</p>";
+          document.querySelector("#total-price").textContent = 0;
+          document.querySelector("#subtotal").textContent = 0;
+          document.querySelector("#total-discount").textContent = 0;
+          document.querySelector(
+            `[data-key="${key}"] #subtotal-item`
+          ).textContent = itemPrice;
+          document.querySelector("#cart-count").textContent = cartCount;
+        } else {
+          const format = document
+            .querySelector("[data-money-format]")
+            .getAttribute("data-money-format");
 
-    //     document.querySelector("#total-price").textContent = totalPrice;
-    //     document.querySelector("#total-discount").textContent = totalDiscount;
-    //     document.querySelector("#subtotal").textContent = itemPrice;
-    //     remove.closest(".cart-item").remove();
-    //   });
+          const totalDiscount = formatMoney(
+            response.data.total_discount,
+            format
+          );
+          const totalPrice = formatMoney(response.data.total_price, format);
+
+          document.querySelector("#total-discount").textContent = totalDiscount;
+          document.querySelector("#total-price").textContent = totalPrice;
+          document.querySelector("#subtotal").textContent = totalPrice;
+          item.remove();
+        }
+      });
   });
 });

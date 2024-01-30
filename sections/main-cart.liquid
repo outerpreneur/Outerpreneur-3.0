@@ -87,13 +87,13 @@
                                 +
                               </button>
                             </div>
-                            <div class="flex flex-col items-center justify-between">
-                              <p class="text-sm font-medium leading-5 text-gray-700">Qty</p>
+                            <div class="flex items-center justify-between flex-col">
+                              {% comment %} <p class="text-sm font-medium leading-5 text-gray-700">Subtotal</p> {% endcomment %}
                               <p
-                                id="display-quantity-{{ forloop.index }}"
-                                class="text-sm font-medium leading-5 text-gray-700"
+                                id="subtotal-item"
+                                class="text-sm font-medium leading-5 text-gray-500"
                               >
-                                {{- item.quantity -}}
+                                {{- item.final_line_price | money -}}
                               </p>
                             </div>
 
@@ -185,7 +185,10 @@
                 <dd class="text-sm font-medium text-gray-900" id="total-discount">{{ cart.total_discount | money }}</dd>
               </div>
               <div class="flex items-center justify-between border-t border-gray-200 pt-4">
-                <dt class="text-base font-medium text-gray-900">Order total</dt>
+                <dt class="text-base font-medium text-gray-900">
+                  Order total<span class="text-gray-500 text-sm ml-2">(exc shipping)</span>
+                </dt>
+
                 <dd class="text-base font-medium text-gray-900" id="total-price">{{ cart.total_price | money }}</dd>
               </div>
             </dl>

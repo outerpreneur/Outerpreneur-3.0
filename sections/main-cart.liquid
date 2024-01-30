@@ -20,7 +20,7 @@
 </div>
 
 {% form 'cart', cart %}
-  <div class="">
+  <div class="cart" data-money-format="{{ shop.money_format }}">
     <div class="mx-auto max-w-2xl px-4 pb-24 pt-16 sm:px-6 lg:max-w-7xl lg:px-8">
       <h1 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Shopping Cart</h1>
       <div class="mt-12 lg:grid lg:grid-cols-12 lg:items-start lg:gap-x-12 xl:gap-x-16">
@@ -31,7 +31,7 @@
             <h2 id="cart-heading" class="sr-only">Items in your shopping cart</h2>
             <ul role="list" class="divide-y divide-gray-200 border-b border-t border-gray-200">
               {% for item in cart.items %}
-                <li class="flex py-6 sm:py-10">
+                <li class="flex py-6 sm:py-10 cart-item" data-key="{{ item.key }}">
                   <div class="flex-shrink-0">
                     <a href="{{ item.url }}">
                       <img
@@ -64,27 +64,41 @@
                       <div class="mt-4 sm:mt-0 sm:pr-9">
                         <label for="quantity-{{ forloop.index }}" class="sr-only">Quantity, {{ item.title }}</label>
                         <div class="flex items-center h-10">
-                          <div class="mt-4 sm:mt-0 sm:pr-9 flex">
+                          <div class="mt-4 sm:mt-0 sm:pr-9 flex gap-6">
                             <label for="quantity-{{ forloop.index }}" class="sr-only">Quantity, {{ item.title }}</label>
-                            <select
-                              id="quantity-{{ forloop.index }}"
-                              name="quantity-{{ forloop.index }}"
-                              class="max-w-full rounded-md border border-gray-300 py-1.5 text-left text-base font-medium leading-5 text-gray-700 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500 sm:text-sm"
-                            >
-                              {% for i in (1..item.variant.inventory_quantity) %}
-                                <option value="{{ i }}">{{ i }}</option>
-                              {% endfor %}
-                            </select>
-                            <button
-                              type="button"
-                              class="ml-2 bg-indigo-500 text-white rounded-md px-4 py-2"
-                              onclick="cart_count += parseInt(document.getElementById('quantity-{{ forloop.index }}').value)"
-                            >
-                              Add to Cart
-                            </button>
+                            <div class="flex items-center">
+                              <button
+                                id="minus-{{ forloop.index }}"
+                                class="border border-gray-300 rounded-md px-2 py-1.5 text-base font-medium leading-5 text-gray-700 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500 sm:text-sm"
+                              >
+                                -
+                              </button>
+                              <input
+                                type="text"
+                                id="quantity-{{ forloop.index }}"
+                                name="quantity-{{ forloop.index }}"
+                                value="{{ item.quantity }}"
+                                class="border w-10 border-gray-300 rounded-md px-2 py-1.5 text-center text-base font-medium leading-5 text-gray-700 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500 sm:text-sm mx-2"
+                              >
+                              <button
+                                id="plus-{{ forloop.index }}"
+                                class="border border-gray-300 rounded-md px-2 py-1.5 text-base font-medium leading-5 text-gray-700 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500 sm:text-sm"
+                              >
+                                +
+                              </button>
+                            </div>
+                            <div class="flex flex-col items-center justify-between">
+                              <p class="text-sm font-medium leading-5 text-gray-700">Qty</p>
+                              <p
+                                id="display-quantity-{{ forloop.index }}"
+                                class="text-sm font-medium leading-5 text-gray-700"
+                              >
+                                {{- item.quantity -}}
+                              </p>
+                            </div>
 
                             <div class="absolute right-0 top-0">
-                              <a href="{{ item.url_to_remove }}">
+                              <a href="{{ item.url_to_remove }}" class="remove-item" id="remove-item">
                                 <button type="button" class="-m-2 inline-flex p-2 text-gray-400 hover:text-gray-500">
                                   <span class="sr-only">Remove</span>
                                   <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
@@ -94,17 +108,6 @@
                               </a>
                             </div>
                           </div>
-                        </div>
-
-                        <div class="absolute right-0 top-0">
-                          <a href="{{ item.url_to_remove }}">
-                            <button type="button" class="-m-2 inline-flex p-2 text-gray-400 hover:text-gray-500">
-                              <span class="sr-only">Remove</span>
-                              <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                                <path d="M6.28 5.22a.75.75 0 00-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 101.06 1.06L10 11.06l3.72 3.72a.75.75 0 101.06-1.06L11.06 10l3.72-3.72a.75.75 0 00-1.06-1.06L10 8.94 6.28 5.22z" />
-                              </svg>
-                            </button>
-                          </a>
                         </div>
                       </div>
                     </div>
@@ -153,7 +156,7 @@
             <dl class="mt-6 space-y-4">
               <div class="flex items-center justify-between">
                 <dt class="text-sm text-gray-600">Subtotal</dt>
-                <dd class="text-sm font-medium text-gray-900">
+                <dd class="text-sm font-medium text-gray-900" id="subtotal">
                   {{ cart.items_subtotal_price | money }}
                 </dd>
               </div>
@@ -179,11 +182,11 @@
                     </svg>
                   </a>
                 </dt>
-                <dd class="text-sm font-medium text-gray-900">{{ cart.total_discount }}</dd>
+                <dd class="text-sm font-medium text-gray-900" id="total-discount">{{ cart.total_discount | money }}</dd>
               </div>
               <div class="flex items-center justify-between border-t border-gray-200 pt-4">
                 <dt class="text-base font-medium text-gray-900">Order total</dt>
-                <dd class="text-base font-medium text-gray-900">{{ cart.total_price | money }}</dd>
+                <dd class="text-base font-medium text-gray-900" id="total-price">{{ cart.total_price | money }}</dd>
               </div>
             </dl>
 
@@ -200,7 +203,6 @@
         {% endif %}
       </div>
     </div>
-    <button type="submit" name="update">Update</button>
   </div>
 {% endform %}
 

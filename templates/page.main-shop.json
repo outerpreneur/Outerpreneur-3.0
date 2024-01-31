@@ -1,8 +1,23 @@
 {
   "sections": {
     "main": {
-      "type": "main-shop"
+      "type": "main-shop",
+      "settings": {
+      }
+    },
+    "favorites_section_3wHMMf": {
+      "type": "favorites-section",
+      "settings": {
+        "heading": "Our Favorites",
+        "link": "Browse all favorites",
+        "product_1": "bamboo-straws",
+        "product_2": "",
+        "product_3": ""
+      }
     }
   },
-  "order": ["main"]
+  "order": [
+    "main",
+    "favorites_section_3wHMMf"
+  ]
 }

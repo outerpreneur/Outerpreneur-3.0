@@ -5,6 +5,24 @@
       "settings": {
       }
     },
+    "category_6EU8BQ": {
+      "type": "category",
+      "settings": {
+        "heading": "Shop by Category",
+        "link": "Browse all categories",
+        "subheading": "Browse all categories",
+        "image1": "shopify:\/\/shop_images\/raisham-waheed-WK7mhTOYmWY-unsplash-scaled_1_ef266cb0-66be-4c3b-af4f-ab24c99c202d.jpg",
+        "image1Heading": "New Arrivals",
+        "image1Link": "Shop now",
+        "image1LinkUrl": "",
+        "image2Heading": "Accessories",
+        "image2Link": "Shop now",
+        "image2LinkUrl": "",
+        "image3Heading": "Workspace",
+        "image3Link": "Shop now",
+        "image3LinkUrl": ""
+      }
+    },
     "favorites_section_3wHMMf": {
       "type": "favorites-section",
       "settings": {
@@ -18,6 +36,7 @@
   },
   "order": [
     "main",
+    "category_6EU8BQ",
     "favorites_section_3wHMMf"
   ]
 }

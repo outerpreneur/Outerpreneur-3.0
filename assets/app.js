@@ -67,7 +67,7 @@ function updateItemQuantity(key, quantity) {
       quantity,
     })
     .then((response) => {
-      console.log(response.data);
+      // console.log(response.data);
       const format = document
         .querySelector("[data-money-format]")
         .getAttribute("data-money-format");
@@ -84,7 +84,7 @@ function updateItemQuantity(key, quantity) {
         itemPrice;
       document.querySelector("#cart-count").textContent = cartCount;
 
-      // console.log(totalDiscount, totalPrice, item);
+      // console.log(totalDiscount, totalPrice, item, itemPrice, cartCount);
     });
 }
 
@@ -141,6 +141,7 @@ document.querySelectorAll(".remove-item").forEach((remove) => {
     event.preventDefault();
     const item = remove.closest(".cart-item");
     const key = item.getAttribute("data-key");
+
     axios
       .post("/cart/change.js", {
         id: key,
@@ -153,10 +154,12 @@ document.querySelectorAll(".remove-item").forEach((remove) => {
           document.querySelector("#total-price").textContent = 0;
           document.querySelector("#subtotal").textContent = 0;
           document.querySelector("#total-discount").textContent = 0;
+          console.log("hello-1");
+          document.querySelector("#cart-count").textContent = 0;
+
           document.querySelector(
             `[data-key="${key}"] #subtotal-item`
           ).textContent = itemPrice;
-          document.querySelector("#cart-count").textContent = cartCount;
         } else {
           const format = document
             .querySelector("[data-money-format]")
@@ -167,10 +170,14 @@ document.querySelectorAll(".remove-item").forEach((remove) => {
             format
           );
           const totalPrice = formatMoney(response.data.total_price, format);
+          const cartCount = response.data.item_count;
 
           document.querySelector("#total-discount").textContent = totalDiscount;
           document.querySelector("#total-price").textContent = totalPrice;
           document.querySelector("#subtotal").textContent = totalPrice;
+          console.log(cartCount);
+          document.querySelector("#cart-count").textContent = cartCount;
+
           item.remove();
         }
       });

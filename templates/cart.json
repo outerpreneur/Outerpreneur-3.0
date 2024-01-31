@@ -1,1 +1,15 @@
-{"sections":{"main":{"type":"main-cart","settings":{"background_image":"shopify:\/\/shop_images\/raisham-waheed-WK7mhTOYmWY-unsplash-scaled.jpg","position_image":"center","heading":"Cart","subheading":"Complete your purchase","description":""}}},"order":["main"]}
+{
+  "sections": {
+    "main": {
+      "type": "main-cart",
+      "settings": {
+        "background_image": "shopify://shop_images/raisham-waheed-WK7mhTOYmWY-unsplash-scaled.jpg",
+        "position_image": "center",
+        "heading": "Cart",
+        "subheading": "Complete your purchase",
+        "description": ""
+      }
+    }
+  },
+  "order": ["main"]
+}

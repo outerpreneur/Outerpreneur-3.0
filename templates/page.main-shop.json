@@ -23,6 +23,16 @@
         "image3LinkUrl": ""
       }
     },
+    "feature_section_xw3YyX": {
+      "type": "feature-section",
+      "settings": {
+        "heading": "Long-term thinking",
+        "content": "We're committed to responsible, sustainable, and ethical manufacturing. Our small-scale approach allows us to focus on quality and reduce our impact. We're doing our best to delay the inevitable heat-death of the universe.",
+        "image": "shopify:\/\/shop_images\/Untitled-design-485-scaled.jpg",
+        "link": "",
+        "link_text": "Read our story"
+      }
+    },
     "favorites_section_3wHMMf": {
       "type": "favorites-section",
       "settings": {
@@ -37,6 +47,7 @@
   "order": [
     "main",
     "category_6EU8BQ",
+    "feature_section_xw3YyX",
     "favorites_section_3wHMMf"
   ]
 }

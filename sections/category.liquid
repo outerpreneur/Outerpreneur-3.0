@@ -1,0 +1,196 @@
+<div class="bg-white">
+  <!-- Category section -->
+  <section aria-labelledby="category-heading" class="bg-gray-50">
+    <div class="mx-auto max-w-7xl px-4 py-24 sm:px-6 sm:py-32 lg:px-8">
+      <div class="sm:flex sm:items-baseline sm:justify-between">
+        <h2 id="category-heading" class="text-2xl font-bold tracking-tight text-gray-900">
+          {{ section.settings.heading }}
+        </h2>
+        <a
+          href="{{ section.settings.link }}"
+          class="hidden text-sm font-semibold text-indigo-600 hover:text-indigo-500 sm:block"
+        >
+          {{ section.settings.subheading }}
+          <span aria-hidden="true"> &rarr;</span>
+        </a>
+      </div>
+
+      <div class="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:grid-rows-2 sm:gap-x-6 lg:gap-8">
+        <div class="group aspect-h-1 aspect-w-2 overflow-hidden rounded-lg sm:aspect-h-1 sm:aspect-w-1 sm:row-span-2">
+          <img
+            src="{{  section.settings.image1 | image_url }}"
+            width=""
+            height=""
+            loading="eager"
+            alt="Two models wearing women's black cotton crewneck tee and off-white cotton crewneck tee."
+            class="object-cover object-center group-hover:opacity-75"
+          >
+          <div aria-hidden="true" class="bg-gradient-to-b from-transparent to-black opacity-50"></div>
+          <div class="flex items-end p-6">
+            <div>
+              <h3 class="font-semibold text-white">
+                <a href="#">
+                  <span class="absolute inset-0"></span>
+                  {{ section.settings.image1Heading }}
+                </a>
+              </h3>
+              <p aria-hidden="true" class="mt-1 text-sm text-white">
+                {{ section.settings.image1Link }}
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="group aspect-h-1 aspect-w-2 overflow-hidden rounded-lg sm:aspect-none sm:relative sm:h-full">
+          <img
+            src="{{  section.settings.image2 | image_url }}"
+            alt="Wooden shelf with gray and olive drab green baseball caps, next to wooden clothes hanger with sweaters."
+            class="object-cover object-center group-hover:opacity-75 sm:absolute sm:inset-0 sm:h-full sm:w-full"
+            width=""
+            height=""
+            loading="eager"
+          >
+          <div
+            aria-hidden="true"
+            class="bg-gradient-to-b from-transparent to-black opacity-50 sm:absolute sm:inset-0"
+          ></div>
+          <div class="flex items-end p-6 sm:absolute sm:inset-0">
+            <div>
+              <h3 class="font-semibold text-white">
+                <a href="#">
+                  <span class="absolute inset-0"></span>
+                  {{ section.settings.image2Heading }}
+                </a>
+              </h3>
+              <p aria-hidden="true" class="mt-1 text-sm text-white">
+                {{ section.settings.image2Link }}
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="group aspect-h-1 aspect-w-2 overflow-hidden rounded-lg sm:aspect-none sm:relative sm:h-full">
+          <img
+            src="{{  section.settings.image3 | image_url }}"
+            alt="Walnut desk organizer set with white modular trays, next to porcelain mug on wooden desk."
+            class="object-cover object-center group-hover:opacity-75 sm:absolute sm:inset-0 sm:h-full sm:w-full"
+          >
+          <div
+            aria-hidden="true"
+            class="bg-gradient-to-b from-transparent to-black opacity-50 sm:absolute sm:inset-0"
+          ></div>
+          <div class="flex items-end p-6 sm:absolute sm:inset-0">
+            <div>
+              <h3 class="font-semibold text-white">
+                <a href="#">
+                  <span class="absolute inset-0"></span>
+                  {{ section.settings.image3Heading }}
+                </a>
+              </h3>
+              <p aria-hidden="true" class="mt-1 text-sm text-white">
+                {{ section.settings.image3Link }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-6 sm:hidden">
+        <a href="#" class="block text-sm font-semibold text-indigo-600 hover:text-indigo-500">
+          {{ section.settings.subheading }}
+          <span aria-hidden="true"> &rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+</div>
+
+{% schema %}
+{
+  "name": "Featured Category",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Shop by Category"
+    },
+    {
+      "type": "text",
+      "id": "link",
+      "label": "Link",
+      "default": "Browse all categories"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "subheading",
+      "default": "Browse all categories"
+    },
+    {
+      "type": "image_picker",
+      "id": "image1",
+      "label": "Image 1"
+    },
+    {
+      "type": "text",
+      "id": "image1Heading",
+      "label": "Image 1 Heading",
+      "default": "New Arrivals"
+    },
+    {
+      "type": "text",
+      "id": "image1Link",
+      "label": "Image 1 Link",
+      "default": "Shop now"
+    },
+    {
+      "type": "url",
+      "id": "image1LinkUrl",
+      "label": "Image 1 Link URL"
+    },
+    {
+      "type": "image_picker",
+      "id": "image2",
+      "label": "Image 2"
+    },
+    {
+      "type": "text",
+      "id": "image2Heading",
+      "label": "Image 2 Heading",
+      "default": "Accessories"
+    },
+    {
+      "type": "text",
+      "id": "image2Link",
+      "label": "Image 2 Link",
+      "default": "Shop now"
+    },
+    {
+      "type": "url",
+      "id": "image2LinkUrl",
+      "label": "Image 2 Link URL"
+    },
+    {
+      "type": "image_picker",
+      "id": "image3",
+      "label": "Image 3"
+    },
+    {
+      "type": "text",
+      "id": "image3Heading",
+      "label": "Image 3 Heading",
+      "default": "Workspace"
+    },
+    {
+      "type": "text",
+      "id": "image3Link",
+      "label": "Image 3 Link",
+      "default": "Shop now"
+    },
+    {
+      "type": "url",
+      "id": "image3LinkUrl",
+      "label": "Image 3 Link URL"
+    }
+  ]
+}
+{% endschema %}

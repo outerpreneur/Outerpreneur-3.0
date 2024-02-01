@@ -3,9 +3,15 @@
     "hero_gallery_8wfgY3": {
       "type": "hero-gallery",
       "settings": {
-        "title": "",
-        "subtitle": "",
-        "button": "",
+        "title": "Summer styles are finally here",
+        "subtitle": "This year, our new summer collection will shelter you from the harsh elements of a world that doesn't care if you live or die.",
+        "image1": "shopify:\/\/shop_images\/t-shirt-mockup-of-a-slim-tattooed-man-at-the-beach-26751_331bd9dd-ad15-4a9d-b97f-76aeafd4d80e.png",
+        "image2": "shopify:\/\/shop_images\/t-shirt-mockup-of-a-woman-taking-a-walk-by-the-sea-m10092-r-el2-2_4434166e-b7b2-4168-882f-321289349463.png",
+        "image3": "shopify:\/\/shop_images\/t-shirt-mockup-of-a-smiling-man-with-sunglasses-by-the-beach-26752.jpg",
+        "image4": "shopify:\/\/shop_images\/smiling-lovely-woman-wearing-a-t-shirt-mockup-and-sunglasses-at-the-beach-a12725-2_copy.jpg",
+        "image5": "shopify:\/\/shop_images\/woman-in-sari-on-beach.jpg",
+        "image6": "shopify:\/\/shop_images\/553b883a65b42bb8dad402f4c1d7a31b.jpg",
+        "button": "Shop Collection",
         "gradient_scheme": "bg-gradient-to-r from-cyan-500 to-blue-500",
         "link": ""
       }

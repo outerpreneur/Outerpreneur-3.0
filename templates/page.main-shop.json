@@ -60,7 +60,7 @@
     "main": {
       "type": "sale-banner",
       "settings": {
-        "heading": "Final Stock. Up to 50% off.",
+        "heading": "Final Stock. \nUp to 50% off.",
         "text_link": "Shop the Sale",
         "url": "",
         "image1": "shopify:\/\/shop_images\/15636813773738292964_2048.jpg",

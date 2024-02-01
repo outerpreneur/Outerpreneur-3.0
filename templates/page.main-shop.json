@@ -1,9 +1,14 @@
 {
   "sections": {
-    "main": {
-      "type": "sale-banner",
-      "disabled": true,
-      "settings": {}
+    "hero_gallery_8wfgY3": {
+      "type": "hero-gallery",
+      "settings": {
+        "title": "",
+        "subtitle": "",
+        "button": "",
+        "gradient_scheme": "bg-gradient-to-r from-cyan-500 to-blue-500",
+        "link": ""
+      }
     },
     "category_6EU8BQ": {
       "type": "category",
@@ -11,7 +16,7 @@
         "heading": "Shop by Category",
         "link": "Browse all categories",
         "subheading": "Browse all categories",
-        "image1": "shopify://shop_images/raisham-waheed-WK7mhTOYmWY-unsplash-scaled_1_ef266cb0-66be-4c3b-af4f-ab24c99c202d.jpg",
+        "image1": "shopify:\/\/shop_images\/raisham-waheed-WK7mhTOYmWY-unsplash-scaled_1_ef266cb0-66be-4c3b-af4f-ab24c99c202d.jpg",
         "image1Heading": "New Arrivals",
         "image1Link": "Shop now",
         "image1LinkUrl": "",
@@ -28,7 +33,7 @@
       "settings": {
         "heading": "Long-term thinking",
         "content": "We're committed to responsible, sustainable, and ethical manufacturing. Our small-scale approach allows us to focus on quality and reduce our impact. We're doing our best to delay the inevitable heat-death of the universe.",
-        "image": "shopify://shop_images/Untitled-design-485-scaled.jpg",
+        "image": "shopify:\/\/shop_images\/Untitled-design-485-scaled.jpg",
         "link": "",
         "link_text": "Read our story"
       }
@@ -42,12 +47,21 @@
         "product_2": "",
         "product_3": ""
       }
+    },
+    "main": {
+      "type": "sale-banner",
+      "settings": {
+        "heading": "Final Stock. Up to 50% off.",
+        "text_link": "Shop the Sale",
+        "url": ""
+      }
     }
   },
   "order": [
-    "main",
+    "hero_gallery_8wfgY3",
     "category_6EU8BQ",
     "feature_section_xw3YyX",
-    "favorites_section_3wHMMf"
+    "favorites_section_3wHMMf",
+    "main"
   ]
 }

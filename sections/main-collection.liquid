@@ -393,324 +393,11 @@
     </div>
 
     <main class="mx-auto max-w-2xl px-4 lg:max-w-7xl lg:px-8">
-      <div class="border-b border-gray-200 pb-10 pt-24">
-        <h1 class="text-4xl font-bold tracking-tight text-gray-900">{{ collection.title }}</h1>
-        <p class="mt-4 text-base text-gray-500">
-          {{ collection.description }}
-        </p>
-      </div>
-
-      <div class="pb-24 pt-12 lg:grid lg:grid-cols-3 lg:gap-x-8 xl:grid-cols-4">
-        <aside>
-          <h2 class="sr-only">Filters</h2>
-
-          <!-- Mobile filter dialog toggle, controls the 'mobileFilterDialogOpen' state. -->
-          <button type="button" class="inline-flex items-center lg:hidden">
-            <span class="text-sm font-medium text-gray-700">Filters</span>
-            <svg
-              class="ml-1 h-5 w-5 flex-shrink-0 text-gray-400"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-              aria-hidden="true"
-            >
-              <path d="M10.75 4.75a.75.75 0 00-1.5 0v4.5h-4.5a.75.75 0 000 1.5h4.5v4.5a.75.75 0 001.5 0v-4.5h4.5a.75.75 0 000-1.5h-4.5v-4.5z" />
-            </svg>
-          </button>
-
-          <div class="hidden lg:block">
-            <form class="space-y-10 divide-y divide-gray-200">
-              <div>
-                <fieldset>
-                  <legend class="block text-sm font-medium text-gray-900">Color</legend>
-                  <div class="space-y-3 pt-6">
-                    <div class="flex items-center">
-                      <input
-                        id="color-0"
-                        name="color[]"
-                        value="white"
-                        type="checkbox"
-                        class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
-                      >
-                      <label for="color-0" class="ml-3 text-sm text-gray-600">White</label>
-                    </div>
-                    <div class="flex items-center">
-                      <input
-                        id="color-1"
-                        name="color[]"
-                        value="beige"
-                        type="checkbox"
-                        class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
-                      >
-                      <label for="color-1" class="ml-3 text-sm text-gray-600">Beige</label>
-                    </div>
-                    <div class="flex items-center">
-                      <input
-                        id="color-2"
-                        name="color[]"
-                        value="blue"
-                        type="checkbox"
-                        class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
-                      >
-                      <label for="color-2" class="ml-3 text-sm text-gray-600">Blue</label>
-                    </div>
-                    <div class="flex items-center">
-                      <input
-                        id="color-3"
-                        name="color[]"
-                        value="brown"
-                        type="checkbox"
-                        class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
-                      >
-                      <label for="color-3" class="ml-3 text-sm text-gray-600">Brown</label>
-                    </div>
-                    <div class="flex items-center">
-                      <input
-                        id="color-4"
-                        name="color[]"
-                        value="green"
-                        type="checkbox"
-                        class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
-                      >
-                      <label for="color-4" class="ml-3 text-sm text-gray-600">Green</label>
-                    </div>
-                    <div class="flex items-center">
-                      <input
-                        id="color-5"
-                        name="color[]"
-                        value="purple"
-                        type="checkbox"
-                        class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
-                      >
-                      <label for="color-5" class="ml-3 text-sm text-gray-600">Purple</label>
-                    </div>
-                  </div>
-                </fieldset>
-              </div>
-              <div class="pt-10">
-                <fieldset>
-                  <legend class="block text-sm font-medium text-gray-900">Category</legend>
-                  <div class="space-y-3 pt-6">
-                    <div class="flex items-center">
-                      <input
-                        id="category-0"
-                        name="category[]"
-                        value="new-arrivals"
-                        type="checkbox"
-                        class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
-                      >
-                      <label for="category-0" class="ml-3 text-sm text-gray-600">All New Arrivals</label>
-                    </div>
-                    <div class="flex items-center">
-                      <input
-                        id="category-1"
-                        name="category[]"
-                        value="tees"
-                        type="checkbox"
-                        class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
-                      >
-                      <label for="category-1" class="ml-3 text-sm text-gray-600">Tees</label>
-                    </div>
-                    <div class="flex items-center">
-                      <input
-                        id="category-2"
-                        name="category[]"
-                        value="crewnecks"
-                        type="checkbox"
-                        class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
-                      >
-                      <label for="category-2" class="ml-3 text-sm text-gray-600">Crewnecks</label>
-                    </div>
-                    <div class="flex items-center">
-                      <input
-                        id="category-3"
-                        name="category[]"
-                        value="sweatshirts"
-                        type="checkbox"
-                        class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
-                      >
-                      <label for="category-3" class="ml-3 text-sm text-gray-600">Sweatshirts</label>
-                    </div>
-                    <div class="flex items-center">
-                      <input
-                        id="category-4"
-                        name="category[]"
-                        value="pants-shorts"
-                        type="checkbox"
-                        class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
-                      >
-                      <label for="category-4" class="ml-3 text-sm text-gray-600">Pants &amp; Shorts</label>
-                    </div>
-                  </div>
-                </fieldset>
-              </div>
-              <div class="pt-10">
-                <fieldset>
-                  <legend class="block text-sm font-medium text-gray-900">Sizes</legend>
-                  <div class="space-y-3 pt-6">
-                    <div class="flex items-center">
-                      <input
-                        id="sizes-0"
-                        name="sizes[]"
-                        value="xs"
-                        type="checkbox"
-                        class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
-                      >
-                      <label for="sizes-0" class="ml-3 text-sm text-gray-600">XS</label>
-                    </div>
-                    <div class="flex items-center">
-                      <input
-                        id="sizes-1"
-                        name="sizes[]"
-                        value="s"
-                        type="checkbox"
-                        class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
-                      >
-                      <label for="sizes-1" class="ml-3 text-sm text-gray-600">S</label>
-                    </div>
-                    <div class="flex items-center">
-                      <input
-                        id="sizes-2"
-                        name="sizes[]"
-                        value="m"
-                        type="checkbox"
-                        class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
-                      >
-                      <label for="sizes-2" class="ml-3 text-sm text-gray-600">M</label>
-                    </div>
-                    <div class="flex items-center">
-                      <input
-                        id="sizes-3"
-                        name="sizes[]"
-                        value="l"
-                        type="checkbox"
-                        class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
-                      >
-                      <label for="sizes-3" class="ml-3 text-sm text-gray-600">L</label>
-                    </div>
-                    <div class="flex items-center">
-                      <input
-                        id="sizes-4"
-                        name="sizes[]"
-                        value="xl"
-                        type="checkbox"
-                        class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
-                      >
-                      <label for="sizes-4" class="ml-3 text-sm text-gray-600">XL</label>
-                    </div>
-                    <div class="flex items-center">
-                      <input
-                        id="sizes-5"
-                        name="sizes[]"
-                        value="2xl"
-                        type="checkbox"
-                        class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
-                      >
-                      <label for="sizes-5" class="ml-3 text-sm text-gray-600">2XL</label>
-                    </div>
-                  </div>
-                </fieldset>
-              </div>
-            </form>
-          </div>
-        </aside>
-
-        <section aria-labelledby="product-heading" class="mt-6 lg:col-span-2 lg:mt-0 xl:col-span-3">
-          <h2 id="product-heading" class="sr-only">Products</h2>
-
-          <div class="grid grid-cols-1 gap-y-4 sm:grid-cols-2 sm:gap-x-6 sm:gap-y-10 lg:gap-x-8 xl:grid-cols-3">
-            {% for product in collection.products %}
-              <div class="group relative flex flex-col overflow-hidden rounded-lg border border-gray-200 bg-white">
-                <div class="aspect-h-4 aspect-w-3 bg-gray-200 sm:aspect-none group-hover:opacity-75 sm:h-96">
-                  <a href="{{ product.url }}">
-                    <img
-                      src="{{ product.featured_image | image_url }}"
-                      width=""
-                      height=""
-                      loading="lazy"
-                      alt="Eight shirts arranged on table in black, olive, grey, blue, white, red, mustard, and green."
-                      class="h-full w-full object-cover object-center sm:h-full sm:w-full"
-                    >
-                  </a>
-                </div>
-                <div class="flex flex-1 flex-col space-y-2 p-4">
-                  <h3 class="text-sm font-medium text-gray-900">
-                    <a href="{{ product.url }}">
-                      <span aria-hidden="true" class="absolute inset-0"></span>
-                      {{  }}
-                    </a>
-                  </h3>
-                  <p class="text-sm text-gray-500">
-                    {{ product.description | strip_html | truncate: 100 }}
-                  </p>
-                  <div class="flex flex-1 flex-col justify-end">
-                    <p class="text-sm italic text-gray-500">8 colors</p>
-                    <p class="text-base font-medium text-gray-900">{{ product.price | money }}</p>
-                  </div>
-                </div>
-              </div>
-            {% endfor %}
-
-            <!-- More products... -->
-          </div>
-        </section>
-      </div>
-    </main>
-  </div>
-</div>
-
-{% comment %}
-  <div class="">
-    <div class="relative bg-gray-900">
-      <!-- Decorative image and overlay -->
-      <div aria-hidden="true" class="absolute inset-0 overflow-hidden">
-        {% if collection.image != blank %}
-          <img
-            src="{{ collection.image | image_url }}"
-            loading="eager"
-            width=""
-            height=""
-            alt=""
-            class="h-full w-full object-cover object-center"
-          >
-        {% else %}
-          <img
-            src="https://cdn.shopify.com/s/files/1/0549/1313/8748/files/pullover-hoodie-mockup-of-a-serious-woman-standing-at-the-beach-26829.jpg?v=1656047179"
-            loading="eager"
-            width=""
-            height=""
-            alt=""
-            class="h-full w-full object-cover object-center"
-          >
-        {% endif %}
-      </div>
-      <div aria-hidden="true" class="absolute inset-0 bg-gray-900 opacity-50"></div>
-
-      <div class="relative mx-auto flex max-w-3xl flex-col items-center px-6 py-32 text-center sm:py-64 lg:px-0">
-        <h1 class="text-4xl font-bold tracking-tight text-white lg:text-6xl">
-          {{ collection.title }}
-          {% if collection.products_count > 0 %}
-            <span class="text-gray-500 text-sm">({{ collection.products_count }})</span>
-          {% endif %}
-        </h1>
-        <p class="mt-4 text-xl text-white">
-          {% if collection.description != blank %}
-            {{ collection.description }}
-          {% else %}
-            The latest news, articles, and resources, sent to your inbox weekly.
-          {% endif %}
-        </p>
-      </div>
-    </div>
-  </div>
-
-  {% paginate collection.products by 6 %}
-    <div class="bg-white">
-      <div class="mx-auto max-w-7xl overflow-hidden px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
-        {% if collection.products_count == 0 %}
-          <p>There are no products in this collection.</p>
-        {% endif %}
-
-        <select id="sort-by">
+      <div class="border-b border-gray-200 pb-10 pt-24 flex">
+        <select
+          id="sort-by"
+          class="h-10 rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+        >
           {% assign sort_by = collection.sort_by | default: collection.default_sort_by %}
 
           {% for option in collection.sort_options %}
@@ -724,97 +411,317 @@
             </option>
           {% endfor %}
         </select>
-
-        <div class="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-3 lg:grid-cols-{{ section.settings.number_of_columns }} lg:gap-x-8">
-          {% for product in collection.products %}
-            <a href="{{ product.url }}" class="group text-sm">
-              <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-100 group-hover:opacity-75">
-                <img
-                  src="{{ product.featured_image | image_url }}"
-                  width="500"
-                  height="500"
-                  loading="lazy"
-                  alt="White fabric pouch with white zipper, black zipper pull, and black elastic loop."
-                  class="h-full w-full object-cover object-center"
-                >
-              </div>
-              <h3 class="mt-4 font-medium text-gray-900">{{ product.title }}</h3>
-              <p class="italic text-gray-500">
-                {% if product.variants.size > 1 %}
-                  {{ product.variants.size }} variants
-                {% else %}
-                  {{ product.variants.first.title }}
-                {% endif %}
-              </p>
-              <p class="mt-2 font-medium text-gray-900">
-                {% if product.variants.size > 1 %}
-                  From
-                {% endif %}
-                {{ product.price_min | money_with_currency }}
-              </p>
-            </a>
-          {% endfor %}
-
-          <!-- More products... -->
-        </div>
-
-        {% if paginate.pages > 1 %}
-          <nav class="flex items-center justify-between border-t border-gray-200 px-4 sm:px-0">
-            <div class="-mt-px flex w-0 flex-1">
-              {% if paginate.previous %}
-                <a
-                  href="{{ paginate.previous.url }}"
-                  class="inline-flex items-center border-t-2 border-transparent pr-1 pt-4 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
-                >
-                  <svg class="mr-3 h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                    <path fill-rule="evenodd" d="M18 10a.75.75 0 01-.75.75H4.66l2.1 1.95a.75.75 0 11-1.02 1.1l-3.5-3.25a.75.75 0 010-1.1l3.5-3.25a.75.75 0 111.02 1.1l-2.1 1.95h12.59A.75.75 0 0118 10z" clip-rule="evenodd" />
-                  </svg>
-                  Previous
-                </a>
-              {% endif %}
-            </div>
-            <div class="hidden md:-mt-px md:flex">
-              {% for page in paginate.pages %}
-                <a
-                  href="{{ page.url }}"
-                  class="inline-flex items-center border-t-2 border-transparent px-4 pt-4 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
-                >
-                  {{- page.title -}}
-                </a>
-              {% endfor %}
-            </div>
-            <div class="hidden md:-mt-px md:flex">
-              {% for page in paginate.pages %}
-                <a
-                  href="{{ page.url }}"
-                  class="inline-flex items-center border-t-2 border-transparent px-4 pt-4 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
-                >
-                  {{- page.title -}}
-                </a>
-              {% endfor %}
-              <span class="inline-flex items-center px-4 pt-4 text-sm font-medium text-gray-700">
-                Page {{ paginate.current_page }} of {{ paginate.pages | size }}
-              </span>
-            </div>
-            <div class="-mt-px flex w-0 flex-1 justify-end">
-              {% if paginate.next %}
-                <a
-                  href="{{ paginate.next.url }}"
-                  class="inline-flex items-center border-t-2 border-transparent pl-1 pt-4 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
-                >
-                  Next
-                  <svg class="ml-3 h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                    <path fill-rule="evenodd" d="M2 10a.75.75 0 01.75-.75h12.59l-2.1-1.95a.75.75 0 111.02-1.1l3.5 3.25a.75.75 0 010 1.1l-3.5 3.25a.75.75 0 11-1.02-1.1l2.1-1.95H2.75A.75.75 0 012 10z" clip-rule="evenodd" />
-                  </svg>
-                </a>
-              {% endif %}
-            </div>
-          </nav>
-        {% endif %}
       </div>
-    </div>
-  {% endpaginate %}
-{% endcomment %}
+
+      <div class="pb-24 pt-12 lg:grid lg:grid-cols-3 lg:gap-x-8 xl:grid-cols-4">
+        <aside>
+          <form>
+            {%- for filter in collection.filters -%}
+              <details>
+                <summary>
+                  <div>
+                    <span>{{ filter.label }}</span>
+
+                    {%- if filter.active_values.size > 0 -%}
+                      <span>({{ filter.active_values.size }})</span>
+                    {%- endif -%}
+                  </div>
+                </summary>
+
+                <div>
+                  <div>
+                    <p>{{ filter.active_values.size }} selected</p>
+                    {%- if filter.active_values.size > 0 -%}
+                      <p><a href="{{ filter.url_to_remove }}">Reset</a></p>
+                    {%- endif -%}
+                  </div>
+                  {%- case filter.type -%}
+                    {%- when 'boolean' -%}
+                      <ul>
+                        <li>
+                          <label for="Filter-{{ filter.param_name }}-{{ filter.true_value.value }}">
+                            <input
+                              type="checkbox"
+                              name="{{ filter.param_name }}"
+                              value="{{ filter.true_value.value }}"
+                              id="Filter-{{ filter.param_name }}"
+                              {% if filter.true_value.active -%}
+                                checked
+                              {%- endif %}
+                              {% if filter.true_value.count == 0 and filter.true_value.active == false -%}
+                                disabled
+                              {%- endif -%}
+                            >
+                            {{- filter.true_value.label -}}
+                          </label>
+                        </li>
+                        <li>
+                          <label for="Filter-{{ filter.param_name }}-{{ filter.false_value.value }}">
+                            <input
+                              type="checkbox"
+                              name="{{ filter.param_name }}"
+                              value="{{ filter.false_value.value }}"
+                              id="Filter-{{ filter.param_name }}"
+                              {% if filter.false_value.active -%}
+                                checked
+                              {%- endif %}
+                              {% if filter.false_value.count == 0 and filter.false_value.active == false -%}
+                                disabled
+                              {%- endif %}
+                            >
+                            {{- filter.false_value.label -}}
+                          </label>
+                        </li>
+                      </ul>
+
+                      <div>
+                        <input type="submit" value="Apply">
+                      </div>
+                    {%- when 'list' -%}
+                      <ul>
+                        {%- for filter_value in filter.values -%}
+                          <li>
+                            <label for="Filter-{{ filter.param_name }}-{{ forloop.index }}">
+                              <input
+                                type="checkbox"
+                                name="{{ filter_value.param_name }}"
+                                value="{{ filter_value.value }}"
+                                id="Filter-{{ filter.param_name }}-{{ forloop.index }}"
+                                {% if filter_value.active -%}
+                                  checked
+                                {%- endif %}
+                                {% if filter_value.count == 0 and filter_value.active == false -%}
+                                  disabled
+                                {%- endif %}
+                              >
+                              <span>
+                                {%- case filter_value.display.type -%}
+                                  {%- when 'colors' -%}
+                                    {% liquid
+                                      assign size_limit = filter_value.display.value.size | at_most: 4
+                                      assign rotation = '0deg'
+                                      if size_limit == 2
+                                        assign rotation = '45deg'
+                                      endif
+
+                                      assign angle_increment = 360 | divided_by: size_limit
+                                      assign angle = 0
+                                    %}
+                                    {%- capture conic_gradient -%}
+                                      {%- for color in filter_value.display.value limit: size_limit -%}
+                                        {{ color }} {{ angle }}deg{%- assign angle = angle | plus: angle_increment %} {{ angle }}deg{%- unless forloop.last %}, {%- endunless -%}
+                                      {%- endfor -%}
+                                    {%- endcapture -%}
+                                    <span
+                                      style="
+                                        width: 25px;
+                                        height: 25px;
+                                        border-radius: 50%;
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        background: conic-gradient({{ conic_gradient }}); transform: rotateZ({{ rotation }});
+                                      "
+                                    ></span>
+                                  {%- when 'image' -%}
+                                    {{
+                                      filter_value.display.value
+                                      | image_url: width: 25
+                                      | image_tag: alt: filter_value.display.value.alt
+                                    }}
+                                  {%- else -%}
+                                    <span class="visual-display__child"></span>
+                                {%- endcase -%}
+                              </span>
+                              {{ filter_value.label }}
+                            </label>
+                          </li>
+                        {%- endfor -%}
+                      </ul>
+
+                      <div>
+                        <input type="submit" value="Apply">
+                      </div>
+                    {%- when 'price_range' -%}
+                      <div class="filter-group-display__price-range">
+                        <div class="filter-group-display__price-range-from">
+                          <span>{{ cart.currency.symbol }}</span>
+
+                          <input
+                            name="{{ filter.min_value.param_name }}"
+                            id="Filter-{{ filter.min_value.param_name }}"
+                            {% if filter.min_value.value -%}
+                              value="{{ filter.min_value.value | money_without_currency | replace: ',', '' }}"
+                            {%- endif %}
+                            type="number"
+                            placeholder="0"
+                            min="0"
+                            max="{{ filter.range_max | money_without_currency | replace: ',', '' }}"
+                          >
+
+                          <label for="Filter-{{ filter.min_value.param_name }}">From</label>
+                        </div>
+                        <div class="filter-group-display__price-range-to">
+                          <span>{{ cart.currency.symbol }}</span>
+
+                          <input
+                            name="{{ filter.max_value.param_name }}"
+                            id="Filter-{{ filter.max_value.param_name }}"
+                            {% if filter.max_value.value -%}
+                              value="{{ filter.max_value.value | money_without_currency | replace: ',', '' }}"
+                            {%- endif %}
+                            type="number"
+                            placeholder="{{ filter.range_max | money_without_currency | replace: ',', '' }}"
+                            min="0"
+                            max="{{ filter.range_max | money_without_currency | replace: ',', '' }}"
+                          >
+
+                          <label for="Filter-{{ filter.max_value.param_name }}">To</label>
+                        </div>
+                      </div>
+
+                      <div class="filter-group-display__submit">
+                        <input type="submit" value="Apply">
+                      </div>
+                  {%- endcase -%}
+                </div>
+              </details>
+            {%- endfor -%}
+
+            <div>
+              <p><a href="{{ collection.url }}?sort_by={{ collection.sort_by }}">Clear all</a></p>
+
+              {%- for filter in collection.filters -%}
+                {%- if filter.type == 'price_range' -%}
+                  {%- if filter.min_value.value != null or filter.max_value.value != null -%}
+                    <p>
+                      <a href="{{ filter.url_to_remove }}">
+                        {%- assign min_value = filter.min_value.value | default: 0 -%}
+                        {%- assign max_value = filter.max_value.value | default: filter.range_max -%}
+                        {{ min_value | money }} - {{ max_value | money }} X
+                      </a>
+                    </p>
+                  {%- endif -%}
+                {%- else -%}
+                  {%- for filter_value in filter.active_values -%}
+                    <p>
+                      <a href="{{ filter_value.url_to_remove }}"> {{ filter.label }}: {{ filter_value.label }} X </a>
+                    </p>
+                  {%- endfor -%}
+                {%- endif -%}
+              {%- endfor -%}
+            </div>
+          </form>
+        </aside>
+
+        {% paginate collection.products by 6 %}
+          <section aria-labelledby="product-heading" class="mt-6 lg:col-span-2 lg:mt-0 xl:col-span-3">
+            <h2 id="product-heading" class="sr-only">Products</h2>
+
+            <div class="grid grid-cols-1 gap-y-4 sm:grid-cols-2 sm:gap-x-6 sm:gap-y-10 lg:gap-x-8 xl:grid-cols-3">
+              {% for product in collection.products %}
+                <div class="group relative flex flex-col overflow-hidden rounded-lg border border-gray-200 bg-white">
+                  <div class="aspect-h-4 aspect-w-3 bg-gray-200 sm:aspect-none group-hover:opacity-75 sm:h-96">
+                    <a href="{{ product.url }}">
+                      <img
+                        src="{{ product.featured_image | image_url }}"
+                        width=""
+                        height=""
+                        loading="lazy"
+                        alt="Eight shirts arranged on table in black, olive, grey, blue, white, red, mustard, and green."
+                        class="h-full w-full object-cover object-center sm:h-full sm:w-full"
+                      >
+                    </a>
+                  </div>
+                  <div class="flex flex-1 flex-col space-y-2 p-4">
+                    <h3 class="text-sm font-medium text-gray-900">
+                      <a href="{{ product.url }}">
+                        <span aria-hidden="true" class="absolute inset-0"></span>
+                        {{  }}
+                      </a>
+                    </h3>
+                    <p class="text-sm text-gray-500">
+                      {{ product.description | strip_html | truncate: 100 }}
+                    </p>
+                    <div class="flex flex-1 flex-col justify-end">
+                      <p class="text-sm italic text-gray-500">{{ product.variants | size }} Variants</p>
+                      <p class="text-base font-medium text-gray-900">{{ product.price | money }}</p>
+                    </div>
+                  </div>
+                </div>
+              {% endfor %}
+
+              <!-- More products... -->
+            </div>
+            {% if paginate.pages > 1 %}
+              <nav class="flex items-center justify-between border-t border-gray-200 px-4 sm:px-0">
+                <div class="-mt-px flex w-0 flex-1">
+                  {% if paginate.previous %}
+                    <a
+                      href="{{ paginate.previous.url }}"
+                      class="inline-flex items-center border-t-2 border-transparent pr-1 pt-4 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
+                    >
+                      <svg
+                        class="mr-3 h-5 w-5 text-gray-400"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                        aria-hidden="true"
+                      >
+                        <path fill-rule="evenodd" d="M18 10a.75.75 0 01-.75.75H4.66l2.1 1.95a.75.75 0 11-1.02 1.1l-3.5-3.25a.75.75 0 010-1.1l3.5-3.25a.75.75 0 111.02 1.1l-2.1 1.95h12.59A.75.75 0 0118 10z" clip-rule="evenodd" />
+                      </svg>
+                      Previous
+                    </a>
+                  {% endif %}
+                </div>
+                <div class="hidden md:-mt-px md:flex">
+                  {% for page in paginate.pages %}
+                    <a
+                      href="{{ page.url }}"
+                      class="inline-flex items-center border-t-2 border-transparent px-4 pt-4 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
+                    >
+                      {{- page.title -}}
+                    </a>
+                  {% endfor %}
+                </div>
+                <div class="hidden md:-mt-px md:flex">
+                  {% for page in paginate.pages %}
+                    <a
+                      href="{{ page.url }}"
+                      class="inline-flex items-center border-t-2 border-transparent px-4 pt-4 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
+                    >
+                      {{- page.title -}}
+                    </a>
+                  {% endfor %}
+                  <span class="inline-flex items-center px-4 pt-4 text-sm font-medium text-gray-700">
+                    Page {{ paginate.current_page }} of {{ paginate.pages | size }}
+                  </span>
+                </div>
+                <div class="-mt-px flex w-0 flex-1 justify-end">
+                  {% if paginate.next %}
+                    <a
+                      href="{{ paginate.next.url }}"
+                      class="inline-flex items-center border-t-2 border-transparent pl-1 pt-4 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
+                    >
+                      Next
+                      <svg
+                        class="ml-3 h-5 w-5 text-gray-400"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                        aria-hidden="true"
+                      >
+                        <path fill-rule="evenodd" d="M2 10a.75.75 0 01.75-.75h12.59l-2.1-1.95a.75.75 0 111.02-1.1l3.5 3.25a.75.75 0 010 1.1l-3.5 3.25a.75.75 0 11-1.02-1.1l2.1-1.95H2.75A.75.75 0 012 10z" clip-rule="evenodd" />
+                      </svg>
+                    </a>
+                  {% endif %}
+                </div>
+              </nav>
+            {% endif %}
+          </section>
+        {% endpaginate %}
+      </div>
+    </main>
+  </div>
+</div>
 
 {% javascript %}
   Shopify.queryParams = {};

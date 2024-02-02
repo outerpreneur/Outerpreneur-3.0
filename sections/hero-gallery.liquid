@@ -99,6 +99,7 @@
           </div>
 
           <a
+            href="{{ section.settings.link }}"
             class="inline-block rounded-md border {{ section.settings.gradient_scheme }} border-transparent  px-8 py-3 text-center cursor-pointer font-medium text-white hover:bg-gradient-to-br"
           >
             {{ section.settings.button }}
@@ -163,6 +164,12 @@
       "id": "button",
       "label": "Button"
     },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    },
+
     {
       "type": "select",
       "id": "gradient_scheme",

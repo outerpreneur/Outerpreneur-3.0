@@ -621,6 +621,12 @@
             <div class="grid grid-cols-1 gap-y-4 sm:grid-cols-2 sm:gap-x-6 sm:gap-y-10 lg:gap-x-8 xl:grid-cols-3">
               {% for product in collection.products %}
                 <div class="group relative flex flex-col overflow-hidden rounded-lg border border-gray-200 bg-white">
+                  <button
+                    class="quick-view-button  text-white cursor-pointer px-4 py-2 z-50 bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl left-1/2 transform "
+                    data-product-id="{{ product.id }}"
+                  >
+                    Quick View
+                  </button>
                   <div class="aspect-h-4 aspect-w-3 bg-gray-200 sm:aspect-none group-hover:opacity-75 sm:h-96">
                     <a href="{{ product.url }}">
                       <img
@@ -629,16 +635,14 @@
                         height=""
                         loading="lazy"
                         alt="Eight shirts arranged on table in black, olive, grey, blue, white, red, mustard, and green."
-                        class="h-full w-full object-cover object-center sm:h-full sm:w-full"
+                        class="h-full w-full relative object-cover object-center sm:h-full sm:w-full"
                       >
                     </a>
                   </div>
                   <div class="flex flex-1 flex-col space-y-2 p-4">
                     <h3 class="text-sm font-medium text-gray-900">
-                      <a href="{{ product.url }}">
-                        <span aria-hidden="true" class="absolute inset-0"></span>
-                        {{  }}
-                      </a>
+                      <span aria-hidden="true" class="absolute inset-0"></span>
+                      {{  }}
                     </h3>
                     <p class="text-sm text-gray-500">
                       {{ product.description | strip_html | truncate: 100 }}
@@ -721,6 +725,7 @@
       </div>
     </main>
   </div>
+  <div id="quickshow-container"></div>
 </div>
 
 {% javascript %}
@@ -745,6 +750,17 @@
 
     Shopify.queryParams.sort_by = value;
     location.search = new URLSearchParams(Shopify.queryParams).toString();
+  });
+
+  // Quick view
+
+  var quickViewButton = document.querySelectorAll('.quick-view-button');
+
+  quickViewButton.forEach((button) => {
+    button.addEventListener('click', () => {
+      console.log('clicked');
+      alert('clicked');
+    });
   });
 {% endjavascript %}
 

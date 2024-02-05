@@ -1,1 +1,94 @@
-{"type":"footer","name":"footer","sections":{"footer":{"type":"footer","blocks":{"menu_6azc4D":{"type":"menu","settings":{"title":"Support","menu":"footer"}},"menu_7wmzRP":{"type":"menu","settings":{"title":"Links","menu":"links"}},"menu_UMJbRP":{"type":"menu","settings":{"title":"Legal","menu":"policy-menu"}}},"block_order":["menu_6azc4D","menu_7wmzRP","menu_UMJbRP"],"settings":{"background_image":"shopify:\/\/shop_images\/raisham-waheed-WK7mhTOYmWY-unsplash-scaled_1_3972f741-8c09-476a-b6e9-ce4cc514b444.jpg","logo_footer":"shopify:\/\/shop_images\/Outerpreneur_simple_logo_76545563c_f6b141f4-af73-4c18-ac70-6cd1c2c62bb8.png","show_newsletter":true,"newsletter_title":"Subscribe to our newsletter","newsletter_description":"The latest news, articles, and resources, sent to your inbox weekly.","newsletter_placeholder":"Enter your email","newsletter_button":"Subscribe","gradient_scheme":"bg-gradient-to-r from-cyan-500 to-blue-500","show_social":true,"show_facebook":true,"show_instagram":true,"show_twitter":true,"show_github":true,"show_youtube":true,"facebook_url":"https:\/\/www.facebook.com\/outerpreneur","instagram_url":"https:\/\/www.instagram.com\/outerpreneur","twitter_url":"https:\/\/twitter.com\/outerpreneur1","github_url":"https:\/\/github.com\/outerpreneur","youtube_url":"https:\/\/www.youtube.com\/channel\/UC-tkdYers30vM5WiAFCwBgQ","show_about":true,"show_contact":true,"show_payment":true,"show_language":true,"show_copyright":true}}},"order":["footer"]}
+{
+  "type": "footer",
+  "name": "footer",
+  "sections": {
+    "1707152259a23f7f52": {
+      "type": "apps",
+      "blocks": {
+        "planet_shopify_planet_NTycxw": {
+          "type": "shopify:\/\/apps\/planet\/blocks\/shopify-planet\/12047591-3a2d-45cc-9dfd-2ce5eaa45dee",
+          "settings": {
+            "badgeMode": "info",
+            "showLogo": true,
+            "showMoreInfo": true,
+            "showStats": false,
+            "showProjects": false,
+            "backgroundColor": "#F1F8F5",
+            "textColor": "#1D4136",
+            "borderColor": "#95C9B4",
+            "fullWidth": true,
+            "marginTop": 0,
+            "marginBottom": 0,
+            "borderRadius": 4
+          }
+        }
+      },
+      "block_order": [
+        "planet_shopify_planet_NTycxw"
+      ],
+      "settings": {
+      }
+    },
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "menu_6azc4D": {
+          "type": "menu",
+          "settings": {
+            "title": "Support",
+            "menu": "footer"
+          }
+        },
+        "menu_7wmzRP": {
+          "type": "menu",
+          "settings": {
+            "title": "Links",
+            "menu": "links"
+          }
+        },
+        "menu_UMJbRP": {
+          "type": "menu",
+          "settings": {
+            "title": "Legal",
+            "menu": "policy-menu"
+          }
+        }
+      },
+      "block_order": [
+        "menu_6azc4D",
+        "menu_7wmzRP",
+        "menu_UMJbRP"
+      ],
+      "settings": {
+        "background_image": "shopify:\/\/shop_images\/raisham-waheed-WK7mhTOYmWY-unsplash-scaled_1_3972f741-8c09-476a-b6e9-ce4cc514b444.jpg",
+        "logo_footer": "shopify:\/\/shop_images\/Outerpreneur_simple_logo_76545563c_f6b141f4-af73-4c18-ac70-6cd1c2c62bb8.png",
+        "show_newsletter": true,
+        "newsletter_title": "Subscribe to our newsletter",
+        "newsletter_description": "The latest news, articles, and resources, sent to your inbox weekly.",
+        "newsletter_placeholder": "Enter your email",
+        "newsletter_button": "Subscribe",
+        "gradient_scheme": "bg-gradient-to-r from-cyan-500 to-blue-500",
+        "show_social": true,
+        "show_facebook": true,
+        "show_instagram": true,
+        "show_twitter": true,
+        "show_github": true,
+        "show_youtube": true,
+        "facebook_url": "https:\/\/www.facebook.com\/outerpreneur",
+        "instagram_url": "https:\/\/www.instagram.com\/outerpreneur",
+        "twitter_url": "https:\/\/twitter.com\/outerpreneur1",
+        "github_url": "https:\/\/github.com\/outerpreneur",
+        "youtube_url": "https:\/\/www.youtube.com\/channel\/UC-tkdYers30vM5WiAFCwBgQ",
+        "show_about": true,
+        "show_contact": true,
+        "show_language": true,
+        "show_copyright": true,
+        "show_payments": true
+      }
+    }
+  },
+  "order": [
+    "1707152259a23f7f52",
+    "footer"
+  ]
+}

@@ -404,7 +404,6 @@
     },
     "sale_banner_eepYWR": {
       "type": "sale-banner",
-      "disabled": true,
       "settings": {
         "heading": "Visit our store. \nUp to 20% off.",
         "text_link": "Shop",

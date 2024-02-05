@@ -280,6 +280,22 @@
       "settings": {
       }
     },
+    "pricing_kKHFah": {
+      "type": "pricing",
+      "disabled": true,
+      "settings": {
+        "title": "The right price for you, whoever you are",
+        "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit numquam eligendi quos odit doloribus molestiae voluptatum.",
+        "hobby_title": "Hobby",
+        "hobby_price": "$49",
+        "hobby_description": "Modi dolorem expedita deleniti. Corporis iste qui inventore pariatur adipisci vitae.",
+        "team_title": "Team",
+        "team_price": "$79",
+        "team_description": "Explicabo quo fugit vel facere ullam corrupti non dolores. Expedita eius sit sequi.",
+        "discounted_title": "Discounted",
+        "discounted_description": "Dolor dolores repudiandae doloribus. Rerum sunt aut eum. Odit omnis non voluptatem sunt eos nostrum."
+      }
+    },
     "testimonials_7XAY9J": {
       "type": "testimonials",
       "settings": {
@@ -444,22 +460,6 @@
       ],
       "settings": {
       }
-    },
-    "pricing_kKHFah": {
-      "type": "pricing",
-      "disabled": true,
-      "settings": {
-        "title": "The right price for you, whoever you are",
-        "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit numquam eligendi quos odit doloribus molestiae voluptatum.",
-        "hobby_title": "Hobby",
-        "hobby_price": "$49",
-        "hobby_description": "Modi dolorem expedita deleniti. Corporis iste qui inventore pariatur adipisci vitae.",
-        "team_title": "Team",
-        "team_price": "$79",
-        "team_description": "Explicabo quo fugit vel facere ullam corrupti non dolores. Expedita eius sit sequi.",
-        "discounted_title": "Discounted",
-        "discounted_description": "Dolor dolores repudiandae doloribus. Rerum sunt aut eum. Odit omnis non voluptatem sunt eos nostrum."
-      }
     }
   },
   "order": [
@@ -469,12 +469,12 @@
     "feature_list_Jyrw8M",
     "partners_section_PqdAAD",
     "timeline_section_3zBLbr",
+    "pricing_kKHFah",
     "testimonials_7XAY9J",
     "cta_section_cyaeUq",
     "faq_section_gTe7Fe",
     "about_fKpykr",
     "sale_banner_eepYWR",
-    "1707152697c3913bb9",
-    "pricing_kKHFah"
+    "1707152697c3913bb9"
   ]
 }

@@ -404,6 +404,7 @@
     },
     "sale_banner_eepYWR": {
       "type": "sale-banner",
+      "disabled": true,
       "settings": {
         "heading": "Visit our store. \nUp to 20% off.",
         "text_link": "Shop",
@@ -421,15 +422,16 @@
       "blocks": {
         "planet_shopify_planet_ckYWq4": {
           "type": "shopify:\/\/apps\/planet\/blocks\/shopify-planet\/12047591-3a2d-45cc-9dfd-2ce5eaa45dee",
+          "disabled": true,
           "settings": {
             "badgeMode": "info",
             "showLogo": true,
             "showMoreInfo": false,
             "showStats": false,
             "showProjects": false,
-            "backgroundColor": "#F1F8F5",
-            "textColor": "#1D4136",
-            "borderColor": "#95C9B4",
+            "backgroundColor": "#f1f8f5",
+            "textColor": "#1d4136",
+            "borderColor": "#95c9b4",
             "fullWidth": true,
             "marginTop": 0,
             "marginBottom": 0,

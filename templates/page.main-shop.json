@@ -14,8 +14,7 @@
         "image7": "shopify:\/\/shop_images\/046f14cc2f4f5bd70b1a8241ac92bc39.jpg",
         "button": "Shop All",
         "button_link": "shopify:\/\/collections\/all-products",
-        "gradient_scheme": "bg-gradient-to-r from-cyan-500 to-blue-500",
-        "link": ""
+        "gradient_scheme": "bg-gradient-to-r from-cyan-500 to-blue-500"
       }
     },
     "category_6EU8BQ": {
@@ -69,6 +68,33 @@
         "image5": "shopify:\/\/shop_images\/6819417807496041932_2048.jpg",
         "image6": "shopify:\/\/shop_images\/t-shirt-mockup-of-a-smiling-man-with-sunglasses-by-the-beach-26752.jpg"
       }
+    },
+    "17071526024c1c8ca5": {
+      "type": "apps",
+      "blocks": {
+        "planet_shopify_planet_DrptaU": {
+          "type": "shopify:\/\/apps\/planet\/blocks\/shopify-planet\/12047591-3a2d-45cc-9dfd-2ce5eaa45dee",
+          "settings": {
+            "badgeMode": "info",
+            "showLogo": true,
+            "showMoreInfo": false,
+            "showStats": true,
+            "showProjects": true,
+            "backgroundColor": "#F1F8F5",
+            "textColor": "#1D4136",
+            "borderColor": "#95C9B4",
+            "fullWidth": true,
+            "marginTop": 0,
+            "marginBottom": 0,
+            "borderRadius": 4
+          }
+        }
+      },
+      "block_order": [
+        "planet_shopify_planet_DrptaU"
+      ],
+      "settings": {
+      }
     }
   },
   "order": [
@@ -76,6 +102,7 @@
     "category_6EU8BQ",
     "feature_section_xw3YyX",
     "favorites_section_3wHMMf",
-    "main"
+    "main",
+    "17071526024c1c8ca5"
   ]
 }

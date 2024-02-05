@@ -4,28 +4,6 @@
   "sections": {
     "1707152259a23f7f52": {
       "type": "apps",
-      "blocks": {
-        "planet_shopify_planet_NTycxw": {
-          "type": "shopify:\/\/apps\/planet\/blocks\/shopify-planet\/12047591-3a2d-45cc-9dfd-2ce5eaa45dee",
-          "settings": {
-            "badgeMode": "info",
-            "showLogo": true,
-            "showMoreInfo": false,
-            "showStats": false,
-            "showProjects": false,
-            "backgroundColor": "#f1f8f5",
-            "textColor": "#1d4136",
-            "borderColor": "#95c9b4",
-            "fullWidth": true,
-            "marginTop": 0,
-            "marginBottom": 0,
-            "borderRadius": 4
-          }
-        }
-      },
-      "block_order": [
-        "planet_shopify_planet_NTycxw"
-      ],
       "settings": {
       }
     },

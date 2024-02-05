@@ -415,6 +415,33 @@
         "image5": "shopify:\/\/shop_images\/a40650c9d22553cca8997ac578c2b7cd.jpg",
         "image6": "shopify:\/\/shop_images\/austin-neill-RzLQnuP4bl4-unsplash_1.jpg"
       }
+    },
+    "1707152697c3913bb9": {
+      "type": "apps",
+      "blocks": {
+        "planet_shopify_planet_ckYWq4": {
+          "type": "shopify:\/\/apps\/planet\/blocks\/shopify-planet\/12047591-3a2d-45cc-9dfd-2ce5eaa45dee",
+          "settings": {
+            "badgeMode": "info",
+            "showLogo": true,
+            "showMoreInfo": false,
+            "showStats": false,
+            "showProjects": false,
+            "backgroundColor": "#F1F8F5",
+            "textColor": "#1D4136",
+            "borderColor": "#95C9B4",
+            "fullWidth": true,
+            "marginTop": 0,
+            "marginBottom": 0,
+            "borderRadius": 4
+          }
+        }
+      },
+      "block_order": [
+        "planet_shopify_planet_ckYWq4"
+      ],
+      "settings": {
+      }
     }
   },
   "order": [
@@ -428,6 +455,7 @@
     "cta_section_cyaeUq",
     "faq_section_gTe7Fe",
     "about_fKpykr",
-    "sale_banner_eepYWR"
+    "sale_banner_eepYWR",
+    "1707152697c3913bb9"
   ]
 }

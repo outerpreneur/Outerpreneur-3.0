@@ -293,23 +293,6 @@
       "settings": {
       }
     },
-    "pricing_kKHFah": {
-      "type": "pricing",
-      "disabled": true,
-      "settings": {
-        "subheader": "Pricing",
-        "title": "The right price for you, whoever you are",
-        "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit numquam eligendi quos odit doloribus molestiae voluptatum.",
-        "packages": "",
-        "package_button": "Get started today",
-        "gradient_scheme": "bg-gradient-to-r from-cyan-500 to-blue-500",
-        "call_title": "Contact us",
-        "call_description": "Any questions?. Flexible payment plan. Pause or cancel anytime.",
-        "call_button": "Book a call",
-        "call_button_url": "",
-        "background-position": "center"
-      }
-    },
     "pricing_w4qjBw": {
       "type": "pricing",
       "settings": {
@@ -323,7 +306,7 @@
         "call_description": "Any questions?. Flexible payment plan. Pause or cancel anytime.",
         "call_button": "Book a call",
         "call_button_url": "",
-        "background_image": "shopify:\/\/shop_images\/raisham-waheed-WK7mhTOYmWY-unsplash-scaled_1.jpg",
+        "background_image": "shopify:\/\/shop_images\/raisham-waheed-WK7mhTOYmWY-unsplash-scaled.jpg",
         "background-position": "center"
       }
     },
@@ -445,7 +428,6 @@
     "feature_list_Jyrw8M",
     "partners_section_PqdAAD",
     "timeline_section_3zBLbr",
-    "pricing_kKHFah",
     "pricing_w4qjBw",
     "faq_section_gTe7Fe",
     "testimonials_7XAY9J",

@@ -40,6 +40,19 @@
         "image": "shopify:\/\/shop_images\/IMG_8004.png"
       }
     },
+    "cta_section_cyaeUq": {
+      "type": "cta-section",
+      "settings": {
+        "background_image": "shopify:\/\/shop_images\/raisham-waheed-WK7mhTOYmWY-unsplash-scaled.jpg",
+        "title": "Ready to dive in?",
+        "subtitle": "Find out more about our plans",
+        "button_text": "Get started",
+        "gradient_scheme": "bg-gradient-to-br from-pink-500 to-orange-400",
+        "button_url": "",
+        "button_text_2": "Learn more",
+        "button_url_2": ""
+      }
+    },
     "projects_section_iX3CLx": {
       "type": "projects-section",
       "blocks": {
@@ -323,17 +336,21 @@
         "author_handle_5": "Business Manager at August Berg"
       }
     },
-    "cta_section_cyaeUq": {
-      "type": "cta-section",
+    "pricing_w4qjBw": {
+      "type": "pricing",
       "settings": {
-        "background_image": "shopify:\/\/shop_images\/raisham-waheed-WK7mhTOYmWY-unsplash-scaled.jpg",
-        "title": "Ready to dive in?",
-        "subtitle": "",
-        "button_text": "Get started",
+        "subheader": "Pricing",
+        "title": "Membership levels",
+        "description": "Choose the plan that works for you",
+        "packages": "packages",
+        "package_button": "Get started today",
         "gradient_scheme": "bg-gradient-to-tr from-[#9089fc] to-[#ff80b5]",
-        "button_url": "",
-        "button_text_2": "Learn more",
-        "button_url_2": ""
+        "call_title": "Contact us",
+        "call_description": "Any questions?. Flexible payment plan. Pause or cancel anytime.",
+        "call_button": "Book a call",
+        "call_button_url": "",
+        "background_image": "shopify:\/\/shop_images\/raisham-waheed-WK7mhTOYmWY-unsplash-scaled_1.jpg",
+        "background-position": "center"
       }
     },
     "faq_section_gTe7Fe": {
@@ -461,39 +478,22 @@
       ],
       "settings": {
       }
-    },
-    "pricing_w4qjBw": {
-      "type": "pricing",
-      "settings": {
-        "subheader": "Pricing",
-        "title": "Membership levels",
-        "description": "Choose the plan that works for you",
-        "packages": "packages",
-        "package_button": "Get started today",
-        "gradient_scheme": "bg-gradient-to-tr from-[#9089fc] to-[#ff80b5]",
-        "call_title": "Contact us",
-        "call_description": "Any questions?. Flexible payment plan. Pause or cancel anytime.",
-        "call_button": "Book a call",
-        "call_button_url": "",
-        "background_image": "shopify:\/\/shop_images\/raisham-waheed-WK7mhTOYmWY-unsplash-scaled_1.jpg",
-        "background-position": "center"
-      }
     }
   },
   "order": [
     "hero-section",
     "hero_section_2_jLnYcA",
+    "cta_section_cyaeUq",
     "projects_section_iX3CLx",
     "feature_list_Jyrw8M",
     "partners_section_PqdAAD",
     "timeline_section_3zBLbr",
     "pricing_kKHFah",
     "testimonials_7XAY9J",
-    "cta_section_cyaeUq",
+    "pricing_w4qjBw",
     "faq_section_gTe7Fe",
     "about_fKpykr",
     "sale_banner_eepYWR",
-    "1707152697c3913bb9",
-    "pricing_w4qjBw"
+    "1707152697c3913bb9"
   ]
 }

@@ -1989,6 +1989,11 @@ select {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-red-900 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(127 29 29 / var(--tw-bg-opacity));
+}
+
 .bg-opacity-25 {
   --tw-bg-opacity: 0.25;
 }
@@ -2567,6 +2572,10 @@ select {
 
 .text-white\/60 {
   color: rgb(255 255 255 / 0.6);
+}
+
+.line-through {
+  text-decoration-line: line-through;
 }
 
 .opacity-0 {

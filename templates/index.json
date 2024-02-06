@@ -188,66 +188,6 @@
         "description": "With over 10 years of business management and Web Development & design experience, we like to say that we bring color to your business & work strategically to align you as the leader you deserve to be."
       }
     },
-    "partners_section_PqdAAD": {
-      "type": "partners-section",
-      "blocks": {
-        "image_picker_fM7ntf": {
-          "type": "image_picker",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/imageedit_4_6781213933.png"
-          }
-        },
-        "image_picker_RbVTEw": {
-          "type": "image_picker",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/output-onlinepngtools-10-768x155.png"
-          }
-        },
-        "image_picker_b9dnxD": {
-          "type": "image_picker",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/imageedit_8_3032632256.png"
-          }
-        },
-        "image_picker_Rw8RCg": {
-          "type": "image_picker",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/624-6247978_qb-logo-white-quickbooks-online-simple-start_d9a58726-4708-44ba-8d51-60ab54bae7a1.png"
-          }
-        },
-        "image_picker_EX9pkF": {
-          "type": "image_picker",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/imageedit_2_2776210233.png"
-          }
-        },
-        "image_picker_EjpRVA": {
-          "type": "image_picker",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/imageedit_5_8061061546.png"
-          }
-        }
-      },
-      "block_order": [
-        "image_picker_fM7ntf",
-        "image_picker_RbVTEw",
-        "image_picker_b9dnxD",
-        "image_picker_Rw8RCg",
-        "image_picker_EX9pkF",
-        "image_picker_EjpRVA"
-      ],
-      "settings": {
-        "background_image": "shopify:\/\/shop_images\/raisham-waheed-WK7mhTOYmWY-unsplash-scaled.jpg",
-        "title": "We Guide You With Expertise",
-        "description": "We work closely with a carefully select suite of e‑commerce technologies, platforms, and specialists; all designed to maximize performance across our Shopify stores.",
-        "button_text": "Get Started",
-        "gradient_scheme": "bg-gradient-to-r from-cyan-500 to-blue-500",
-        "button_url": "",
-        "link_text": "Contact us",
-        "link_url": "",
-        "image_columns": "2"
-      }
-    },
     "timeline_section_3zBLbr": {
       "type": "timeline-section",
       "blocks": {
@@ -303,7 +243,7 @@
         "package_button": "Get started today",
         "gradient_scheme": "bg-gradient-to-tr from-[#9089fc] to-[#ff80b5]",
         "call_title": "Contact us",
-        "call_description": "Any questions?. Flexible payment plan. Pause or cancel anytime.",
+        "call_description": "Any questions? Flexible payment plan. Pause or cancel anytime.",
         "call_button": "Book a call",
         "call_button_url": "",
         "background_image": "shopify:\/\/shop_images\/raisham-waheed-WK7mhTOYmWY-unsplash-scaled.jpg",
@@ -368,6 +308,66 @@
         "title": "Frequently asked questions"
       }
     },
+    "partners_section_PqdAAD": {
+      "type": "partners-section",
+      "blocks": {
+        "image_picker_fM7ntf": {
+          "type": "image_picker",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/imageedit_4_6781213933.png"
+          }
+        },
+        "image_picker_RbVTEw": {
+          "type": "image_picker",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/output-onlinepngtools-10-768x155.png"
+          }
+        },
+        "image_picker_b9dnxD": {
+          "type": "image_picker",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/imageedit_8_3032632256.png"
+          }
+        },
+        "image_picker_Rw8RCg": {
+          "type": "image_picker",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/624-6247978_qb-logo-white-quickbooks-online-simple-start_d9a58726-4708-44ba-8d51-60ab54bae7a1.png"
+          }
+        },
+        "image_picker_EX9pkF": {
+          "type": "image_picker",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/imageedit_2_2776210233.png"
+          }
+        },
+        "image_picker_EjpRVA": {
+          "type": "image_picker",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/imageedit_5_8061061546.png"
+          }
+        }
+      },
+      "block_order": [
+        "image_picker_fM7ntf",
+        "image_picker_RbVTEw",
+        "image_picker_b9dnxD",
+        "image_picker_Rw8RCg",
+        "image_picker_EX9pkF",
+        "image_picker_EjpRVA"
+      ],
+      "settings": {
+        "background_image": "shopify:\/\/shop_images\/raisham-waheed-WK7mhTOYmWY-unsplash-scaled.jpg",
+        "title": "We Guide You With Expertise",
+        "description": "We work closely with a carefully select suite of e‑commerce technologies, platforms, and specialists; all designed to maximize performance across our Shopify stores.",
+        "button_text": "Get Started",
+        "gradient_scheme": "bg-gradient-to-r from-cyan-500 to-blue-500",
+        "button_url": "",
+        "link_text": "Contact us",
+        "link_url": "",
+        "image_columns": "2"
+      }
+    },
     "testimonials_7XAY9J": {
       "type": "testimonials",
       "settings": {
@@ -426,10 +426,10 @@
     "cta_section_cyaeUq",
     "projects_section_iX3CLx",
     "feature_list_Jyrw8M",
-    "partners_section_PqdAAD",
     "timeline_section_3zBLbr",
     "pricing_w4qjBw",
     "faq_section_gTe7Fe",
+    "partners_section_PqdAAD",
     "testimonials_7XAY9J",
     "about_fKpykr"
   ]

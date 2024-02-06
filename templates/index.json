@@ -284,16 +284,17 @@
       "type": "pricing",
       "disabled": true,
       "settings": {
+        "subheader": "Pricing",
         "title": "The right price for you, whoever you are",
         "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit numquam eligendi quos odit doloribus molestiae voluptatum.",
-        "hobby_title": "Hobby",
-        "hobby_price": "$49",
-        "hobby_description": "Modi dolorem expedita deleniti. Corporis iste qui inventore pariatur adipisci vitae.",
-        "team_title": "Team",
-        "team_price": "$79",
-        "team_description": "Explicabo quo fugit vel facere ullam corrupti non dolores. Expedita eius sit sequi.",
-        "discounted_title": "Discounted",
-        "discounted_description": "Dolor dolores repudiandae doloribus. Rerum sunt aut eum. Odit omnis non voluptatem sunt eos nostrum."
+        "packages": "",
+        "package_button": "Get started today",
+        "gradient_scheme": "bg-gradient-to-r from-cyan-500 to-blue-500",
+        "call_title": "Contact us",
+        "call_description": "Any questions?. Flexible payment plan. Pause or cancel anytime.",
+        "call_button": "Book a call",
+        "call_button_url": "",
+        "background-position": "center"
       }
     },
     "testimonials_7XAY9J": {
@@ -460,6 +461,23 @@
       ],
       "settings": {
       }
+    },
+    "pricing_w4qjBw": {
+      "type": "pricing",
+      "settings": {
+        "subheader": "Pricing",
+        "title": "Membership levels",
+        "description": "Choose the plan that works for you",
+        "packages": "packages",
+        "package_button": "Get started today",
+        "gradient_scheme": "bg-gradient-to-tr from-[#9089fc] to-[#ff80b5]",
+        "call_title": "Contact us",
+        "call_description": "Any questions?. Flexible payment plan. Pause or cancel anytime.",
+        "call_button": "Book a call",
+        "call_button_url": "",
+        "background_image": "shopify:\/\/shop_images\/raisham-waheed-WK7mhTOYmWY-unsplash-scaled_1.jpg",
+        "background-position": "center"
+      }
     }
   },
   "order": [
@@ -475,6 +493,7 @@
     "faq_section_gTe7Fe",
     "about_fKpykr",
     "sale_banner_eepYWR",
-    "1707152697c3913bb9"
+    "1707152697c3913bb9",
+    "pricing_w4qjBw"
   ]
 }

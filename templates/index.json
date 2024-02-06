@@ -310,32 +310,6 @@
         "background-position": "center"
       }
     },
-    "testimonials_7XAY9J": {
-      "type": "testimonials",
-      "settings": {
-        "testimonials_title": "Testimonials",
-        "testimonials_subtitle": "We have worked with amazing entrepreneurs",
-        "testimonials_text_1": "I am very pleased with the quality of work Outerpreneur has delivered for us. They were highly engaged, possessed excellent communication skills, and provided timely delivery of materials. Moreover, they exceeded our expectations by offering valuable recommendations.",
-        "author_name_1": "Lourdes Reyes",
-        "author_handle_1": "CEO of Nativus Hom & Marilou Shop",
-        "author_image_1": "shopify:\/\/shop_images\/AliKaukas_DSC_2489-scaled.jpg",
-        "author_company_logo": "shopify:\/\/shop_images\/Marilou_Logo_FA-27.png",
-        "testimonials_text_2": "“It was a pleasure to work with Alek. He is very proactive, offers reasonable solutions and delivers flawless work and is always on time. Our project included work on the platforms Shopify and Printful. Alek is not only familiar with the web design, but also gave very good and helpful advice about settings and policies of the mentioned platforms. I would work with Alek again anytime.”",
-        "author_name_2": "Melanie Sweickardt",
-        "author_handle_2": "Lead vocalist of Beyond Frequencies",
-        "author_image_2": "shopify:\/\/shop_images\/Mel-Schweickardt-Beyond-Frequencies-scaled.jpg",
-        "testimonials_text_3": "“Alek did a great job putting my website up to date and converting my Shopify store to 2.0. He also re-designed my website and layout. He also offers ongoing Shopify POS support which is greatly helpful and appreciated. I will keep using his services in a near future.”",
-        "author_name_3": "Regine Fombrun",
-        "author_handle_3": "CEO of Centroartesano",
-        "author_image_3": "shopify:\/\/shop_images\/Centro-Artesano-04-scaled.jpg",
-        "testimonials_text_4": "“I have worked with Aleksander on various projects and really appreciate his work as well as his way of working. Also, his communication is very clear and he works very precisely. Aleksander has a lot of knowledge in e-commerce as well as with Shopify and is always interested in innovations and researches and implements the most reasonable solution. I look forward to many more projects together.\"",
-        "author_name_4": "Jens Vogel",
-        "author_handle_4": "Project Manager at Simple & Pure",
-        "testimonials_text_5": "“I had the pleasure of collaborating withAlek on several e-commerce projects, and I have consistently been impressed by his exceptional skills and dedication.  What sets Alek apart is his commitment to delivering quality work on time and within budget. He is a reliable and proactive professional who takes ownership of their tasks and consistently delivers outstanding results. I have always been impressed by his ability to troubleshoot and find creative solutions to complex technical challenges.  If you're looking for a professional who combines technical expertise with a passion for delivering exceptional results, Alek is the ideal choice!”",
-        "author_name_5": "Mario Leang",
-        "author_handle_5": "Business Manager at August Berg"
-      }
-    },
     "pricing_w4qjBw": {
       "type": "pricing",
       "settings": {
@@ -411,6 +385,32 @@
         "title": "Frequently asked questions"
       }
     },
+    "testimonials_7XAY9J": {
+      "type": "testimonials",
+      "settings": {
+        "testimonials_title": "Testimonials",
+        "testimonials_subtitle": "We have worked with amazing entrepreneurs",
+        "testimonials_text_1": "I am very pleased with the quality of work Outerpreneur has delivered for us. They were highly engaged, possessed excellent communication skills, and provided timely delivery of materials. Moreover, they exceeded our expectations by offering valuable recommendations.",
+        "author_name_1": "Lourdes Reyes",
+        "author_handle_1": "CEO of Nativus Hom & Marilou Shop",
+        "author_image_1": "shopify:\/\/shop_images\/AliKaukas_DSC_2489-scaled.jpg",
+        "author_company_logo": "shopify:\/\/shop_images\/Marilou_Logo_FA-27.png",
+        "testimonials_text_2": "“It was a pleasure to work with Alek. He is very proactive, offers reasonable solutions and delivers flawless work and is always on time. Our project included work on the platforms Shopify and Printful. Alek is not only familiar with the web design, but also gave very good and helpful advice about settings and policies of the mentioned platforms. I would work with Alek again anytime.”",
+        "author_name_2": "Melanie Sweickardt",
+        "author_handle_2": "Lead vocalist of Beyond Frequencies",
+        "author_image_2": "shopify:\/\/shop_images\/Mel-Schweickardt-Beyond-Frequencies-scaled.jpg",
+        "testimonials_text_3": "“Alek did a great job putting my website up to date and converting my Shopify store to 2.0. He also re-designed my website and layout. He also offers ongoing Shopify POS support which is greatly helpful and appreciated. I will keep using his services in a near future.”",
+        "author_name_3": "Regine Fombrun",
+        "author_handle_3": "CEO of Centroartesano",
+        "author_image_3": "shopify:\/\/shop_images\/Centro-Artesano-04-scaled.jpg",
+        "testimonials_text_4": "“I have worked with Aleksander on various projects and really appreciate his work as well as his way of working. Also, his communication is very clear and he works very precisely. Aleksander has a lot of knowledge in e-commerce as well as with Shopify and is always interested in innovations and researches and implements the most reasonable solution. I look forward to many more projects together.\"",
+        "author_name_4": "Jens Vogel",
+        "author_handle_4": "Project Manager at Simple & Pure",
+        "testimonials_text_5": "“I had the pleasure of collaborating withAlek on several e-commerce projects, and I have consistently been impressed by his exceptional skills and dedication.  What sets Alek apart is his commitment to delivering quality work on time and within budget. He is a reliable and proactive professional who takes ownership of their tasks and consistently delivers outstanding results. I have always been impressed by his ability to troubleshoot and find creative solutions to complex technical challenges.  If you're looking for a professional who combines technical expertise with a passion for delivering exceptional results, Alek is the ideal choice!”",
+        "author_name_5": "Mario Leang",
+        "author_handle_5": "Business Manager at August Berg"
+      }
+    },
     "about_fKpykr": {
       "type": "about",
       "settings": {
@@ -435,49 +435,6 @@
         "stat_4_title": "Countries",
         "stat_4_value": "10+"
       }
-    },
-    "sale_banner_eepYWR": {
-      "type": "sale-banner",
-      "disabled": true,
-      "settings": {
-        "heading": "Visit our store. \nUp to 20% off.",
-        "text_link": "Shop",
-        "url": "shopify:\/\/pages\/shop",
-        "image1": "shopify:\/\/shop_images\/046f14cc2f4f5bd70b1a8241ac92bc39.jpg",
-        "image2": "shopify:\/\/shop_images\/18416268668071540827_2048.jpg",
-        "image3": "shopify:\/\/shop_images\/pullover-hoodie-mockup-of-a-serious-woman-standing-at-the-beach-26829.jpg",
-        "image4": "shopify:\/\/shop_images\/13056828621880073409_2048.jpg",
-        "image5": "shopify:\/\/shop_images\/a40650c9d22553cca8997ac578c2b7cd.jpg",
-        "image6": "shopify:\/\/shop_images\/austin-neill-RzLQnuP4bl4-unsplash_1.jpg"
-      }
-    },
-    "1707152697c3913bb9": {
-      "type": "apps",
-      "blocks": {
-        "planet_shopify_planet_ckYWq4": {
-          "type": "shopify:\/\/apps\/planet\/blocks\/shopify-planet\/12047591-3a2d-45cc-9dfd-2ce5eaa45dee",
-          "disabled": true,
-          "settings": {
-            "badgeMode": "info",
-            "showLogo": true,
-            "showMoreInfo": false,
-            "showStats": false,
-            "showProjects": false,
-            "backgroundColor": "#f1f8f5",
-            "textColor": "#1d4136",
-            "borderColor": "#95c9b4",
-            "fullWidth": true,
-            "marginTop": 0,
-            "marginBottom": 0,
-            "borderRadius": 4
-          }
-        }
-      },
-      "block_order": [
-        "planet_shopify_planet_ckYWq4"
-      ],
-      "settings": {
-      }
     }
   },
   "order": [
@@ -489,11 +446,9 @@
     "partners_section_PqdAAD",
     "timeline_section_3zBLbr",
     "pricing_kKHFah",
-    "testimonials_7XAY9J",
     "pricing_w4qjBw",
     "faq_section_gTe7Fe",
-    "about_fKpykr",
-    "sale_banner_eepYWR",
-    "1707152697c3913bb9"
+    "testimonials_7XAY9J",
+    "about_fKpykr"
   ]
 }

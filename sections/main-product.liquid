@@ -22,7 +22,7 @@
                     height=""
                     loading="eager"
                     alt=""
-                    class="h-full w-full object-cover object-center"
+                    class="h-full w-full object-cover object-center slider-image"
                   >
                 </span>
                 <!-- Selected: "ring-indigo-500", Not Selected: "ring-transparent" -->
@@ -41,6 +41,7 @@
           <div id="tabs-1-panel-1" aria-labelledby="tabs-1-tab-1" role="tabpanel" tabindex="0">
             <img
               src="{{ product.featured_image | image_url }}"
+              id="main-image"
               width=""
               height=""
               loading="eager"
@@ -180,17 +181,19 @@
               <h3>
                 <!-- Expand/collapse question button -->
                 <button
+                  id="highlights"
                   type="button"
-                  class="group relative flex w-full items-center justify-between py-6 text-left"
+                  class="group relative flex w-full items-center justify-between py-6 text-left accordion-button"
                   aria-controls="disclosure-1"
-                  aria-expanded="false"
+                  aria-expanded="true"
+                  data-open="true"
                 >
                   <!-- Open: "text-indigo-600", Closed: "text-gray-900" -->
                   <span class="text-gray-900 text-sm font-medium">Features</span>
                   <span class="ml-6 flex items-center">
                     <!-- Open: "hidden", Closed: "block" -->
                     <svg
-                      class="block h-6 w-6 text-gray-400 group-hover:text-gray-500"
+                      class="hidden h-6 w-6 text-gray-400 group-hover:text-gray-500 plus-icon"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke-width="1.5"
@@ -201,7 +204,7 @@
                     </svg>
                     <!-- Open: "block", Closed: "hidden" -->
                     <svg
-                      class="hidden h-6 w-6 text-indigo-400 group-hover:text-indigo-500"
+                      class="block h-6 w-6 text-indigo-400 group-hover:text-indigo-500 minus-icon"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke-width="1.5"
@@ -214,80 +217,100 @@
                 </button>
               </h3>
               <div class="prose prose-sm pb-6" id="disclosure-1">
-                <ul role="list">
-                  {% for highlight in product.metafields.custom.highlights.value %}
-                    <li>{{ highlight | newline_to_br }}</li>
-                  {% endfor %}
+                <ul role="list" class="list-disc pl-4 text-gray-400">
+                  <li>{{ product.metafields.custom.highlight_1.value }}</li>
+                  <li>{{ product.metafields.custom.highlight_2.value }}</li>
+                  <li>{{ product.metafields.custom.highlight_3.value }}</li>
+                  <li>{{ product.metafields.custom.highlight_4.value }}</li>
+                  <li>{{ product.metafields.custom.highlight_5.value }}</li>
                 </ul>
               </div>
             </div>
-
-            <!-- More sections... -->
           </div>
         </section>
-        <section aria-labelledby="details-heading" class="mt-12">
-          <h2 id="details-heading" class="sr-only">Additional details</h2>
 
-          <div class="divide-y divide-gray-200 border-t">
-            <div>
-              <h3>
-                <!-- Expand/collapse question button -->
-                <button
-                  type="button"
-                  class="group relative flex w-full items-center justify-between py-6 text-left"
-                  aria-controls="disclosure-1"
-                  aria-expanded="false"
-                >
-                  <!-- Open: "text-indigo-600", Closed: "text-gray-900" -->
-                  <span class="text-gray-900 text-sm font-medium">Features</span>
-                  <span class="ml-6 flex items-center">
-                    <!-- Open: "hidden", Closed: "block" -->
-                    <svg
-                      class="block h-6 w-6 text-gray-400 group-hover:text-gray-500"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke-width="1.5"
-                      stroke="currentColor"
-                      aria-hidden="true"
-                    >
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
-                    </svg>
-                    <!-- Open: "block", Closed: "hidden" -->
-                    <svg
-                      class="hidden h-6 w-6 text-indigo-400 group-hover:text-indigo-500"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke-width="1.5"
-                      stroke="currentColor"
-                      aria-hidden="true"
-                    >
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12h-15" />
-                    </svg>
-                  </span>
-                </button>
-              </h3>
-              <div class="prose prose-sm pb-6" id="disclosure-1">
-                <ul role="list">
-                  <li>Multiple strap configurations</li>
-                  <li>Spacious interior with top zip</li>
-                  <li>Leather handle and tabs</li>
-                  <li>Interior dividers</li>
-                  <li>Stainless strap loops</li>
-                  <li>Double stitched construction</li>
-                  <li>Water-resistant</li>
-                </ul>
+        {% if product.type != 'Support Package' %}
+          <section aria-labelledby="details-heading" class="mt-12">
+            <h2 id="details-heading" class="sr-only">Additional details</h2>
+
+            <div class="divide-y divide-gray-200 border-t">
+              <div>
+                <h3>
+                  <!-- Expand/collapse question button -->
+                  <button
+                    id="size-chart"
+                    type="button"
+                    class="group  relative flex w-full items-center justify-between py-6 text-left accordion-button"
+                    aria-controls="disclosure-2"
+                    aria-expanded="false"
+                    data-open="false"
+                  >
+                    <!-- Open: "text-indigo-600", Closed: "text-gray-900" -->
+                    <span class="text-gray-900 text-sm font-medium">Size Chart</span>
+                    <span class="ml-6 flex items-center">
+                      <!-- Open: "hidden", Closed: "block" -->
+                      <svg
+                        class="hidden h-6 w-6 text-gray-400 group-hover:text-gray-500 plus-icon"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        aria-hidden="true"
+                      >
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                      </svg>
+                      <!-- Open: "block", Closed: "hidden" -->
+                      <svg
+                        class="block h-6 w-6 text-indigo-400 group-hover:text-indigo-500 minus-icon"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        aria-hidden="true"
+                      >
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12h-15" />
+                      </svg>
+                    </span>
+                  </button>
+                </h3>
               </div>
+              <div class="prose prose-sm pb-6 hidden" id="disclosure-2">
+                {{ product.metafields.custom.size_chart.value }}
+              </div>
+
+              <!-- More sections... -->
             </div>
-
-            {{ product.metafields.custom.size_chart.value }}
-
-            <!-- More sections... -->
-          </div>
-        </section>
+          </section>
+        {% endif %}
       </div>
     </div>
   </div>
 </div>
+
+{% javascript %}
+  // Accordion
+  document.querySelectorAll('.accordion-button').forEach((button) => {
+    button.addEventListener('click', () => {
+      const isOpen = button.getAttribute('data-open') === 'true';
+      const content = document.querySelector(`#${button.getAttribute('aria-controls')}`);
+      const plusIcon = button.querySelector('.plus-icon');
+      const minusIcon = button.querySelector('.minus-icon');
+
+      content.classList.toggle('hidden');
+      plusIcon.classList.toggle('hidden');
+      minusIcon.classList.toggle('hidden');
+      button.setAttribute('data-open', !isOpen);
+    });
+  });
+
+  // Image selector
+  document.querySelectorAll('.slider-image').forEach((image) => {
+    image.addEventListener('click', () => {
+      const mainImage = document.getElementById('main-image');
+      mainImage.src = image.src;
+    });
+  });
+{% endjavascript %}
 
 {% schema %}
 {

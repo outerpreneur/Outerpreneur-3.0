@@ -8,7 +8,12 @@
     {% render 'favicon' %}
     {{ 'output.css' | asset_url | stylesheet_tag }}
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    >
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js" defer></script>
 
     <script src="{{ 'app.js' | asset_url }}" defer></script>

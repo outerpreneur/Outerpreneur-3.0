@@ -55,7 +55,12 @@
                             </a>
                           </h3>
                         </div>
-                        {{ item.variant.options_with_values | json }}
+                        {% if item.variant.title != 'Default Title' %}
+                          <h4 class="text-sm font-medium text-gray-500 hover:text-gray-800">
+                            {{- item.variant.title -}}
+                          </h4>
+                        {% endif %}
+
                         <p class="mt-1 text-sm font-medium text-gray-900">
                           {{ item.price | money }}
                         </p>
@@ -124,6 +129,8 @@
 
                         <span>In stock</span>
                       </p>
+                    {% elsif item.variant.inventory_management == null %}
+                      <span></span>
                     {% else %}
                       <p class="mt-4 flex space-x-2 text-sm text-gray-700">
                         <svg
@@ -138,6 +145,7 @@
                             clip-rule="evenodd"
                           />
                         </svg>
+
                         <span>Out of stock</span>
                     {% endif %}
                   </div>

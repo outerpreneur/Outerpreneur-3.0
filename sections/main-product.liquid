@@ -92,12 +92,19 @@
                                 type="radio"
                                 name="{{ option.name }}"
                                 value="{{ value }}"
+                                id="{{ option.name |  handleize }}-{{ value | handleize }}"
+
                                 class="sr-only"
                                 {% if value == product.selected_or_first_available_variant.options[forloop.index0] %}
                                   checked
                                 {% endif %}
                                 aria-labelledby="color-choice-{{ forloop.index }}-label"
+                                data-variant-id="{{ product.selected_or_first_available_variant.id }}"
                               >
+                              <label class="hidden" for="{{ option.name |  handleize }}-{{ value | handleize }}">
+                                {{- value -}}
+                              </label>
+
                               <span id="color-choice-{{ forloop.index }}-label" class="sr-only">
                                 {{ value }}
                               </span>
@@ -135,11 +142,13 @@
                                   type="radio"
                                   name="{{ option.name }}"
                                   value="{{ value }}"
+                                  id="{{ option.name |  handleize }}-{{ value | handleize }}"
                                   class="sr-only"
                                   {% if value == product.selected_or_first_available_variant.options[forloop.index0] %}
                                     checked
                                   {% endif %}
                                   aria-labelledby="size-choice-{{ forloop.index }}-label"
+                                  data-variant-id="{{ product.selected_or_first_available_variant.id }}"
                                 >
                                 <span id="size-choice-{{ forloop.index }}-label">{{ value }}</span>
                                 <!--
@@ -162,10 +171,12 @@
             {% endfor %}
 
             <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+            {% comment %} <div class="subscriptions_app_embed_block"></div> {% endcomment %}
 
             <button
               id="add-to-cart"
               type="submit"
+              data-variant-id="{{ product.selected_or_first_available_variant.id }}"
               class="mt-10 flex w-full items-center justify-center rounded-md border border-transparent {{ section.settings.gradient_scheme }} px-8 py-3 text-base font-medium text-white hover:bg-gradient-to-bl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
             >
               Add to cart
@@ -274,7 +285,7 @@
                   </button>
                 </h3>
               </div>
-              <div class="prose prose-sm pb-6 hidden" id="disclosure-2">
+              <div class="prose prose-sm pb-6 hidden text-gray-400" id="disclosure-2">
                 {{ product.metafields.custom.size_chart.value }}
               </div>
 
@@ -310,6 +321,8 @@
       mainImage.src = image.src;
     });
   });
+
+  // Product form
 {% endjavascript %}
 
 {% schema %}

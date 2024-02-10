@@ -74,7 +74,7 @@
         </div>
 
         {% form 'product', product %}
-          <div class="mt-10">
+          <div class="mt-10 .product-options">
             <!-- Colors -->
             {% for option in product.options %}
               {% if option == 'Color' %}
@@ -101,6 +101,7 @@
                                 aria-labelledby="color-choice-{{ forloop.index }}-label"
                                 data-variant-id="{{ product.selected_or_first_available_variant.id }}"
                               >
+
                               <label class="hidden" for="{{ option.name |  handleize }}-{{ value | handleize }}">
                                 {{- value -}}
                               </label>
@@ -171,7 +172,6 @@
             {% endfor %}
 
             <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
-            {% comment %} <div class="subscriptions_app_embed_block"></div> {% endcomment %}
 
             <button
               id="add-to-cart"
@@ -321,9 +321,32 @@
       mainImage.src = image.src;
     });
   });
-
-  // Product form
 {% endjavascript %}
+
+<script>
+  var product = {{ product | json }};
+
+  document.querySelectorAll('input[type="radio"]').forEach((input) => {
+    input.addEventListener('change', () => {
+      var selectedOptions = [];
+      document.querySelectorAll('input[type="radio"]:checked').forEach((input) => {
+        selectedOptions.push(input.value);
+      });
+
+      var matchedVariant = product.variants.find((variant) => {
+        var pass = true;
+        for (let index = 0; index < selectedOptions.length; index++) {
+          if (selectedOptions.indexOf(variant.options[index]) === -1) {
+            pass = false;
+            break;
+          }
+        }
+        return pass;
+      });
+      console.log(matchedVariant);
+    });
+  });
+</script>
 
 {% schema %}
 {

@@ -109,10 +109,11 @@
                               <span id="color-choice-{{ forloop.index }}-label" class="sr-only">
                                 {{ value }}
                               </span>
+
                               <span
                                 aria-hidden="true"
                                 class="h-8 w-8 bg-white rounded-full border border-black border-opacity-10"
-                                style="background-color: {{ value | handleize }}"
+                                style="background-image: url({{ value |  handleize | append: '.png' | file_url}})"
                               ></span>
                             </label>
                           {% endfor %}

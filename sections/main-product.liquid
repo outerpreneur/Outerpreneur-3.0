@@ -342,8 +342,19 @@
           }
         }
         return pass;
-      });
-      console.log(matchedVariant);
+          });
+
+
+      console.log(matchedVariant)
+
+      if (matchedVariant) {
+        console.log(' variant found');
+        var mainImage = document.getElementById('main-image');
+        mainImage.src = matchedVariant.featured_image.src;
+      }
+
+
+
       document.getElementById('product-id').value = matchedVariant.id;
 
       var url = new URL(window.location.href);

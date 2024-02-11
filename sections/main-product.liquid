@@ -171,7 +171,7 @@
               {% endif %}
             {% endfor %}
 
-            <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+            <input id="product-id" type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
 
             <button
               id="add-to-cart"
@@ -344,9 +344,23 @@
         return pass;
       });
       console.log(matchedVariant);
+      document.getElementById('product-id').value = matchedVariant.id;
+
+      var url = new URL(window.location.href);
+      url.searchParams.set('variant', matchedVariant.id);
+      console.log(url.toString());
+
+
+
     });
   });
 </script>
+
+<style>
+  input[type='radio']:checked ~ span {
+    border: 1px solid gray;
+  }
+</style>
 
 {% schema %}
 {

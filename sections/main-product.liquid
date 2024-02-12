@@ -174,13 +174,22 @@
 
             <input id="product-id" type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
 
+            {% assign first_variant = product.selected_or_first_available_variant %}
             <button
               id="add-to-cart"
               type="submit"
-              data-variant-id="{{ product.selected_or_first_available_variant.id }}"
-              class="mt-10 flex w-full items-center justify-center rounded-md border border-transparent {{ section.settings.gradient_scheme }} px-8 py-3 text-base font-medium text-white hover:bg-gradient-to-bl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+              data-variant-id="{{ first_variant.id }}"
+              class="mt-10 flex w-full items-center justify-center rounded-md border border-transparent {{ section.settings.gradient_scheme }} px-8 py-3 text-base font-medium text-white hover:bg-gradient-to-bl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 {% unless first_variant.available %}bg-gray-500 cursor-not-allowed opacity-50{% endunless %}"
+              {% unless first_variant.available %}
+                disabled
+                aria-disabled="true"
+              {% endunless %}
             >
-              Add to cart
+              {% if first_variant.available %}
+                Add to Cart
+              {% else %}
+                Out of Stock
+              {% endif %}
             </button>
           </div>
         {% endform %}
@@ -325,17 +334,17 @@
 {% endjavascript %}
 
 <script>
-  var product = {{ product | json }};
+  const product = {{ product | json }};
 
   document.querySelectorAll('input[type="radio"]').forEach((input) => {
     input.addEventListener('change', () => {
-      var selectedOptions = [];
+      let selectedOptions = [];
       document.querySelectorAll('input[type="radio"]:checked').forEach((input) => {
         selectedOptions.push(input.value);
       });
 
-      var matchedVariant = product.variants.find((variant) => {
-        var pass = true;
+      let matchedVariant = product.variants.find((variant) => {
+        let pass = true;
         for (let index = 0; index < selectedOptions.length; index++) {
           if (selectedOptions.indexOf(variant.options[index]) === -1) {
             pass = false;
@@ -343,42 +352,34 @@
           }
         }
         return pass;
-          });
+      });
 
-
-      console.log(matchedVariant)
+      console.log(matchedVariant);
 
       if (matchedVariant) {
-        console.log(' variant found');
-        var mainImage = document.getElementById('main-image');
+        let mainImage = document.getElementById('main-image');
         mainImage.src = matchedVariant.featured_image.src;
       }
 
-
       // change button add to cart depending on stock
-      var addToCartButton = document.querySelector('#add-to-cart');
-    if (addToCartButton) {
-      if (variant.available) {
+
+      const addToCartButton = document.querySelector('#add-to-cart');
+      if (matchedVariant.available === true) {
         addToCartButton.textContent = 'Add to Cart';
-        addToCartButton.style.backgroundColor = 'initial';
+        addToCartButton.classList.remove('bg-gray-500', 'cursor-not-allowed', 'opacity-50');
         addToCartButton.disabled = false;
       } else {
         addToCartButton.textContent = 'Out of Stock';
-        addToCartButton.style.backgroundColor = 'gray';
+        addToCartButton.classList.add('bg-gray-500', 'cursor-not-allowed', 'opacity-50');
         addToCartButton.disabled = true;
       }
-    }
-
-
 
       document.getElementById('product-id').value = matchedVariant.id;
 
       var url = new URL(window.location.href);
       url.searchParams.set('variant', matchedVariant.id);
       console.log(url.toString());
-
-
-
+      window.history.replaceState(null, null, url.toString());
     });
   });
 </script>

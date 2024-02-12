@@ -355,6 +355,21 @@
       }
 
 
+      // change button add to cart depending on stock
+      var addToCartButton = document.querySelector('#add-to-cart');
+    if (addToCartButton) {
+      if (variant.available) {
+        addToCartButton.textContent = 'Add to Cart';
+        addToCartButton.style.backgroundColor = 'initial';
+        addToCartButton.disabled = false;
+      } else {
+        addToCartButton.textContent = 'Out of Stock';
+        addToCartButton.style.backgroundColor = 'gray';
+        addToCartButton.disabled = true;
+      }
+    }
+
+
 
       document.getElementById('product-id').value = matchedVariant.id;
 

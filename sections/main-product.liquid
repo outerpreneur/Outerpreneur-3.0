@@ -60,7 +60,13 @@
 
         <div class="mt-3">
           <h2 class="sr-only">Product information</h2>
-          <p class="text-3xl tracking-tight text-gray-900">{{ product.price | money_without_trailing_zeros }}</p>
+          <p id="product-price" class="text-3xl tracking-tight text-gray-900 ">
+            {{ product.price | money_without_trailing_zeros }}
+          </p>
+          <span id="compare-price" class="text-lg text-gray-400 line-through">
+            Was
+            {{- product.compare_at_price | money_without_trailing_zeros -}}
+          </span>
         </div>
 
         <div class="mt-6">
@@ -243,7 +249,9 @@
                   <li>{{ product.metafields.custom.highlight_2.value }}</li>
                   <li>{{ product.metafields.custom.highlight_3.value }}</li>
                   <li>{{ product.metafields.custom.highlight_4.value }}</li>
-                  <li>{{ product.metafields.custom.highlight_5.value }}</li>
+                  {% if product.metafields.custom.highlight_5.value %}
+                    <li>{{ product.metafields.custom.highlight_5.value }}</li>
+                  {% endif %}
                 </ul>
               </div>
             </div>
@@ -334,7 +342,9 @@
 {% endjavascript %}
 
 <script>
-  const product = {{ product | json }};
+
+const product = {{ product | json }};
+
 
   document.querySelectorAll('input[type="radio"]').forEach((input) => {
     input.addEventListener('change', () => {
@@ -353,6 +363,8 @@
         }
         return pass;
       });
+
+      // change variant image
 
       console.log(matchedVariant);
 
@@ -376,12 +388,71 @@
 
       document.getElementById('product-id').value = matchedVariant.id;
 
+      // change price
+      var formatter = new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'EUR',
+        minimumFractionDigits: 0,
+      });
+
+      document.getElementById('product-price').textContent = formatter.format(matchedVariant.price / 100);
+      document.getElementById('compare-price').textContent = `Was ${formatter.format(matchedVariant.compare_at_price / 100)}`;
+
+      // change url
       var url = new URL(window.location.href);
       url.searchParams.set('variant', matchedVariant.id);
       console.log(url.toString());
       window.history.replaceState(null, null, url.toString());
     });
   });
+
+  function formatMoney(cents, format) {
+  if (typeof cents == "string") {
+    cents = cents.replace(".", "");
+  }
+  var value = "";
+  var placeholderRegex = /\{\{\s*(\w+)\s*\}\}/;
+  var formatString = format || this.money_format;
+
+  function defaultOption(opt, def) {
+    return typeof opt == "undefined" ? def : opt;
+  }
+
+  function formatWithDelimiters(number, precision, thousands, decimal) {
+    precision = defaultOption(precision, 2);
+    thousands = defaultOption(thousands, ",");
+    decimal = defaultOption(decimal, ".");
+
+    if (isNaN(number) || number == null) {
+      return 0;
+    }
+
+    number = (number / 100.0).toFixed(precision);
+
+    var parts = number.split("."),
+      dollars = parts[0].replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1" + thousands),
+      cents = parts[1] ? decimal + parts[1] : "";
+
+    return dollars + cents;
+  }
+
+  switch (formatString.match(placeholderRegex)[1]) {
+    case "amount":
+      value = formatWithDelimiters(cents, 2);
+      break;
+    case "amount_no_decimals":
+      value = formatWithDelimiters(cents, 0);
+      break;
+    case "amount_with_comma_separator":
+      value = formatWithDelimiters(cents, 2, ".", ",");
+      break;
+    case "amount_no_decimals_with_comma_separator":
+      value = formatWithDelimiters(cents, 0, ".", ",");
+      break;
+  }
+
+  return formatString.replace(placeholderRegex, value);
+}
 </script>
 
 <style>

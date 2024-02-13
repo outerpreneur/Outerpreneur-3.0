@@ -88,6 +88,8 @@ function updateItemQuantity(key, quantity) {
     });
 }
 
+// Format money
+
 function formatMoney(cents, format) {
   if (typeof cents == "string") {
     cents = cents.replace(".", "");
@@ -135,6 +137,8 @@ function formatMoney(cents, format) {
 
   return formatString.replace(placeholderRegex, value);
 }
+
+// Remove item
 
 document.querySelectorAll(".remove-item").forEach((remove) => {
   remove.addEventListener("click", function (event) {

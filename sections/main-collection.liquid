@@ -618,7 +618,7 @@
           <section aria-labelledby="product-heading" class="mt-6 lg:col-span-2 lg:mt-0 xl:col-span-3">
             <h2 id="product-heading" class="sr-only">Products</h2>
 
-            <div class="grid grid-cols-1 gap-y-4 sm:grid-cols-2 sm:gap-x-6 sm:gap-y-10 lg:gap-x-8 xl:grid-cols-3">
+            <div class="products-on-page grid grid-cols-1 gap-y-4 sm:grid-cols-2 sm:gap-x-6 sm:gap-y-10 lg:gap-x-8 xl:grid-cols-3">
               {% for product in collection.products %}
                 <div class="group relative flex flex-col overflow-hidden rounded-lg border border-gray-200 bg-white">
                   <button
@@ -657,6 +657,12 @@
 
               <!-- More products... -->
             </div>
+            {% comment %}
+              <div class="flex justify-center  w-full pt-4">
+                <button class="border border-gray-300 py-2 px-4 text-sm" id="load-more" data-page="2">Load More</button>
+              </div>
+            {% endcomment %}
+
             {% if paginate.pages > 1 %}
               <nav class="flex items-center justify-between border-t border-gray-200 px-4 sm:px-0">
                 <div class="-mt-px flex w-0 flex-1">
@@ -762,6 +768,8 @@
       alert('clicked');
     });
   });
+
+  //  load more
 {% endjavascript %}
 
 {% schema %}

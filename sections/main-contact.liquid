@@ -152,68 +152,76 @@
                 >
               </div>
             </div>
-            <div class="sm:col-span-2">
-              <label for="company" class="block text-sm font-semibold leading-6 text-gray-900">Company*</label>
-              <div class="mt-2.5">
-                <input
-                  type="text"
-                  name="contact[company]"
-                  id="company"
-                  autocomplete="organization"
-                  class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                  required
-                >
+            {% comment %}
+              <div class="sm:col-span-2">
+                <label for="company" class="block text-sm font-semibold leading-6 text-gray-900">Company*</label>
+                <div class="mt-2.5">
+                  <input
+                    type="text"
+                    name="contact[company]"
+                    id="company"
+                    autocomplete="organization"
+                    class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                    required
+                  >
+                </div>
               </div>
-            </div>
-            <div class="sm:col-span-2">
-              <label for="company" class="block text-sm font-semibold leading-6 text-gray-900">Country*</label>
-              <div class="mt-2.5">
-                <select
-                  name="contact[country]"
-                  id="country"
-                  autocomplete="country"
-                  class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                  required
-                >
-                  <option value="">Select a country</option>
-                  <!-- Add more option elements for each country | API is pulling this -->
-                </select>
+            {% endcomment %}
+            {% comment %}
+              <div class="sm:col-span-2">
+                <label for="company" class="block text-sm font-semibold leading-6 text-gray-900">Country*</label>
+                <div class="mt-2.5">
+                  <select
+                    name="contact[country]"
+                    id="country"
+                    autocomplete="country"
+                    class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                    required
+                  >
+                    <option value="">Select a country</option>
+                    <!-- Add more option elements for each country | API is pulling this -->
+                  </select>
+                </div>
               </div>
-            </div>
-            <div class="sm:col-span-2">
-              <label for="company" class="block text-sm font-semibold leading-6 text-gray-900">Type of project*</label>
-              <div class="mt-2.5">
-                <select
-                  name="contact[project]"
-                  id="project"
-                  autocomplete="project"
-                  class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                  required
-                >
-                  <option value="new store">New store</option>
-                  <option value="customization">Customization</option>
-                  <option value="migration">Migration</option>
-                  <option value="maintenance">Maintenance</option>
-                  <option value="consulting">Consulting</option>
-                  <option value="other">Other</option>
-                </select>
+            {% endcomment %}
+            {% comment %}
+              <div class="sm:col-span-2">
+                <label for="company" class="block text-sm font-semibold leading-6 text-gray-900">Type of project*</label>
+                <div class="mt-2.5">
+                  <select
+                    name="contact[project]"
+                    id="project"
+                    autocomplete="project"
+                    class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                    required
+                  >
+                    <option value="new store">New store</option>
+                    <option value="customization">Customization</option>
+                    <option value="migration">Migration</option>
+                    <option value="maintenance">Maintenance</option>
+                    <option value="consulting">Consulting</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
               </div>
-            </div>
+            {% endcomment %}
 
-            <div class="sm:col-span-2">
-              <label for="subject" class="block text-sm font-semibold leading-6 text-gray-900"
-                >Current website (if applicable)</label
-              >
-              <div class="mt-2.5">
-                <input
-                  placeholder="https://myshopify.com"
-                  type="text"
-                  name="contact[subject]"
-                  id="subject"
-                  class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+            {% comment %}
+              <div class="sm:col-span-2">
+                <label for="subject" class="block text-sm font-semibold leading-6 text-gray-900"
+                  >Current website (if applicable)</label
                 >
+                <div class="mt-2.5">
+                  <input
+                    placeholder="https://myshopify.com"
+                    type="text"
+                    name="contact[subject]"
+                    id="subject"
+                    class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  >
+                </div>
               </div>
-            </div>
+            {% endcomment %}
             <div class="sm:col-span-2">
               <label for="message" class="block text-sm font-semibold leading-6 text-gray-900"
                 >Describe the purpose of your call</label

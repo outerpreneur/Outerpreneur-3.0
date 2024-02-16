@@ -251,6 +251,21 @@
   </div>
 </div>
 
+<div>
+  {% form 'contact' %}
+    <label for="ContactFormName">Your Name</label>
+    <input type="text" id="ContactFormName" name="contact[name]" required>
+
+    <label for="ContactFormEmail">Your Email</label>
+    <input type="email" id="ContactFormEmail" name="contact[email]" required>
+
+    <label for="ContactFormMessage">Your Message</label>
+    <textarea rows="5" id="ContactFormMessage" name="contact[body]" required></textarea>
+
+    <input type="submit" value="Submit">
+  {% endform %}
+</div>
+
 {% schema %}
 {
   "name": "Contact form",

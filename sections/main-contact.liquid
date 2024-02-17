@@ -1,4 +1,4 @@
-<div
+{% comment %} <div
   class="relative isolate "
 >
   <div class="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2 ">
@@ -222,6 +222,7 @@
                 </div>
               </div>
             {% endcomment %}
+            {% comment %} 
             <div class="sm:col-span-2">
               <label for="message" class="block text-sm font-semibold leading-6 text-gray-900"
                 >Describe the purpose of your call</label
@@ -250,7 +251,8 @@
     {% endform %}
   </div>
 </div>
-
+ {% endcomment %}
+{% comment %}  
 <div>
   {% form 'contact' %}
     <label for="ContactFormName">Your Name</label>
@@ -264,7 +266,7 @@
 
     <input type="submit" value="Submit">
   {% endform %}
-</div>
+</div> {% endcomment %}
 
 {% form 'contact' %}
   {{ form.errors | default_errors }}

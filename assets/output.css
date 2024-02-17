@@ -2254,6 +2254,11 @@ select {
   padding-bottom: 1.5rem;
 }
 
+.py-28 {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+}
+
 .pb-10 {
   padding-bottom: 2.5rem;
 }
@@ -2445,6 +2450,11 @@ select {
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
+}
+
+.text-7xl {
+  font-size: 4.5rem;
+  line-height: 1;
 }
 
 .font-bold {

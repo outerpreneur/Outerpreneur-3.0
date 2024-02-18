@@ -236,9 +236,10 @@
             <button
               type="submit"
               value="send"
+              id="submit"
               class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
             >
-              Send message
+              Schedule a call
             </button>
           </div>
         </div>
@@ -308,4 +309,9 @@
         countrySelect.add(option);
       });
     });
+
+  document.getElementById('submit').addEventListener('click', function () {
+    const form = document.querySelector('form[action="/pages/book-a-call"]');
+    form.submit();
+  });
 {% endjavascript %}

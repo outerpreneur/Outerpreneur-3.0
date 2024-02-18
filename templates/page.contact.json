@@ -1,7 +1,10 @@
 {
   "sections": {
     "main": {
-      "type": "main-page"
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+      }
     },
     "contact": {
       "type": "main-contact",
@@ -11,9 +14,12 @@
         "address": "Rue de Malatrex 32\nGeneve, 1201",
         "phone": "Reach out by filling the form",
         "email": "hello@outerpreneur.com",
-        "hero_image": "shopify://shop_images/ishan-seefromthesky-BMJWpck6eQA-unsplash-scaled.jpg"
+        "hero_image": "shopify:\/\/shop_images\/ishan-seefromthesky-BMJWpck6eQA-unsplash-scaled.jpg"
       }
     }
   },
-  "order": ["main", "contact"]
+  "order": [
+    "main",
+    "contact"
+  ]
 }

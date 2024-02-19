@@ -63,10 +63,12 @@
           <p id="product-price" class="text-3xl tracking-tight text-gray-900 ">
             {{ product.price | money_without_trailing_zeros }}
           </p>
-          <span id="compare-price" class="text-lg text-gray-400 line-through">
-            Was
-            {{- product.compare_at_price | money_without_trailing_zeros -}}
-          </span>
+          {% if product.compare_at_price != blank %}
+            <span id="compare-price" class="text-lg text-gray-400 line-through">
+              Was
+              {{- product.compare_at_price | money_without_trailing_zeros -}}
+            </span>
+          {% endif %}
         </div>
 
         <div class="mt-6">
@@ -338,6 +340,18 @@
       const mainImage = document.getElementById('main-image');
       mainImage.src = image.src;
     });
+  });
+
+  // spinner
+  document.getElementById('add-to-cart').addEventListener('click', () => {
+    const button = document.getElementById('add-to-cart');
+    button.innerHTML = `<svg class="mx-auto h-5 w-5 animate-spin text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+      <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+      <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+    </svg>`;
+    setTimeout(() => {
+      button.innerHTML = 'Add to cart'; // Replace this with the original button content
+    }, 1000);
   });
 {% endjavascript %}
 

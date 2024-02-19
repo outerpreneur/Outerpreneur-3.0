@@ -88,6 +88,34 @@
             </figcaption>
           </figure>
 
+          <figure class="rounded-2xl bg-white p-6 shadow-lg ring-1 ring-gray-900/5">
+            <blockquote class="text-gray-900">
+              <p>
+                {{ section.settings.testimonials_text_6 }}
+              </p>
+            </blockquote>
+            <figcaption class="mt-6 flex items-center gap-x-4">
+              {% if section.settings.author_image_6 != blank %}
+                <img
+                  class="h-10 w-10 rounded-full bg-gray-50"
+                  src="{{ section.settings.author_image_6 |  image_url }}"
+                  width=""
+                  height=""
+                  loading="lazy"
+                  alt=""
+                >
+              {% endif %}
+              <div>
+                <div class="font-semibold">
+                  {{ section.settings.author_name_6 }}
+                </div>
+                <div class="text-gray-600">
+                  {{ section.settings.author_handle_6 }}
+                </div>
+              </div>
+            </figcaption>
+          </figure>
+
           <!-- More testimonials... -->
         </div>
         <div class="space-y-8 xl:row-start-1">
@@ -335,6 +363,34 @@
     {
       "type": "image_picker",
       "id": "author_image_5",
+      "label": "Author image",
+      "info": "Recommended size: 256x256"
+    },
+    {
+      "type": "header",
+      "content": "Testimonial 6"
+    },
+    {
+      "type": "textarea",
+      "id": "testimonials_text_6",
+      "label": "Text",
+      "default": "“Molestias ea earum quos nostrum doloremque sed. Quaerat quasi aut velit incidunt excepturi rerum voluptatem minus harum.”"
+    },
+    {
+      "type": "text",
+      "id": "author_name_6",
+      "label": "Author name",
+      "default": "Leonard Krasner"
+    },
+    {
+      "type": "text",
+      "id": "author_handle_6",
+      "label": "Author handle",
+      "default": "@leonardkrasner"
+    },
+    {
+      "type": "image_picker",
+      "id": "author_image_6",
       "label": "Author image",
       "info": "Recommended size: 256x256"
     }

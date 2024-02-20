@@ -210,6 +210,33 @@
               </div>
             </figcaption>
           </figure>
+          <figure class="rounded-2xl bg-white p-6 shadow-lg ring-1 ring-gray-900/5">
+            <blockquote class="text-gray-900">
+              <p>
+                {{ section.settings.testimonials_text_7 }}
+              </p>
+            </blockquote>
+            <figcaption class="mt-6 flex items-center gap-x-4">
+              {% if section.settings.author_image_7 != blank %}
+                <img
+                  class="h-10 w-10 rounded-full bg-gray-50"
+                  src="{{ section.settings.author_image_7 | image_url }}"
+                  width=""
+                  height=""
+                  loading="lazy"
+                  alt=""
+                >
+              {% endif %}
+              <div>
+                <div class="font-semibold">
+                  {{ section.settings.author_name_7 }}
+                </div>
+                <div class="text-gray-600">
+                  {{ section.settings.author_handle_7 }}
+                </div>
+              </div>
+            </figcaption>
+          </figure>
 
           <!-- More testimonials... -->
         </div>

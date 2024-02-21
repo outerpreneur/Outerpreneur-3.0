@@ -1,5 +1,5 @@
 {% assign mobile_menu = linklists[section.settings.mobile_menu] %}
-<div class="bg-white ">
+<div class="">
   <div id="mobile-menu" class="relative z-40 hidden lg:hidden" role="dialog" aria-modal="true">
     <div class="fixed inset-0  flex">
       <div class="relative flex w-full max-w-xs flex-col overflow-y-auto bg-white pb-12 shadow-xl">
@@ -79,7 +79,7 @@
     </div>
   </div>
 
-  <header id="header" class=" bg-white z-40 fixed w-full">
+  <header id="header" class=" bg-white dark:bg-black z-40 fixed w-full">
     <nav aria-label="Top" class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="border-b border-gray-200">
         <div class="flex h-16 items-center">
@@ -87,7 +87,7 @@
           <button
             id="mobile-menu-open"
             type="button"
-            class="relative rounded-md bg-white p-2 text-gray-400 lg:hidden cursor-pointer"
+            class="relative rounded-md bg-white p-2 text-gray-400 dark:text-white lg:hidden cursor-pointer"
           >
             <span class="absolute -inset-0.5"></span>
             <span class="sr-only">Open menu</span>
@@ -128,7 +128,7 @@
               {% for link in linklists[section.settings.header_menu].links %}
                 <a
                   href="{{ link.url }}"
-                  class="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800"
+                  class="flex items-center text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-gray-800"
                 >
                   {{- link.title -}}
                 </a>
@@ -139,9 +139,15 @@
           <div class="ml-auto flex items-center">
             {% if section.settings.show_account_settings == true %}
               <div class="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
-                <a href="/account/login" class="text-sm font-medium text-gray-700 hover:text-gray-800">Sign in</a>
+                <a
+                  href="/account/login"
+                  class="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-gray-800"
+                  >Sign in</a
+                >
                 <span class="h-6 w-px bg-gray-200" aria-hidden="true"></span>
-                <a href="/account/register" class="text-sm font-medium text-gray-700 hover:text-gray-800"
+                <a
+                  href="/account/register"
+                  class="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-gray-800"
                   >Create account</a
                 >
               </div>
@@ -149,7 +155,7 @@
 
             {% if section.settings.show_currency == true %}
               <div class="hidden lg:ml-8 lg:flex">
-                <a href="" class="flex items-center text-gray-700 hover:text-gray-800">
+                <a href="" class="flex items-center text-gray-700 dark:text-gray-300 hover:text-gray-800">
                   <img
                     src="https://tailwindui.com/img/flags/flag-canada.svg"
                     alt=""
@@ -164,7 +170,7 @@
             <!-- Search -->
             {% if section.settings.show_search == true %}
               <div class="flex lg:ml-6">
-                <a href="/search" class="p-2 text-gray-400 hover:text-gray-500">
+                <a href="/search" class="p-2 text-gray-400 dark:text-gray-300 hover:text-gray-500">
                   <span class="sr-only">Search</span>
                   <svg
                     class="h-6 w-6"
@@ -185,7 +191,7 @@
               <div class="ml-4 flow-root lg:ml-6">
                 <a href="/cart" class="group -m-2 flex items-center p-2">
                   <svg
-                    class="h-6 w-6 flex-shrink-0 text-gray-400 group-hover:text-gray-500"
+                    class="h-6 w-6 flex-shrink-0 text-gray-400 dark:text-gray-300 group-hover:text-gray-500"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke-width="1.5"

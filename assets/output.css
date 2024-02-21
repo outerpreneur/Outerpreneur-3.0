@@ -2075,6 +2075,24 @@ select {
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
+.from-\[\#3b82f606b6d4\] {
+  --tw-gradient-from: #3b82f606b6d4 var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(255 255 255 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.from-\[\#06b6d4\] {
+  --tw-gradient-from: #06b6d4 var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(6 182 212 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.from-\[\#3b82f6\] {
+  --tw-gradient-from: #3b82f6 var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(59 130 246 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
 .to-\[\#62b6a0\] {
   --tw-gradient-to: #62b6a0 var(--tw-gradient-to-position);
 }
@@ -2101,6 +2119,10 @@ select {
 
 .to-orange-400 {
   --tw-gradient-to: #fb923c var(--tw-gradient-to-position);
+}
+
+.to-\[\#06b6d4\] {
+  --tw-gradient-to: #06b6d4 var(--tw-gradient-to-position);
 }
 
 .fill-current {

@@ -4322,6 +4322,11 @@ select {
     background-color: rgb(15 23 42 / var(--tw-bg-opacity));
   }
 
+  .dark\:bg-slate-500 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(100 116 139 / var(--tw-bg-opacity));
+  }
+
   .dark\:text-white {
     --tw-text-opacity: 1;
     color: rgb(255 255 255 / var(--tw-text-opacity));

@@ -22,7 +22,7 @@
 {% form 'cart', cart %}
   <div class="cart" data-money-format="{{ shop.money_format }}">
     <div class="mx-auto max-w-2xl px-4 pb-24 pt-16 sm:px-6 lg:max-w-7xl lg:px-8">
-      <h1 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Shopping Cart</h1>
+      <h1 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">Shopping Cart</h1>
       <div class="mt-12 lg:grid lg:grid-cols-12 lg:items-start lg:gap-x-12 xl:gap-x-16">
         {% if cart.empty? %}
           <p>Your cart is empty.</p>
@@ -50,18 +50,18 @@
                       <div>
                         <div class="flex justify-between">
                           <h3 class="text-sm">
-                            <a href="#" class="font-medium text-gray-700 hover:text-gray-800">
+                            <a href="#" class="font-medium text-gray-700 dark:text-gray-300 hover:text-gray-800">
                               {{- item.product.title -}}
                             </a>
                           </h3>
                         </div>
                         {% if item.variant.title != 'Default Title' %}
-                          <h4 class="text-sm font-medium text-gray-500 hover:text-gray-800">
+                          <h4 class="text-sm font-medium text-gray-500 dark:text-gray-300 hover:text-gray-800">
                             {{- item.variant.title -}}
                           </h4>
                         {% endif %}
 
-                        <p class="mt-1 text-sm font-medium text-gray-900">
+                        <p class="mt-1 text-sm font-medium text-gray-900 dark:text-gray-300">
                           {{ item.price | money }}
                         </p>
                       </div>
@@ -74,7 +74,7 @@
                             <div class="flex items-center">
                               <button
                                 id="minus-{{ forloop.index }}"
-                                class="border border-gray-300 rounded-md px-2 py-1.5 text-base font-medium leading-5 text-gray-700 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500 sm:text-sm"
+                                class="border border-gray-300 rounded-md px-2 py-1.5 text-base font-medium leading-5 text-gray-700 dark:text-gray-300 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500 sm:text-sm"
                               >
                                 -
                               </button>
@@ -83,11 +83,11 @@
                                 id="quantity-{{ forloop.index }}"
                                 name="quantity-{{ forloop.index }}"
                                 value="{{ item.quantity }}"
-                                class="border w-10 border-gray-300 rounded-md px-2 py-1.5 text-center text-base font-medium leading-5 text-gray-700 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500 sm:text-sm mx-2"
+                                class="border w-10 border-gray-300 rounded-md px-2 py-1.5 text-center text-base font-medium leading-5 text-gray-700 dark:text-gray-300 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500 sm:text-sm mx-2"
                               >
                               <button
                                 id="plus-{{ forloop.index }}"
-                                class="border border-gray-300 rounded-md px-2 py-1.5 text-base font-medium leading-5 text-gray-700 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500 sm:text-sm"
+                                class="border border-gray-300 rounded-md px-2 py-1.5 text-base font-medium leading-5 text-gray-700 dark:text-gray-300 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500 sm:text-sm"
                               >
                                 +
                               </button>
@@ -96,7 +96,7 @@
                               {% comment %} <p class="text-sm font-medium leading-5 text-gray-700">Subtotal</p> {% endcomment %}
                               <p
                                 id="subtotal-item"
-                                class="text-sm font-medium leading-5 text-gray-500"
+                                class="text-sm font-medium leading-5 text-gray-500 dark:text-gray-300"
                               >
                                 {{- item.final_line_price | money -}}
                               </p>
@@ -104,7 +104,10 @@
 
                             <div class="absolute right-0 top-0">
                               <a href="{{ item.url_to_remove }}" class="remove-item" id="remove-item">
-                                <button type="button" class="-m-2 inline-flex p-2 text-gray-400 hover:text-gray-500">
+                                <button
+                                  type="button"
+                                  class="-m-2 inline-flex p-2 text-gray-400 dark:text-gray-200 hover:text-gray-500"
+                                >
                                   <span class="sr-only">Remove</span>
                                   <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                                     <path d="M6.28 5.22a.75.75 0 00-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 101.06 1.06L10 11.06l3.72 3.72a.75.75 0 101.06-1.06L11.06 10l3.72-3.72a.75.75 0 00-1.06-1.06L10 8.94 6.28 5.22z" />
@@ -132,7 +135,7 @@
                     {% elsif item.variant.inventory_management == null %}
                       <span></span>
                     {% else %}
-                      <p class="mt-4 flex space-x-2 text-sm text-gray-700">
+                      <p class="mt-4 flex space-x-2 text-sm text-gray-700 dark:text-gray-300">
                         <svg
                           class="h-5 w-5 flex-shrink-0 text-red-500"
                           viewBox="0 0 20 20"
@@ -157,19 +160,19 @@
           <!-- Order summary -->
           <section
             aria-labelledby="summary-heading"
-            class="mt-16 rounded-lg bg-gray-50 px-4 py-6 sm:p-6 lg:col-span-5 lg:mt-0 lg:p-8"
+            class="mt-16 rounded-lg bg-gray-50 dark:bg-black px-4 py-6 sm:p-6 lg:col-span-5 lg:mt-0 lg:p-8"
           >
-            <h2 id="summary-heading" class="text-lg font-medium text-gray-900">Order summary</h2>
+            <h2 id="summary-heading" class="text-lg font-medium text-gray-900 dark:text-white">Order summary</h2>
 
             <dl class="mt-6 space-y-4">
               <div class="flex items-center justify-between">
-                <dt class="text-sm text-gray-600">Subtotal</dt>
-                <dd class="text-sm font-medium text-gray-900" id="subtotal">
+                <dt class="text-sm text-gray-600 dark:text-gray-300">Subtotal</dt>
+                <dd class="text-sm font-medium text-gray-900 dark:text-white" id="subtotal">
                   {{ cart.items_subtotal_price | money }}
                 </dd>
               </div>
               <div class="flex items-center justify-between border-t border-gray-200 pt-4">
-                <dt class="flex items-center text-sm text-gray-600">
+                <dt class="flex items-center text-sm text-gray-600 dark:text-gray-300">
                   <span>Shipping</span>
                   <a href="#" class="ml-2 flex-shrink-0 text-gray-400 hover:text-gray-500">
                     <span class="sr-only">Learn more about how shipping is calculated</span>
@@ -178,10 +181,10 @@
                     </svg>
                   </a>
                 </dt>
-                <dd class="text-sm font-medium text-gray-900">At checkout</dd>
+                <dd class="text-sm font-medium text-gray-900 dark:text-white">At checkout</dd>
               </div>
               <div class="flex items-center justify-between border-t border-gray-200 pt-4">
-                <dt class="flex text-sm text-gray-600">
+                <dt class="flex text-sm text-gray-600 dark:text-gray-300">
                   <span>Discounts</span>
                   <a href="#" class="ml-2 flex-shrink-0 text-gray-400 hover:text-gray-500">
                     <span class="sr-only">Learn more about how tax is calculated</span>
@@ -190,14 +193,18 @@
                     </svg>
                   </a>
                 </dt>
-                <dd class="text-sm font-medium text-gray-900" id="total-discount">{{ cart.total_discount | money }}</dd>
+                <dd class="text-sm font-medium text-gray-900 dark:text-white" id="total-discount">
+                  {{ cart.total_discount | money }}
+                </dd>
               </div>
               <div class="flex items-center justify-between border-t border-gray-200 pt-4">
-                <dt class="text-base font-medium text-gray-900">
-                  Order total<span class="text-gray-500 text-sm ml-2">(exc shipping)</span>
+                <dt class="text-base font-medium text-gray-900 dark:text-white">
+                  Order total<span class="text-gray-500 dark:text-gray-300 text-sm ml-2">(exc shipping)</span>
                 </dt>
 
-                <dd class="text-base font-medium text-gray-900" id="total-price">{{ cart.total_price | money }}</dd>
+                <dd class="text-base font-medium text-gray-900 dark:text-white" id="total-price">
+                  {{ cart.total_price | money }}
+                </dd>
               </div>
             </dl>
 

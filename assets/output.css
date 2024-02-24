@@ -1229,6 +1229,10 @@ select {
   aspect-ratio: 801/1036;
 }
 
+.aspect-\[401\/1036\] {
+  aspect-ratio: 401/1036;
+}
+
 .h-0 {
   height: 0px;
 }

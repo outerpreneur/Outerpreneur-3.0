@@ -2995,6 +2995,14 @@ select {
   text-decoration-line: underline;
 }
 
+.hover\:opacity-50:hover {
+  opacity: 0.5;
+}
+
+.hover\:opacity-75:hover {
+  opacity: 0.75;
+}
+
 .hover\:ring-gray-900\/20:hover {
   --tw-ring-color: rgb(17 24 39 / 0.2);
 }
@@ -4269,5 +4277,9 @@ select {
   .dark\:text-white {
     --tw-text-opacity: 1;
     color: rgb(255 255 255 / var(--tw-text-opacity));
+  }
+
+  .dark\:hover\:opacity-75:hover {
+    opacity: 0.75;
   }
 }

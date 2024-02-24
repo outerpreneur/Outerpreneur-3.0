@@ -114,7 +114,7 @@
         {% endif %}
       </div>
       {% if section.settings.show_payments %}
-        <div>
+        <div class="mt-8 md:mt-0">
           <ul class="flex gap-2" role="list">
             {% assign enabled_payment_types = 'visa,master,shopify_pay, apple_pay, google_pay,paypal'
               | remove: ' '

@@ -20,7 +20,7 @@
         "header_menu": "main-menu",
         "mobile_menu": "main-menu",
         "secondary_menu": "",
-        "show_account_settings": false,
+        "show_account_settings": true,
         "show_currency": false,
         "show_search": true,
         "show_cart": true

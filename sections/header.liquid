@@ -404,6 +404,7 @@
   const mobileMenu = document.getElementById('mobile-menu');
   const mobileMenuOpen = document.getElementById('mobile-menu-open');
   const mobileMenuClose = document.getElementById('mobile-menu-close');
+  const mobileMenuLinsk = document.querySelectorAll('#mobile-menu a');
 
   mobileMenuOpen.addEventListener('click', () => {
     mobileMenu.classList.toggle('hidden');
@@ -411,6 +412,12 @@
 
   mobileMenuClose.addEventListener('click', () => {
     mobileMenu.classList.toggle('hidden');
+  });
+
+  mobileMenuLinks.forEach((link) => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
   });
 
   // Mobile menu scrolling

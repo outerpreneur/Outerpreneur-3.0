@@ -79,10 +79,10 @@
     </div>
   </div>
 
-  <header id="header" class=" bg-white dark:bg-black z-40 fixed w-full">
+  <header id="header" class="z-40 fixed w-full">
     <nav aria-label="Top" class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <div class="border-b border-gray-200">
-        <div class="flex h-16 items-center">
+      <div class="border-b border-gray-200 dark:border-gray-800">
+        <div id="inner-header" class="flex h-16 items-center">
           <!-- Mobile menu toggle, controls the 'mobileMenuOpen' state. -->
           <button
             id="mobile-menu-open"
@@ -391,3 +391,22 @@
   ]
 }
 {% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+  window.addEventListener('scroll', function () {
+    const header = document.getElementById('header');
+    const innerHeader = document.getElementById('inner-header');
+
+    if (window.scrollY > 0) {
+      // Add a class to the header when scrolling starts
+      header.classList.add('bg-white', 'dark:bg-black', 'bg-opacity-50', 'dark:bg-opacity-70');
+    } else {
+      // Remove the class when scrolling back to the top
+      header.classList.remove('bg-white', 'dark:bg-black', 'bg-opacity-50', 'dark:bg-opacity-70');
+    }
+  });
+{% endjavascript %}
+```

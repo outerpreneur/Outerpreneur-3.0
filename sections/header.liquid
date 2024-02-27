@@ -63,24 +63,6 @@
           {% endfor %}
         </div>
 
-        {% if section.settings.show_theme_switch %}
-          <!-- Enabled: "bg-indigo-600", Not Enabled: "bg-gray-200" -->
-          hello
-          <button
-            type="button"
-            class="bg-gray-200 relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2"
-            role="switch"
-            aria-checked="false"
-          >
-            <span class="sr-only">Use setting</span>
-            <!-- Enabled: "translate-x-5", Not Enabled: "translate-x-0" -->
-            <span
-              aria-hidden="true"
-              class="translate-x-0 pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out"
-            ></span>
-          </button>
-        {% endif %}
-
         {% if section.settings.show_account_settings %}
           <div class="space-y-6 border-t border-gray-200 px-4 py-6">
             <div class="flow-root">
@@ -161,6 +143,24 @@
               {% endfor %}
             </div>
           </div>
+
+          {% if section.settings.show_theme_switch %}
+            <!-- Enabled: "bg-indigo-600", Not Enabled: "bg-gray-200" -->
+            <button
+              id="theme-switch"
+              type="button"
+              class="mx-auto bg-gray-200 relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2"
+              role="switch"
+              aria-checked="false"
+            >
+              <span class="sr-only">Use setting</span>
+              <!-- Enabled: "translate-x-5", Not Enabled: "translate-x-0" -->
+              <span
+                aria-hidden="true"
+                class="translate-x-0 pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out"
+              ></span>
+            </button>
+          {% endif %}
 
           <div class="ml-auto flex items-center">
             {% if section.settings.show_account_settings == true %}
@@ -459,6 +459,24 @@
     } else {
       // Remove the class when scrolling back to the top
       header.classList.remove('bg-white', 'dark:bg-black', 'bg-opacity-80', 'dark:bg-opacity-80');
+    }
+  });
+
+  // Theme switch
+  document.getElementById('theme-switch').addEventListener('click', () => {
+    const button = document.getElementById('theme-switch');
+    const slider = button.querySelector('[aria-hidden="true"]');
+
+    if (button.getAttribute('aria-checked') === 'false') {
+      button.setAttribute('aria-checked', 'true');
+      button.classList.remove('bg-gray-200');
+      button.classList.add('bg-gradient-to-r', 'from-cyan-500', 'to-blue-500');
+      slider.classList.replace('translate-x-0', 'translate-x-5');
+    } else {
+      button.setAttribute('aria-checked', 'false');
+      button.classList.add('bg-gray-200');
+      button.classList.remove('bg-gradient-to-r', 'from-cyan-500', 'to-blue-500');
+      slider.classList.replace('translate-x-5', 'translate-x-0');
     }
   });
 {% endjavascript %}

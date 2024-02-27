@@ -1,6 +1,6 @@
 {% assign mobile_menu = linklists[section.settings.mobile_menu] %}
 <div class="">
-  <div id="mobile-menu" class="relative z-40 hidden lg:hidden" role="dialog" aria-modal="true">
+  <div id="mobile-menu" class="relative z-50 hidden lg:hidden" role="dialog" aria-modal="true">
     <div class="fixed inset-0  flex">
       <div class="relative flex w-full max-w-xs flex-col overflow-y-auto bg-white dark:bg-black pb-12 shadow-xl">
         <div class="flex px-4 pb-2 pt-5">
@@ -52,7 +52,11 @@
         <div class="space-y-6 border-t border-gray-200 px-4 py-6">
           {% for link in linklist[section.settings.secondary_menu].links %}
             <div class="flow-root">
-              <a href="{{ link.url }}" class="-m-2 block p-2 font-medium text-gray-900 dark:text-white">
+              <a
+                class="mobile-menu-link"
+                href="{{ link.url }}"
+                class="-m-2 block p-2 font-medium text-gray-900 dark:text-white"
+              >
                 {{- link.title -}}
               </a>
             </div>
@@ -400,11 +404,12 @@
 {% endstylesheet %}
 
 {% javascript %}
-  // Mobile menu
   const mobileMenu = document.getElementById('mobile-menu');
   const mobileMenuOpen = document.getElementById('mobile-menu-open');
   const mobileMenuClose = document.getElementById('mobile-menu-close');
-  const mobileMenuLinsk = document.querySelectorAll('#mobile-menu a');
+  const mobileMenuLinks = document.querySelectorAll('#mobile-menu a');
+
+  alert(mobileMenuLinks);
 
   mobileMenuOpen.addEventListener('click', () => {
     mobileMenu.classList.toggle('hidden');
@@ -416,7 +421,7 @@
 
   mobileMenuLinks.forEach((link) => {
     link.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
+      document.getElementById('mobile-menu').classList.toggle('hidden');
     });
   });
 

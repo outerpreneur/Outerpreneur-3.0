@@ -400,6 +400,20 @@
 {% endstylesheet %}
 
 {% javascript %}
+  // Mobile menu
+  const mobileMenu = document.getElementById('mobile-menu');
+  const mobileMenuOpen = document.getElementById('mobile-menu-open');
+  const mobileMenuClose = document.getElementById('mobile-menu-close');
+
+  mobileMenuOpen.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+
+  mobileMenuClose.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+
+  // Mobile menu scrolling
   window.addEventListener('scroll', function () {
     const header = document.getElementById('header');
     const innerHeader = document.getElementById('inner-header');

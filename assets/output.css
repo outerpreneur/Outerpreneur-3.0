@@ -2019,6 +2019,14 @@ select {
   --tw-bg-opacity: 0.75;
 }
 
+.bg-opacity-30 {
+  --tw-bg-opacity: 0.3;
+}
+
+.bg-opacity-80 {
+  --tw-bg-opacity: 0.8;
+}
+
 .bg-gradient-to-b {
   background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
 }
@@ -4296,6 +4304,18 @@ select {
 
   .dark\:bg-opacity-70 {
     --tw-bg-opacity: 0.7;
+  }
+
+  .dark\:bg-opacity-30 {
+    --tw-bg-opacity: 0.3;
+  }
+
+  .dark\:bg-opacity-90 {
+    --tw-bg-opacity: 0.9;
+  }
+
+  .dark\:bg-opacity-80 {
+    --tw-bg-opacity: 0.8;
   }
 
   .dark\:text-gray-200 {

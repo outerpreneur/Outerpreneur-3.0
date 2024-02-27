@@ -63,6 +63,24 @@
           {% endfor %}
         </div>
 
+        {% if section.settings.show_theme_switch %}
+          <!-- Enabled: "bg-indigo-600", Not Enabled: "bg-gray-200" -->
+          hello
+          <button
+            type="button"
+            class="bg-gray-200 relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2"
+            role="switch"
+            aria-checked="false"
+          >
+            <span class="sr-only">Use setting</span>
+            <!-- Enabled: "translate-x-5", Not Enabled: "translate-x-0" -->
+            <span
+              aria-hidden="true"
+              class="translate-x-0 pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out"
+            ></span>
+          </button>
+        {% endif %}
+
         {% if section.settings.show_account_settings %}
           <div class="space-y-6 border-t border-gray-200 px-4 py-6">
             <div class="flow-root">
@@ -368,6 +386,13 @@
       "info": "The secondary menu that appears in the header."
     },
     { "type": "header", "content": "Header Options" },
+    {
+      "type": "checkbox",
+      "id": "show_theme_switch",
+      "label": "Show Theme Switch",
+      "default": true,
+      "info": "Show the theme switch in the header."
+    },
     {
       "type": "checkbox",
       "id": "show_account_settings",

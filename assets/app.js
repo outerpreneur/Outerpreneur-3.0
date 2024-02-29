@@ -201,17 +201,13 @@ addToCartForms.forEach((form) => {
 // dark mode
 
 const toggle = document.getElementById("theme-switch");
-const currentTheme = localStorage.getItem("theme");
-const bodyTag = document.getElementById("bodyTag");
 
-toggle.addEventListener("click", () => {
-  console.log(bodyTag);
-  if (bodyTag.classList.contains("dark")) {
-    bodyTag.classList.remove("dark");
-    localStorage.setItem("theme", "light");
-  } else {
-    bodyTag.classList.add("dark");
+toggle.addEventListener("click", function () {
+  document.documentElement.classList.toggle("dark");
+  if (document.body.classList.contains("dark")) {
     localStorage.setItem("theme", "dark");
+  } else {
+    localStorage.setItem("theme", "light");
   }
 });
 

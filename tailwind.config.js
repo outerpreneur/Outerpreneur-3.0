@@ -8,6 +8,7 @@ module.exports = {
     "./locales/*.json",
     "./templates/costumers/*.liquid",
   ],
+  darkMode: "selector",
   theme: {
     extend: {
       fontFamily: {
@@ -27,7 +28,6 @@ module.exports = {
           "100%": { opacity: "0" },
         },
       },
-      darkMode: ["selector", '[data-mode="dark"]'],
     },
   },
   plugins: [

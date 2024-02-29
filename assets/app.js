@@ -200,6 +200,19 @@ addToCartForms.forEach((form) => {
 
 // dark mode
 
+const toggle = document.getElementById("theme-switch");
+const currentTheme = localStorage.getItem("theme");
+if (currentTheme) {
+  document.documentElement.setAttribute("data-theme", currentTheme);
+  if (currentTheme === "dark") {
+    toggle.checked = true;
+  }
+}
+
+toggle.addEventListener("click", function (e) {
+  document.documentElement.classList.add("dark");
+});
+
 // On page load or when changing themes, best to add inline in `head` to avoid FOUC
 if (
   localStorage.theme === "dark" ||

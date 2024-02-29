@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="dark">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,7 +18,8 @@
 
     <script src="{{ 'app.js' | asset_url }}" defer></script>
   </head>
-  <body class="bg-white dark:bg-black text-black dark:text-white">
+
+  <body id="bodyTag" class="bg-white dark:bg-black text-black dark:text-white">
     {% sections 'header-group' %}
     {{ content_for_layout }}
     {% sections 'footer-group' %}

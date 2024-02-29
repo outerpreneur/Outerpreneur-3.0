@@ -27,6 +27,7 @@ module.exports = {
           "100%": { opacity: "0" },
         },
       },
+      darkMode: "class",
     },
   },
   plugins: [

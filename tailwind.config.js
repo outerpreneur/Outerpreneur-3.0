@@ -27,7 +27,7 @@ module.exports = {
           "100%": { opacity: "0" },
         },
       },
-      darkMode: "class",
+      darkMode: ["selector", '[data-mode="dark"]'],
     },
   },
   plugins: [

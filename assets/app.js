@@ -202,15 +202,17 @@ addToCartForms.forEach((form) => {
 
 const toggle = document.getElementById("theme-switch");
 const currentTheme = localStorage.getItem("theme");
-if (currentTheme) {
-  document.documentElement.setAttribute("data-theme", currentTheme);
-  if (currentTheme === "dark") {
-    toggle.checked = true;
-  }
-}
+const bodyTag = document.getElementById("bodyTag");
 
-toggle.addEventListener("click", function (e) {
-  document.documentElement.classList.add("dark");
+toggle.addEventListener("click", () => {
+  console.log(bodyTag);
+  if (bodyTag.classList.contains("dark")) {
+    bodyTag.classList.remove("dark");
+    localStorage.setItem("theme", "light");
+  } else {
+    bodyTag.classList.add("dark");
+    localStorage.setItem("theme", "dark");
+  }
 });
 
 // On page load or when changing themes, best to add inline in `head` to avoid FOUC

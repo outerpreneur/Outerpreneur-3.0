@@ -21,9 +21,9 @@
         "mobile_menu": "main-menu",
         "secondary_menu": "",
         "show_theme_switch": true,
-        "show_account_settings": true,
+        "show_account_settings": false,
         "show_currency": false,
-        "show_search": true,
+        "show_search": false,
         "show_cart": true
       }
     }

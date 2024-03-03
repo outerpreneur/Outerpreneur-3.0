@@ -470,11 +470,10 @@
     }
   });
 
-  // Theme switch
+  const button = document.getElementById('theme-switch');
+  const slider = button.querySelector('[aria-hidden="true"]');
+  // // Theme switch
   document.getElementById('theme-switch').addEventListener('click', () => {
-    const button = document.getElementById('theme-switch');
-    const slider = button.querySelector('[aria-hidden="true"]');
-
     if (button.getAttribute('aria-checked') === 'false') {
       button.setAttribute('aria-checked', 'true');
       button.classList.remove('bg-gray-200');
@@ -487,5 +486,19 @@
       slider.classList.replace('translate-x-5', 'translate-x-0');
     }
   });
+
+  // Set the theme switch based on the user's preference
+
+  if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    button.setAttribute('aria-checked', 'true');
+    button.classList.remove('bg-gray-200');
+    button.classList.add('bg-gradient-to-r', 'from-cyan-500', 'to-blue-500');
+    slider.classList.replace('translate-x-0', 'translate-x-5');
+  } else {
+    button.setAttribute('aria-checked', 'false');
+    button.classList.add('bg-gray-200');
+    button.classList.remove('bg-gradient-to-r', 'from-cyan-500', 'to-blue-500');
+    slider.classList.replace('translate-x-5', 'translate-x-0');
+  }
 {% endjavascript %}
 ```

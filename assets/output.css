@@ -3686,6 +3686,14 @@ select {
     width: 18rem;
   }
 
+  .md\:w-44 {
+    width: 11rem;
+  }
+
+  .md\:w-48 {
+    width: 12rem;
+  }
+
   .md\:max-w-2xl {
     max-width: 42rem;
   }

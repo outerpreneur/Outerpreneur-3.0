@@ -87,7 +87,7 @@
     </div>
   </div>
 
-  <header id="header" class="z-40 fixed w-full">
+  <header id="header" class="z-40 fixed w-full bg-white dark:bg-black bg-opacity-80 dark:bg-opacity-80">
     <nav aria-label="Top" class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="border-b border-gray-200 dark:border-gray-800">
         <div id="inner-header" class="flex h-16 items-center">
@@ -95,7 +95,7 @@
           <button
             id="mobile-menu-open"
             type="button"
-            class="relative rounded-md bg-white dark:bg-black p-2 text-gray-400 dark:text-white lg:hidden cursor-pointer"
+            class="relative rounded-md bg-white bg-opacity-50 dark:bg-black dark:bg-opacity-70 p-2 text-gray-400 dark:text-white lg:hidden cursor-pointer"
           >
             <span class="absolute -inset-0.5"></span>
             <span class="sr-only">Open menu</span>
@@ -117,7 +117,7 @@
               <span class="sr-only">Your Company</span>
               {% if section.settings.header_logo != blank %}
                 <img
-                  class="h-{{ section.settings.logo_size }} w-auto"
+                  class="w-{{ section.settings.logo_size_mobile }} md:w-{{ section.settings.logo_size }} h-auto"
                   src="{{ section.settings.header_logo | image_url }}"
                   height=""
                   width=""
@@ -255,6 +255,7 @@
 {
   "name": "Header",
   "settings": [
+    { "type": "header", "content": "Logo" },
     {
       "type": "image_picker",
       "id": "header_logo",
@@ -267,12 +268,40 @@
       "label": "Logo Size",
       "options": [
         {
+          "value": "2",
+          "label": "2"
+        },
+        {
+          "value": "3",
+          "label": "3"
+        },
+        {
+          "value": "4",
+          "label": "4"
+        },
+        {
+          "value": "5",
+          "label": "5"
+        },
+        {
+          "value": "6",
+          "label": "6"
+        },
+        {
+          "value": "7",
+          "label": "7"
+        },
+        {
           "value": "8",
           "label": "8"
         },
         {
           "value": "10",
           "label": "10"
+        },
+        {
+          "value": "11",
+          "label": "11"
         },
         {
           "value": "12",
@@ -287,40 +316,20 @@
           "label": "16"
         },
         {
-          "value": "18",
-          "label": "18"
-        },
-        {
           "value": "20",
           "label": "20"
-        },
-        {
-          "value": "22",
-          "label": "22"
         },
         {
           "value": "24",
           "label": "24"
         },
         {
-          "value": "26",
-          "label": "26"
-        },
-        {
           "value": "28",
           "label": "28"
         },
         {
-          "value": "30",
-          "label": "30"
-        },
-        {
           "value": "32",
           "label": "32"
-        },
-        {
-          "value": "34",
-          "label": "34"
         },
         {
           "value": "36",
@@ -335,20 +344,12 @@
           "label": "40"
         },
         {
-          "value": "42",
-          "label": "42"
-        },
-        {
           "value": "44",
           "label": "44"
         },
         {
           "value": "46",
           "label": "46"
-        },
-        {
-          "value": "48",
-          "label": "48"
         },
         {
           "value": "50",
@@ -371,9 +372,123 @@
           "label": "58"
         }
       ],
-      "default": "24",
+      "default": "44",
       "info": "The size of the logo image that appears in the header."
     },
+    {
+      "type": "select",
+      "id": "logo_size_mobile",
+      "label": "Logo Size Mobile",
+      "info": "The size of the logo image that appears in the header on mobile.",
+      "options": [
+        {
+          "value": "2",
+          "label": "2"
+        },
+        {
+          "value": "3",
+          "label": "3"
+        },
+        {
+          "value": "4",
+          "label": "4"
+        },
+        {
+          "value": "5",
+          "label": "5"
+        },
+        {
+          "value": "6",
+          "label": "6"
+        },
+        {
+          "value": "7",
+          "label": "7"
+        },
+        {
+          "value": "8",
+          "label": "8"
+        },
+        {
+          "value": "10",
+          "label": "10"
+        },
+        {
+          "value": "11",
+          "label": "11"
+        },
+        {
+          "value": "12",
+          "label": "12"
+        },
+        {
+          "value": "14",
+          "label": "14"
+        },
+        {
+          "value": "16",
+          "label": "16"
+        },
+        {
+          "value": "20",
+          "label": "20"
+        },
+        {
+          "value": "24",
+          "label": "24"
+        },
+        {
+          "value": "28",
+          "label": "28"
+        },
+        {
+          "value": "32",
+          "label": "32"
+        },
+        {
+          "value": "36",
+          "label": "36"
+        },
+        {
+          "value": "38",
+          "label": "38"
+        },
+        {
+          "value": "40",
+          "label": "40"
+        },
+        {
+          "value": "44",
+          "label": "44"
+        },
+        {
+          "value": "46",
+          "label": "46"
+        },
+        {
+          "value": "50",
+          "label": "50"
+        },
+        {
+          "value": "52",
+          "label": "52"
+        },
+        {
+          "value": "54",
+          "label": "54"
+        },
+        {
+          "value": "56",
+          "label": "56"
+        },
+        {
+          "value": "58",
+          "label": "58"
+        }
+      ],
+      "default": "8"
+    },
+    { "type": "header", "content": "Menus" },
     {
       "type": "link_list",
       "id": "header_menu",
@@ -457,22 +572,23 @@
   });
 
   // Mobile menu scrolling
-  window.addEventListener('scroll', function () {
-    const header = document.getElementById('header');
-    const innerHeader = document.getElementById('inner-header');
+  // window.addEventListener('scroll', function () {
+  //   const header = document.getElementById('header');
+  //   const innerHeader = document.getElementById('inner-header');
 
-    if (window.scrollY > 0) {
-      // Add a class to the header when scrolling starts
-      header.classList.add('bg-white', 'dark:bg-black', 'bg-opacity-80', 'dark:bg-opacity-80');
-    } else {
-      // Remove the class when scrolling back to the top
-      header.classList.remove('bg-white', 'dark:bg-black', 'bg-opacity-80', 'dark:bg-opacity-80');
-    }
-  });
+  //   if (window.scrollY > 0) {
+  //     // Add a class to the header when scrolling starts
+  //     header.classList.add('bg-white', 'dark:bg-black', 'bg-opacity-80', 'dark:bg-opacity-80');
+  //   } else {
+  //     // Remove the class when scrolling back to the top
+  //     header.classList.remove('bg-white', 'dark:bg-black', 'bg-opacity-80', 'dark:bg-opacity-80');
+  //   }
+  // });
 
+  // // Theme switch
   const button = document.getElementById('theme-switch');
   const slider = button.querySelector('[aria-hidden="true"]');
-  // // Theme switch
+
   document.getElementById('theme-switch').addEventListener('click', () => {
     if (button.getAttribute('aria-checked') === 'false') {
       button.setAttribute('aria-checked', 'true');

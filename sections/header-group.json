@@ -17,6 +17,7 @@
       "settings": {
         "header_logo": "shopify:\/\/shop_images\/Outerpreneur-simple-logo-7654556345ty.png",
         "logo_size": "10",
+        "logo_size_mobile": "12",
         "header_menu": "main-menu",
         "mobile_menu": "main-menu",
         "secondary_menu": "",

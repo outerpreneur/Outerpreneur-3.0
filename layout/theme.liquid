@@ -19,10 +19,15 @@
     <script src="{{ 'app.js' | asset_url }}" defer></script>
   </head>
 
-  <body class="bg-white dark:bg-black text-black dark:text-white">
+  <body class="bg-red-500 dark:bg-black text-black dark:text-white">
     {% sections 'header-group' %}
-    {{ content_for_layout }}
-    {% sections 'footer-group' %}
+    <main>
+      {{ content_for_layout }}
+      {% sections 'footer-group' %}
+    </main>
+    {% if template != 'cart' %}
+      {% render 'mini-cart' %}
+    {% endif %}
   </body>
 </html>
 

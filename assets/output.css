@@ -873,6 +873,10 @@ select {
   pointer-events: none;
 }
 
+.pointer-events-auto {
+  pointer-events: auto;
+}
+
 .fixed {
   position: fixed;
 }
@@ -895,6 +899,14 @@ select {
 
 .-inset-0\.5 {
   inset: -0.125rem;
+}
+
+.-inset-2 {
+  inset: -0.5rem;
+}
+
+.-inset-2\.5 {
+  inset: -0.625rem;
 }
 
 .-inset-px {
@@ -1059,6 +1071,10 @@ select {
 
 .-ml-24 {
   margin-left: -6rem;
+}
+
+.-ml-8 {
+  margin-left: -2rem;
 }
 
 .-mr-2 {
@@ -1375,6 +1391,10 @@ select {
 
 .w-8 {
   width: 2rem;
+}
+
+.w-96 {
+  width: 24rem;
 }
 
 .w-\[22\.875rem\] {
@@ -1843,6 +1863,10 @@ select {
 
 .overflow-y-auto {
   overflow-y: auto;
+}
+
+.overflow-y-scroll {
+  overflow-y: scroll;
 }
 
 .truncate {
@@ -2344,6 +2368,10 @@ select {
   padding-left: 0.25rem;
 }
 
+.pl-10 {
+  padding-left: 2.5rem;
+}
+
 .pl-4 {
   padding-left: 1rem;
 }
@@ -2358,6 +2386,10 @@ select {
 
 .pr-12 {
   padding-right: 3rem;
+}
+
+.pr-2 {
+  padding-right: 0.5rem;
 }
 
 .pr-9 {
@@ -2817,6 +2849,10 @@ select {
   transition-duration: 300ms;
 }
 
+.duration-500 {
+  transition-duration: 500ms;
+}
+
 .ease-in {
   transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
 }
@@ -3078,6 +3114,11 @@ select {
   --tw-ring-color: rgb(79 70 229 / var(--tw-ring-opacity));
 }
 
+.focus\:ring-white:focus {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(255 255 255 / var(--tw-ring-opacity));
+}
+
 .focus\:ring-opacity-50:focus {
   --tw-ring-opacity: 0.5;
 }
@@ -3209,6 +3250,10 @@ select {
   .sm\:mx-auto {
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .sm\:-ml-10 {
+    margin-left: -2.5rem;
   }
 
   .sm\:-ml-4 {
@@ -3540,6 +3585,10 @@ select {
     padding-right: 3rem;
   }
 
+  .sm\:pr-4 {
+    padding-right: 1rem;
+  }
+
   .sm\:pr-9 {
     padding-right: 2.25rem;
   }
@@ -3626,6 +3675,10 @@ select {
     opacity: 0;
   }
 
+  .sm\:duration-700 {
+    transition-duration: 700ms;
+  }
+
   .sm\:before\:flex-1::before {
     content: var(--tw-content);
     flex: 1 1 0%;
@@ -3682,16 +3735,12 @@ select {
     height: 18rem;
   }
 
-  .md\:w-72 {
-    width: 18rem;
-  }
-
-  .md\:w-44 {
-    width: 11rem;
-  }
-
   .md\:w-48 {
     width: 12rem;
+  }
+
+  .md\:w-72 {
+    width: 18rem;
   }
 
   .md\:max-w-2xl {

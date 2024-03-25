@@ -1019,6 +1019,10 @@ select {
   z-index: 50;
 }
 
+.z-30 {
+  z-index: 30;
+}
+
 .col-span-2 {
   grid-column: span 2 / span 2;
 }
@@ -1071,10 +1075,6 @@ select {
 
 .-ml-24 {
   margin-left: -6rem;
-}
-
-.-ml-8 {
-  margin-left: -2rem;
 }
 
 .-mr-2 {
@@ -1391,10 +1391,6 @@ select {
 
 .w-8 {
   width: 2rem;
-}
-
-.w-96 {
-  width: 24rem;
 }
 
 .w-\[22\.875rem\] {
@@ -2040,6 +2036,11 @@ select {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-green-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(34 197 94 / var(--tw-bg-opacity));
+}
+
 .bg-opacity-25 {
   --tw-bg-opacity: 0.25;
 }
@@ -2386,10 +2387,6 @@ select {
 
 .pr-12 {
   padding-right: 3rem;
-}
-
-.pr-2 {
-  padding-right: 0.5rem;
 }
 
 .pr-9 {
@@ -3114,11 +3111,6 @@ select {
   --tw-ring-color: rgb(79 70 229 / var(--tw-ring-opacity));
 }
 
-.focus\:ring-white:focus {
-  --tw-ring-opacity: 1;
-  --tw-ring-color: rgb(255 255 255 / var(--tw-ring-opacity));
-}
-
 .focus\:ring-opacity-50:focus {
   --tw-ring-opacity: 0.5;
 }
@@ -3252,10 +3244,6 @@ select {
     margin-right: auto;
   }
 
-  .sm\:-ml-10 {
-    margin-left: -2.5rem;
-  }
-
   .sm\:-ml-4 {
     margin-left: -1rem;
   }
@@ -3344,6 +3332,18 @@ select {
     height: 100%;
   }
 
+  .sm\:h-8 {
+    height: 2rem;
+  }
+
+  .sm\:h-24 {
+    height: 6rem;
+  }
+
+  .sm\:h-12 {
+    height: 3rem;
+  }
+
   .sm\:w-48 {
     width: 12rem;
   }
@@ -3362,6 +3362,18 @@ select {
 
   .sm\:w-full {
     width: 100%;
+  }
+
+  .sm\:w-8 {
+    width: 2rem;
+  }
+
+  .sm\:w-24 {
+    width: 6rem;
+  }
+
+  .sm\:w-12 {
+    width: 3rem;
   }
 
   .sm\:max-w-lg {
@@ -3583,10 +3595,6 @@ select {
 
   .sm\:pr-12 {
     padding-right: 3rem;
-  }
-
-  .sm\:pr-4 {
-    padding-right: 1rem;
   }
 
   .sm\:pr-9 {
@@ -4342,6 +4350,16 @@ select {
 .dark\:bg-gray-700:where(.dark, .dark *) {
   --tw-bg-opacity: 1;
   background-color: rgb(55 65 81 / var(--tw-bg-opacity));
+}
+
+.dark\:bg-gray-900:where(.dark, .dark *) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(17 24 39 / var(--tw-bg-opacity));
+}
+
+.dark\:bg-gray-800:where(.dark, .dark *) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(31 41 55 / var(--tw-bg-opacity));
 }
 
 .dark\:bg-opacity-70:where(.dark, .dark *) {

@@ -5,7 +5,6 @@
       "settings": {
         "heading_title": "We Build",
         "hero_text": "We help Entrepreneurs build Shopify Stores with Shopify Store development & E-commerce Strategies",
-        "logo": "shopify:\/\/shop_images\/shopify-partner-dark.webp",
         "logo_size": "96",
         "button": "Get Started",
         "gradient_scheme": "bg-gradient-to-r from-cyan-500 to-blue-500",
@@ -60,7 +59,7 @@
           "type": "article",
           "settings": {
             "article_title": "Weathertech Switzerland",
-            "article_image": "shopify:\/\/shop_images\/CleanShot_2024-01-21_at_08-front_1.png"
+            "article_image": "shopify:\/\/shop_images\/Frame_1.png"
           }
         },
         "article_L9kaUa": {

@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "hero-section": {
@@ -8,14 +17,14 @@
         "logo_size": "96",
         "button": "Get Started",
         "gradient_scheme": "bg-gradient-to-r from-cyan-500 to-blue-500",
-        "button_url": "shopify:\/\/pages\/contact",
+        "button_url": "shopify://pages/contact",
         "cta_text": "Setup your Call",
-        "cta_url": "shopify:\/\/pages\/contact",
-        "image": "shopify:\/\/shop_images\/screencapture-weathertechch-2024-01-21-08_22_39_2.jpg",
-        "image2": "shopify:\/\/shop_images\/screencapture-mariloushop-2024-01-21-08_55_30.jpg",
-        "image3": "shopify:\/\/shop_images\/screencapture-centroartesano-es-2024-01-21-09_02_43.jpg",
-        "image4": "shopify:\/\/shop_images\/screencapture-superbra-nl-collections-brazilian-2024-01-21-09_09_37_1.jpg",
-        "image5": "shopify:\/\/shop_images\/screencapture-cocobambooshop-myshopify-2024-01-23-00_21_03.jpg",
+        "cta_url": "shopify://pages/contact",
+        "image": "shopify://shop_images/screencapture-weathertechch-2024-01-21-08_22_39_22desktop.jpg",
+        "image2": "shopify://shop_images/screencapture-mariloushop-2024-01-21-08_55_302desktop.jpg",
+        "image3": "shopify://shop_images/screencapture-centroartesano-es-2024-01-21-09_02_432desktop.jpg",
+        "image4": "shopify://shop_images/screencapture-superbra-nl-collections-brazilian-2024-01-21-09_09_37_12desktop.jpg",
+        "image5": "shopify://shop_images/screencapture-cocobambooshop-myshopify-2024-01-23-00_21_032desktop.jpg",
         "rotating_text": "Beautiful",
         "rotating_text2": "Powerful",
         "rotating_text3": "Scalable",
@@ -34,15 +43,15 @@
         "description": "As Shopify Store developers, it’s our mission to help you create an impact on a global scale — by turning your products & services into inspiration across communities & beyond.",
         "cta_url2": "",
         "cta_text2": "Get started",
-        "learn_more_url": "shopify:\/\/pages\/contact",
+        "learn_more_url": "shopify://pages/contact",
         "learn_more_text": "Learn more",
-        "image": "shopify:\/\/shop_images\/IMG_8004.png"
+        "image": "shopify://shop_images/IMG_8004.png"
       }
     },
     "cta_section_cyaeUq": {
       "type": "cta-section",
       "settings": {
-        "background_image": "shopify:\/\/shop_images\/raisham-waheed-WK7mhTOYmWY-unsplash-scaled.jpg",
+        "background_image": "shopify://shop_images/raisham-waheed-WK7mhTOYmWY-unsplash-scaled.jpg",
         "title": "Ready to dive in?",
         "subtitle": "Find out more about our plans",
         "button_text": "Get started",
@@ -59,42 +68,42 @@
           "type": "article",
           "settings": {
             "article_title": "Weathertech Switzerland",
-            "article_image": "shopify:\/\/shop_images\/Frame_1.png"
+            "article_image": "shopify://shop_images/Frame_1.png"
           }
         },
         "article_L9kaUa": {
           "type": "article",
           "settings": {
             "article_title": "Marilou Shop",
-            "article_image": "shopify:\/\/shop_images\/CleanShot_2024-01-21_at_18-front_3_1.png"
+            "article_image": "shopify://shop_images/CleanShot_2024-01-21_at_18-front_3_1.png"
           }
         },
         "article_aGbmJg": {
           "type": "article",
           "settings": {
             "article_title": "August Berg",
-            "article_image": "shopify:\/\/shop_images\/CleanShot_2024-01-21_at_19-front_2.png"
+            "article_image": "shopify://shop_images/CleanShot_2024-01-21_at_19-front_2.png"
           }
         },
         "article_hKApdC": {
           "type": "article",
           "settings": {
             "article_title": "Centroartesano",
-            "article_image": "shopify:\/\/shop_images\/CleanShot_2024-01-21_at_08-front_2_1_0e3ff9b3-5c4c-424b-b3d5-9681397dbc75.png"
+            "article_image": "shopify://shop_images/CleanShot_2024-01-21_at_08-front_2_1_0e3ff9b3-5c4c-424b-b3d5-9681397dbc75.png"
           }
         },
         "article_Uqiiqd": {
           "type": "article",
           "settings": {
             "article_title": "SuperBra",
-            "article_image": "shopify:\/\/shop_images\/CleanShot_2024-01-21_at_08-front_4_1.png"
+            "article_image": "shopify://shop_images/CleanShot_2024-01-21_at_08-front_4_1.png"
           }
         },
         "article_WRADpY": {
           "type": "article",
           "settings": {
             "article_title": "Beyond Frequencies",
-            "article_image": "shopify:\/\/shop_images\/CleanShot_2024-01-22_at_19-front_1.png"
+            "article_image": "shopify://shop_images/CleanShot_2024-01-22_at_19-front_1.png"
           }
         }
       },
@@ -202,7 +211,7 @@
           "type": "timeline",
           "settings": {
             "timeline_step": "Step 2",
-            "timeline_title": "Research\/ Project mapping",
+            "timeline_title": "Research/ Project mapping",
             "timeline_description": "After our discovery call, we will gather all the information, process it and build a project plan according to your business needs. We will send you an estimate"
           }
         },
@@ -210,7 +219,7 @@
           "type": "timeline",
           "settings": {
             "timeline_step": "Step 3",
-            "timeline_title": "Project Kick-off \/ Development",
+            "timeline_title": "Project Kick-off / Development",
             "timeline_description": "After accepting our proposal, you will be welcome with your own client portal where you will be able to follow up updates, sign up documentation, upload content and schedule calls with the team."
           }
         },
@@ -218,7 +227,7 @@
           "type": "timeline",
           "settings": {
             "timeline_step": "Step 4",
-            "timeline_title": "Delivery \/ Maintenance",
+            "timeline_title": "Delivery / Maintenance",
             "timeline_description": "We will help you maintain your store by providing step-by-step guidance. If necessary, we can also suggest a maintenance plan to keep your store thriving and growing"
           }
         }
@@ -245,7 +254,7 @@
         "call_description": "Any questions? Flexible payment plan. Pause or cancel anytime.",
         "call_button": "Book a call",
         "call_button_url": "",
-        "background_image": "shopify:\/\/shop_images\/raisham-waheed-WK7mhTOYmWY-unsplash-scaled.jpg",
+        "background_image": "shopify://shop_images/raisham-waheed-WK7mhTOYmWY-unsplash-scaled.jpg",
         "background-position": "center"
       }
     },
@@ -313,37 +322,37 @@
         "image_picker_fM7ntf": {
           "type": "image_picker",
           "settings": {
-            "image": "shopify:\/\/shop_images\/imageedit_4_6781213933.png"
+            "image": "shopify://shop_images/imageedit_4_6781213933.png"
           }
         },
         "image_picker_RbVTEw": {
           "type": "image_picker",
           "settings": {
-            "image": "shopify:\/\/shop_images\/output-onlinepngtools-10-768x155.png"
+            "image": "shopify://shop_images/output-onlinepngtools-10-768x155.png"
           }
         },
         "image_picker_b9dnxD": {
           "type": "image_picker",
           "settings": {
-            "image": "shopify:\/\/shop_images\/imageedit_8_3032632256.png"
+            "image": "shopify://shop_images/imageedit_8_3032632256.png"
           }
         },
         "image_picker_Rw8RCg": {
           "type": "image_picker",
           "settings": {
-            "image": "shopify:\/\/shop_images\/imageedit_3_7950087972.png"
+            "image": "shopify://shop_images/imageedit_3_7950087972.png"
           }
         },
         "image_picker_EX9pkF": {
           "type": "image_picker",
           "settings": {
-            "image": "shopify:\/\/shop_images\/imageedit_2_2776210233.png"
+            "image": "shopify://shop_images/imageedit_2_2776210233.png"
           }
         },
         "image_picker_EjpRVA": {
           "type": "image_picker",
           "settings": {
-            "image": "shopify:\/\/shop_images\/imageedit_5_8061061546.png"
+            "image": "shopify://shop_images/imageedit_5_8061061546.png"
           }
         }
       },
@@ -356,7 +365,7 @@
         "image_picker_EjpRVA"
       ],
       "settings": {
-        "background_image": "shopify:\/\/shop_images\/raisham-waheed-WK7mhTOYmWY-unsplash-scaled.jpg",
+        "background_image": "shopify://shop_images/raisham-waheed-WK7mhTOYmWY-unsplash-scaled.jpg",
         "title": "We Guide You With Expertise",
         "description": "We work closely with a carefully select suite of e‑commerce technologies, platforms, and specialists; all designed to maximize performance across our Shopify stores.",
         "button_text": "Get Started",
@@ -375,16 +384,16 @@
         "testimonials_text_1": "I am very pleased with the quality of work Outerpreneur has delivered for us. They were highly engaged, possessed excellent communication skills, and provided timely delivery of materials. Moreover, they exceeded our expectations by offering valuable recommendations.",
         "author_name_1": "Lourdes Reyes | Costa Rica",
         "author_handle_1": "CEO of Nativus Hom & Marilou Shop",
-        "author_image_1": "shopify:\/\/shop_images\/AliKaukas_DSC_2489-scaled.jpg",
-        "author_company_logo": "shopify:\/\/shop_images\/Marilou_Logo_FA-27.png",
+        "author_image_1": "shopify://shop_images/AliKaukas_DSC_2489-scaled.jpg",
+        "author_company_logo": "shopify://shop_images/Marilou_Logo_FA-27.png",
         "testimonials_text_2": "“It was a pleasure to work with Alek. He is very proactive, offers reasonable solutions and delivers flawless work and is always on time. Our project included work on the platforms Shopify and Printful. Alek is not only familiar with the web design, but also gave very good and helpful advice about settings and policies of the mentioned platforms. I would work with Alek again anytime.”",
         "author_name_2": "Melanie Sweickardt | Switzerland",
         "author_handle_2": "Lead vocalist of Beyond Frequencies",
-        "author_image_2": "shopify:\/\/shop_images\/Mel-Schweickardt-Beyond-Frequencies-scaled.jpg",
+        "author_image_2": "shopify://shop_images/Mel-Schweickardt-Beyond-Frequencies-scaled.jpg",
         "testimonials_text_3": "“Outerpreneur did a great job putting my website up to date and converting my Shopify store to 2.0. He also re-designed my website and layout. He also offers ongoing Shopify POS support which is greatly helpful and appreciated. I will keep using his services in a near future.”",
         "author_name_3": "Regine Fombrun | Spain",
         "author_handle_3": "CEO of Centroartesano",
-        "author_image_3": "shopify:\/\/shop_images\/Centro-Artesano-04-scaled.jpg",
+        "author_image_3": "shopify://shop_images/Centro-Artesano-04-scaled.jpg",
         "testimonials_text_4": "“I have worked with Aleksander on various projects and really appreciate his work as well as his way of working. Also, his communication is very clear and he works very precisely. Aleksander has a lot of knowledge in e-commerce as well as with Shopify and is always interested in innovations and researches and implements the most reasonable solution. I look forward to many more projects together.\"",
         "author_name_4": "Jens Vogel | Germany",
         "author_handle_4": "Project Manager at Simple & Pure",
@@ -394,18 +403,18 @@
         "testimonials_text_6": "\"I have the pleasure of an ongoing collaboration with Alek for my Shopify platform (three physical stores and a webshop).\nHe goes to great lengths to understand my companies needs and to come with appropriate solutions.\nHe consistently delivers excellent results and his communication skills are great. He responds swiftly to inquiries, provides clear updates on progress, and is always open to discussing any questions or concerns that arise.\"",
         "author_name_6": "Floor Van de Pavert | Netherlands",
         "author_handle_6": "Owner of SuperBra Stores",
-        "author_image_6": "shopify:\/\/shop_images\/DrPdzauXgAAhuRU.jpg",
+        "author_image_6": "shopify://shop_images/DrPdzauXgAAhuRU.jpg",
         "testimonials_text_7": "\"We hired the services of Outerpreneur Developmets in order to improve and develop our website and also to introduce a sales platform for direct sales of our products. Without any doubts he made an outstandning job and we noted an immediate response from the customers. I highly recommend his services due to his high level of engagement in the project and how easy it was to have direct access to his expertise.\"",
         "author_name_7": "Thomas Lindeen | Sweden",
         "author_handle_7": "CEO Alforent",
-        "author_image_7": "shopify:\/\/shop_images\/19399858_10155460567794837_6432551216908091202_n.jpg"
+        "author_image_7": "shopify://shop_images/19399858_10155460567794837_6432551216908091202_n.jpg"
       }
     },
     "about_fKpykr": {
       "type": "about",
       "settings": {
-        "image_hero_background": "shopify:\/\/shop_images\/christopher-gower-m_HRfLhgABo-unsplash-1-scaled.jpg",
-        "image": "shopify:\/\/shop_images\/Outerpreneur_simple_logo_76545563c_f6b141f4-af73-4c18-ac70-6cd1c2c62bb8.png",
+        "image_hero_background": "shopify://shop_images/christopher-gower-m_HRfLhgABo-unsplash-1-scaled.jpg",
+        "image": "shopify://shop_images/Outerpreneur_simple_logo_76545563c_f6b141f4-af73-4c18-ac70-6cd1c2c62bb8.png",
         "caption": "We are excited about innovative ideas that evolve into successful businesses. I would be delighted to assist you on your e-commerce journey and help you achieve your desired goals by enhancing your brand.",
         "caption_title": "Alek Tysklind",
         "caption_position": "Developer at Outerpreneur",

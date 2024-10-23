@@ -264,7 +264,7 @@
         "text_PjVMnc": {
           "type": "text",
           "settings": {
-            "question": "Who are the developers",
+            "question": "What type of service should I expect?",
             "answer": "At Outerpreneur, You can expect a personalized touch from start to finish. As the Founder of Outerpreneur, Alek, I take pride in personally handling a significant amount of task, using extensive experience in the Shopify space. Additionally, I collaborate with a select group of talented colleagues who bring their extensive expertise in specific areas, ensuring exceptional results for your Project"
           }
         },
@@ -278,7 +278,7 @@
         "text_YYEGPH": {
           "type": "text",
           "settings": {
-            "question": "What are you standards",
+            "question": "What are you standards?",
             "answer": "We place immense importance on ensuring that the work we deliver is of the highest quality. Our ultimate goal is to bring a smile of satisfaction to your face. Your happiness is what drives us, and we will always go above and beyond to exceed your expectations. Rest assured that we will leave no stone unturned in our pursuit of excellence. Your satisfaction is at the forefront of everything we do."
           }
         },
@@ -286,14 +286,14 @@
           "type": "text",
           "settings": {
             "question": "What types of projects do you accept?",
-            "answer": "We are fully capable of providing a range of services to meet your needs. Our offerings include the option to create new stores from the ground up, migrate existing stores, provide consulting services, and make custom code modifications tailored to your specific requirements. Whether you're starting from scratch or looking to enhance your current store, we have the expertise to assist you every step of the way."
+            "answer": "We are fully capable of providing a range of services to meet your needs. Our offerings include the option to create new Shopify stores from the ground up, migrate existing stores, provide consulting services, and make custom code modifications tailored to your specific requirements. Whether you're starting from scratch or looking to enhance your current store, we have the expertise to assist you every step of the way."
           }
         },
         "text_EpQABx": {
           "type": "text",
           "settings": {
-            "question": "How do you communicate.",
-            "answer": "We will create a dedicated client portal exclusively for you. This portal will serve as a central hub where you can conveniently track the progress of your project and stay in touch with us. To facilitate smooth communication, we employ a combination of email, Notion, and weekly Google meet calls. Through these channels, we ensure that you are well-informed about the status of your project and provide you with a platform to convey your thoughts and feedback."
+            "question": "How do you communicate?",
+            "answer": "We will create a dedicated Partner portal exclusively for you. This portal will serve as a central hub where you can conveniently track the progress of your project and stay in touch with us. To facilitate smooth communication, we employ a combination of email, Notion, and weekly Google meet calls. Through these channels, we ensure that you are well-informed about the status of your project and provide you with a platform to convey your thoughts and feedback."
           }
         },
         "text_Pmgkwe": {

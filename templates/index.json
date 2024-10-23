@@ -68,42 +68,48 @@
           "type": "article",
           "settings": {
             "article_title": "Weathertech Switzerland",
-            "article_image": "shopify://shop_images/Frame_1.png"
+            "article_image": "shopify://shop_images/Frame_1.png",
+            "project_link": "https://outerpreneur.com"
           }
         },
         "article_L9kaUa": {
           "type": "article",
           "settings": {
             "article_title": "Marilou Shop",
-            "article_image": "shopify://shop_images/CleanShot_2024-01-21_at_18-front_3_1.png"
+            "article_image": "shopify://shop_images/CleanShot_2024-01-21_at_18-front_3_1.png",
+            "project_link": "https://www.mariloushop.com"
           }
         },
         "article_aGbmJg": {
           "type": "article",
           "settings": {
             "article_title": "August Berg",
-            "article_image": "shopify://shop_images/CleanShot_2024-01-21_at_19-front_2.png"
+            "article_image": "shopify://shop_images/CleanShot_2024-01-21_at_19-front_2.png",
+            "project_link": "https://admin.shopify.com/store/augustberg-jp"
           }
         },
         "article_hKApdC": {
           "type": "article",
           "settings": {
             "article_title": "Centroartesano",
-            "article_image": "shopify://shop_images/CleanShot_2024-01-21_at_08-front_2_1_0e3ff9b3-5c4c-424b-b3d5-9681397dbc75.png"
+            "article_image": "shopify://shop_images/CleanShot_2024-01-21_at_08-front_2_1_0e3ff9b3-5c4c-424b-b3d5-9681397dbc75.png",
+            "project_link": "https://centroartesano.es"
           }
         },
         "article_Uqiiqd": {
           "type": "article",
           "settings": {
             "article_title": "SuperBra",
-            "article_image": "shopify://shop_images/CleanShot_2024-01-21_at_08-front_4_1.png"
+            "article_image": "shopify://shop_images/CleanShot_2024-01-21_at_08-front_4_1.png",
+            "project_link": "https://www.superbra.nl"
           }
         },
         "article_WRADpY": {
           "type": "article",
           "settings": {
             "article_title": "Beyond Frequencies",
-            "article_image": "shopify://shop_images/CleanShot_2024-01-22_at_19-front_1.png"
+            "article_image": "shopify://shop_images/CleanShot_2024-01-22_at_19-front_1.png",
+            "project_link": "https://www.beyond-frequencies.com"
           }
         }
       },

@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "type": "header",
   "name": "header",
@@ -8,14 +17,14 @@
       "settings": {
         "title": "Complete Form",
         "text_info": "Start your project",
-        "button_url": "shopify:\/\/pages\/contact",
+        "button_url": "shopify://pages/contact",
         "link_text": "Get Started"
       }
     },
     "header": {
       "type": "header",
       "settings": {
-        "header_logo": "shopify:\/\/shop_images\/Outerpreneur-simple-logo-7654556345ty.png",
+        "header_logo": "shopify://shop_images/Outerpreneur-simple-logo-7654556345tydesktop.png",
         "logo_size": "44",
         "logo_size_mobile": "12",
         "header_menu": "main-menu",

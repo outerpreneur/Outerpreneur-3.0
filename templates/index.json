@@ -51,7 +51,7 @@
     "cta_section_cyaeUq": {
       "type": "cta-section",
       "settings": {
-        "background_image": "shopify://shop_images/raisham-waheed-WK7mhTOYmWY-unsplash-scaled.jpg",
+        "background_image": "shopify://shop_images/raisham-waheed-WK7mhTOYmWY-unsplash-scaleddesktop.jpg",
         "title": "Ready to dive in?",
         "subtitle": "Find out more about our plans",
         "button_text": "Get started",
@@ -68,48 +68,42 @@
           "type": "article",
           "settings": {
             "article_title": "Weathertech Switzerland",
-            "article_image": "shopify://shop_images/Frame_1.png",
-            "project_link": "https://outerpreneur.com"
+            "article_image": "shopify://shop_images/Frame_1.png"
           }
         },
         "article_L9kaUa": {
           "type": "article",
           "settings": {
             "article_title": "Marilou Shop",
-            "article_image": "shopify://shop_images/CleanShot_2024-01-21_at_18-front_3_1.png",
-            "project_link": "https://www.mariloushop.com"
+            "article_image": "shopify://shop_images/CleanShot_2024-01-21_at_18-front_3_1.pngdesktop.jpg"
           }
         },
         "article_aGbmJg": {
           "type": "article",
           "settings": {
             "article_title": "August Berg",
-            "article_image": "shopify://shop_images/CleanShot_2024-01-21_at_19-front_2.png",
-            "project_link": "https://admin.shopify.com/store/augustberg-jp"
+            "article_image": "shopify://shop_images/CleanShot_2024-01-21_at_19-front_2desktop.jpg"
           }
         },
         "article_hKApdC": {
           "type": "article",
           "settings": {
             "article_title": "Centroartesano",
-            "article_image": "shopify://shop_images/CleanShot_2024-01-21_at_08-front_2_1_0e3ff9b3-5c4c-424b-b3d5-9681397dbc75.png",
-            "project_link": "https://centroartesano.es"
+            "article_image": "shopify://shop_images/CleanShot_2024-01-21_at_08-front_2_1_0e3ff9b3-5c4c-424b-b3d5-9681397dbc75desktop.jpg"
           }
         },
         "article_Uqiiqd": {
           "type": "article",
           "settings": {
             "article_title": "SuperBra",
-            "article_image": "shopify://shop_images/CleanShot_2024-01-21_at_08-front_4_1.png",
-            "project_link": "https://www.superbra.nl"
+            "article_image": "shopify://shop_images/CleanShot_2024-01-21_at_08-front_4_1.png"
           }
         },
         "article_WRADpY": {
           "type": "article",
           "settings": {
             "article_title": "Beyond Frequencies",
-            "article_image": "shopify://shop_images/CleanShot_2024-01-22_at_19-front_1.png",
-            "project_link": "https://www.beyond-frequencies.com"
+            "article_image": "shopify://shop_images/CleanShot_2024-01-22_at_19-front_1desktop.jpg"
           }
         }
       },
@@ -260,7 +254,7 @@
         "call_description": "Any questions? Flexible payment plan. Pause or cancel anytime.",
         "call_button": "Book a call",
         "call_button_url": "",
-        "background_image": "shopify://shop_images/raisham-waheed-WK7mhTOYmWY-unsplash-scaled.jpg",
+        "background_image": "shopify://shop_images/raisham-waheed-WK7mhTOYmWY-unsplash-scaleddesktop_b3accf80-cf6d-4d5b-a1e7-7c235a0d2be9.jpg",
         "background-position": "center"
       }
     },
@@ -371,7 +365,7 @@
         "image_picker_EjpRVA"
       ],
       "settings": {
-        "background_image": "shopify://shop_images/raisham-waheed-WK7mhTOYmWY-unsplash-scaled.jpg",
+        "background_image": "shopify://shop_images/raisham-waheed-WK7mhTOYmWY-unsplash-scaleddesktop_b3accf80-cf6d-4d5b-a1e7-7c235a0d2be9.jpg",
         "title": "We Guide You With Expertise",
         "description": "We work closely with a carefully select suite of e‑commerce technologies, platforms, and specialists; all designed to maximize performance across our Shopify stores.",
         "button_text": "Get Started",
@@ -390,7 +384,7 @@
         "testimonials_text_1": "I am very pleased with the quality of work Outerpreneur has delivered for us. They were highly engaged, possessed excellent communication skills, and provided timely delivery of materials. Moreover, they exceeded our expectations by offering valuable recommendations.",
         "author_name_1": "Lourdes Reyes | Costa Rica",
         "author_handle_1": "CEO of Nativus Hom & Marilou Shop",
-        "author_image_1": "shopify://shop_images/AliKaukas_DSC_2489-scaled.jpg",
+        "author_image_1": "shopify://shop_images/AliKaukas_DSC_2489-scaleddesktop.jpg",
         "author_company_logo": "shopify://shop_images/Marilou_Logo_FA-27.png",
         "testimonials_text_2": "“It was a pleasure to work with Alek. He is very proactive, offers reasonable solutions and delivers flawless work and is always on time. Our project included work on the platforms Shopify and Printful. Alek is not only familiar with the web design, but also gave very good and helpful advice about settings and policies of the mentioned platforms. I would work with Alek again anytime.”",
         "author_name_2": "Melanie Sweickardt | Switzerland",
@@ -399,7 +393,7 @@
         "testimonials_text_3": "“Outerpreneur did a great job putting my website up to date and converting my Shopify store to 2.0. He also re-designed my website and layout. He also offers ongoing Shopify POS support which is greatly helpful and appreciated. I will keep using his services in a near future.”",
         "author_name_3": "Regine Fombrun | Spain",
         "author_handle_3": "CEO of Centroartesano",
-        "author_image_3": "shopify://shop_images/Centro-Artesano-04-scaled.jpg",
+        "author_image_3": "shopify://shop_images/Centro-Artesano-04-scaleddesktop.jpg",
         "testimonials_text_4": "“I have worked with Aleksander on various projects and really appreciate his work as well as his way of working. Also, his communication is very clear and he works very precisely. Aleksander has a lot of knowledge in e-commerce as well as with Shopify and is always interested in innovations and researches and implements the most reasonable solution. I look forward to many more projects together.\"",
         "author_name_4": "Jens Vogel | Germany",
         "author_handle_4": "Project Manager at Simple & Pure",
@@ -419,7 +413,7 @@
     "about_fKpykr": {
       "type": "about",
       "settings": {
-        "image_hero_background": "shopify://shop_images/christopher-gower-m_HRfLhgABo-unsplash-1-scaled.jpg",
+        "image_hero_background": "shopify://shop_images/christopher-gower-m_HRfLhgABo-unsplash-1-scaleddesktop.jpg",
         "image": "shopify://shop_images/Outerpreneur_simple_logo_76545563c_f6b141f4-af73-4c18-ac70-6cd1c2c62bb8.png",
         "caption": "We are excited about innovative ideas that evolve into successful businesses. I would be delighted to assist you on your e-commerce journey and help you achieve your desired goals by enhancing your brand.",
         "caption_title": "Alek Tysklind",

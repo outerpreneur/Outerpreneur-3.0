@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "type": "footer",
   "name": "footer",
@@ -38,8 +47,8 @@
         "menu_UMJbRP"
       ],
       "settings": {
-        "background_image": "shopify:\/\/shop_images\/raisham-waheed-WK7mhTOYmWY-unsplash-scaled_1_3972f741-8c09-476a-b6e9-ce4cc514b444.jpg",
-        "logo_footer": "shopify:\/\/shop_images\/Outerpreneur_simple_logo_76545563c_f6b141f4-af73-4c18-ac70-6cd1c2c62bb8.png",
+        "background_image": "shopify://shop_images/raisham-waheed-WK7mhTOYmWY-unsplash-scaleddesktop_b3accf80-cf6d-4d5b-a1e7-7c235a0d2be9.jpg",
+        "logo_footer": "shopify://shop_images/Outerpreneur_simple_logo_76545563c_f6b141f4-af73-4c18-ac70-6cd1c2c62bb8.png",
         "show_newsletter": true,
         "newsletter_title": "Subscribe to our newsletter",
         "newsletter_description": "The latest news, articles, and resources, sent to your inbox weekly.",
@@ -52,11 +61,11 @@
         "show_twitter": true,
         "show_github": true,
         "show_youtube": true,
-        "facebook_url": "https:\/\/www.facebook.com\/outerpreneur",
-        "instagram_url": "https:\/\/www.instagram.com\/outerpreneur",
-        "twitter_url": "https:\/\/twitter.com\/outerpreneur1",
-        "github_url": "https:\/\/github.com\/outerpreneur",
-        "youtube_url": "https:\/\/www.youtube.com\/channel\/UC-tkdYers30vM5WiAFCwBgQ",
+        "facebook_url": "https://www.facebook.com/outerpreneur",
+        "instagram_url": "https://www.instagram.com/outerpreneur",
+        "twitter_url": "https://twitter.com/outerpreneur1",
+        "github_url": "https://github.com/outerpreneur",
+        "youtube_url": "https://www.youtube.com/channel/UC-tkdYers30vM5WiAFCwBgQ",
         "show_about": true,
         "show_contact": true,
         "show_language": true,

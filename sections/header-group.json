@@ -17,7 +17,7 @@
       "settings": {
         "title": "Complete Form",
         "text_info": "Start your project",
-        "button_url": "shopify://pages/contact",
+        "button_url": "shopify://pages/shopify-theme-developer-contact",
         "link_text": "Get Started"
       }
     },

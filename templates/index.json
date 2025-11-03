@@ -17,9 +17,9 @@
         "logo_size": "96",
         "button": "Get Started",
         "gradient_scheme": "bg-gradient-to-r from-cyan-500 to-blue-500",
-        "button_url": "shopify://pages/contact",
+        "button_url": "shopify://pages/shopify-theme-developer-contact",
         "cta_text": "Setup your Call",
-        "cta_url": "shopify://pages/contact",
+        "cta_url": "shopify://pages/shopify-theme-developer-contact",
         "image": "shopify://shop_images/screencapture-weathertechch-2024-01-21-08_22_39_22desktop.jpg",
         "image2": "shopify://shop_images/screencapture-mariloushop-2024-01-21-08_55_302desktop.jpg",
         "image3": "shopify://shop_images/screencapture-centroartesano-es-2024-01-21-09_02_432desktop.jpg",
@@ -43,7 +43,7 @@
         "description": "As Shopify Store developers, it’s our mission to help you create an impact on a global scale — by turning your products & services into inspiration across communities & beyond.",
         "cta_url2": "",
         "cta_text2": "Get started",
-        "learn_more_url": "shopify://pages/contact",
+        "learn_more_url": "shopify://pages/shopify-theme-developer-contact",
         "learn_more_text": "Learn more",
         "image": "shopify://shop_images/IMG_8004.png"
       }
@@ -238,8 +238,7 @@
         "timeline_zt966N",
         "timeline_4TqYUz"
       ],
-      "settings": {
-      }
+      "settings": {}
     },
     "pricing_w4qjBw": {
       "type": "pricing",
